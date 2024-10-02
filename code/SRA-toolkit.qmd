@@ -1,0 +1,21 @@
+---
+title: "Terminal Tutorial"
+format: pdf
+editor: visual
+---
+
+### Introduction
+
+#### Commands
+
+| Command | Action                                                                          |
+|---------------|---------------------------------------------------------|
+| ls      | shows what is in the directory                                                  |
+| ls -F   | shows what things are in the directory                                          |
+| man     | shows manual for commands                                                       |
+| help    | shows commands                                                                  |
+| cd ..   | gets you to parent directory \[../\]                                            |
+| pwd     | print working directory                                                         |
+| history | shows command history                                                           |
+| mv      | mv \[old file name\] \[new file name\] --\> allows you to move and rename files |
+|         |                                                                                 |
