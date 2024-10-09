@@ -9,3 +9,21 @@ editor: visual
 -   started an interactive session
 
     -   session quit unexpectedly due to "broken pipe"
+
+    -   logged back in and cancelled the session then created a new session
+
+-   created a new data directory, new temporary data folder
+
+    -   trying to download sequence data
+
+    -   seeing if I can use a python script shortcut to download the data
+
+    -   had to load in python
+
+        -   uses pip to install package, but the pip command is not working
+
+        -   pip is installed, so idk why its not working
+
+-   session timed out bc I had it set to only last one hour, so I can try to figure this out another day
+
+    -   <https://www.geeksforgeeks.org/how-to-fix-pip-command-not-found-in-linux/>
