@@ -1,0 +1,96 @@
+---
+title: "White Nose Syndrome"
+format: pdf
+editor: visual
+---
+
+# White nose syndrome
+
+## Introduction
+
+This document is meant to help us make analyses replicable, and nice and clean for future work. One copy will be hosted on the lab Google Drive, while a second will be uploaded to a lab GitHub/GitLab account and a third should be with Cappy. Syncing all three forks up may sometimes be a hassle.
+
+\
+Why are we doing this: There's the obvious reasons of *Pseudogymnoascus destructans* being a threat to bat populations, and just worth looking at. The less obvious reason is that previous analyses all seem... off. The number of variant sites in each study is extremely small, which either indicates some strange biology on the part of *P. destructans*, or (frankly more likely) errors somewhere in the sampling -\> genotype pipeline. We can't re-sample and re-sequence, so instead, we will re-analyze the data.
+
+## First steps - sanity checks
+
+The sanity checks here are very simple - download a few files from ncbi, and look at the fastq quality. Maybe there is something funky happening here?
+
+So, attempt number 1:
+
+```{bash}
+#Download a sequence, split paired reads
+fastq-dump SRR11812089 --split-files
+```
+
+We next run these reads through `fastqc` and get the following report:
+
+![Not great! The adapter content makes sense - we haven't trimmed yet. The per base quality is a little wonkier, but we can run all of this through bbduk to try and get a cleaner version:](images/clipboard-87141737.png)
+
+```{bash}
+bbduk.sh in1=SRR11812089_1.fastq in2=SRR11812089_2.fastq out1=SRR11812089_1.trimmed.fastq out2=SRR11812089_2.trimmed.fastq t=10 qtrim=rl maq=10 ftl=10 ftr=-139 trimq=15 tpe tbo
+```
+
+Let's walk through the parameters here. `bbduk` takes paired end reads (in1 and in2) and outputs trimmed reads (out1 and out2). We ask it to use 10 threads (t=10), and to trim both the left and right reads when a sequence doesn't meet quality requirement (qtrim=rl). We ask each read to have a mean quality of 10 (maq=10, pretty low, frankly) and we force trim the first 10 base pairs because of the report from fastqc showing some funkiness there (ftl=10, ftr=139) - this is probably unnecessary, but for first pass might as well be careful. Finally, we use the `tpe` and `tbo` flags - this lets bbduk detect the adapters in the data and remove them (`tbo` finds shared sequence between ALL paired ends, `tpe` makes sure both reads are always the same length). Now if we take a look at fastqc, we get:
+
+![](images/clipboard-3146797320.png)
+
+So we've fixed the red flags, but still some issues. The sequence length distribution flag makes sense here - we've cut the sequences in a weird way, so shouldn't worry too much. Time to map!
+
+### Mapping sequence
+
+We'll map to the `GCA_001641265.1_ASM164126v1` reference, included in project files on the cluster whenever I make a shared directory. This reference is fairly good quality, but lots of repeats, so let's see how this goes.
+
+#### bwa-mem
+
+We map using bwa mem. This is a fast and efficient approach, pretty much the standard in the field.
+
+```{bash}
+
+bwa mem -t 8 GCA_001641265.1_ASM164126v1_genomic.fna SRR11812089_1.trimmed.fastq SRR11812089_2.trimmed.fastq | samtools sort -@8 -o SRR11812089.bam
+```
+
+again, going through the commands: -t 8 threads, reference to map to, followed by the paired-end reads. The output is piped ( \| ) to samtools to sort, using -@8 threads, and outputting as a bam file.
+
+This bam file lacks some important features (Read Group info, really), so next we add that, and dedup and resort
+
+#### Picard
+
+```{bash}
+
+picard AddOrReplaceReadGroups I=SRR11812089.bam O=SRR11812089.named.bam RGID=1 RGLB=lib1 RGPL=ILLUMINA RGPU=unit1 RGSM=test
+
+picard MarkDuplicates I=SRR11812089.named.bam O=SRR1182089.dedup.bam M=dedup.txt
+
+samtools sort SRR11812089.dedup.bam -o SRR11812089.sorted.bam
+
+samtools index SRR11812089.sorted.bam
+
+```
+
+#### Calling with mpileup
+
+We try two approaches to calling genotypes - bcftools mpileup and gatk HaplotypeVariantCaller
+
+First, the command for bcftools:
+
+```{bash}
+bcftools mpileup SRR11812089.sorted.bam --fasta-ref GCA_001641265.1_ASM164126v1_genomic.fna | bcftools call -m --ploidy 1 -Oz -o test.g.vcf.gz
+```
+
+This produces about 3500 SNPs across the genome - still very few, but more reasonable than the total 1200 across 60 samples from prior papers.
+
+#### GATK pipeline
+
+GATK is a bit more annoying, since first we create gvcf and then call genotypes, but no clean pipe to do (which can be helpful for joint calling!). The commands go as follows:
+
+```{bash}
+gatk HaplotypeCaller -R GCA_001641265.1_ASM164126v1_genomic.fna -I SRR11812089.sorted.bam -O test2.g.vcf.gz -ERC GVCF -ploidy 1
+
+gatk GenotypeGVCFs -R GCA_001641265.1_ASM164126v1_genomic.fna \
+  -V test2.g.vcf.gz \
+  -O test2.vcf.gz
+```
+
+Again, around 3k lines in the output.
