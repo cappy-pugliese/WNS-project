@@ -1,0 +1,11 @@
+---
+title: "10-09-24_terminal-notes"
+format: pdf
+editor: visual
+---
+
+-   successfully logged onto HPC storrs
+
+-   started an interactive session
+
+    -   session quit unexpectedly due to "broken pipe"
