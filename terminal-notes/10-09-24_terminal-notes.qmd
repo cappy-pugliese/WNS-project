@@ -28,4 +28,16 @@ editor: visual
 
     -   <https://www.geeksforgeeks.org/how-to-fix-pip-command-not-found-in-linux/>
 
-python3.12 pip install ncbi-acc-download
+#### 10/10
+
+-   made a shortcut to pip in my directory
+
+    -   '\_\_main\_' not found error
+
+    -   gave up
+
+    -   SRA toolkit might be able to download it, i may be an idiot
+
+-   storrs HPC doesnt even look like they have SRA toolkit installed
+
+    -   may have to use farmington cluster for sequence stuff or download sratoolkit to directory
