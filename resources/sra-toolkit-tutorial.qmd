@@ -19,3 +19,7 @@ editor: visual
     ```
 
 -   use fasterq-dump to extract the file
+
+    ``` command line
+    fasterq-dump [SRA-id-number] --split-files
+    ```
