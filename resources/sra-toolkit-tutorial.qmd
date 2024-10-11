@@ -3,3 +3,19 @@ title: "sra toolkit tutorial"
 format: pdf
 editor: visual
 ---
+
+-   create data working directory
+
+-   preset download to working directory
+
+    ``` command line
+    vdb-config --prefetch-to-cwd
+    ```
+
+-   download the file
+
+    ``` command line
+    prefetch [SRA-id-number]
+    ```
+
+-   use fasterq-dump to extract the file
