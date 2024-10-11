@@ -56,4 +56,12 @@ editor: visual
 
 -   prefetched SRX8363356
 
--   
+-   extracted file with fastq
+
+-   tried to analyze using fastqc but run was killed
+
+    -   generated a fastqc zip file but not a viewable html file
+
+    -   looks like I may have run out of memory
+
+    -   next time try initiating an interactive session with 2G of memory
