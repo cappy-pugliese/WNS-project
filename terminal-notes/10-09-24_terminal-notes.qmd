@@ -4,6 +4,8 @@ format: pdf
 editor: visual
 ---
 
+### 10-9
+
 -   successfully logged onto HPC storrs
 
 -   started an interactive session
@@ -28,7 +30,7 @@ editor: visual
 
     -   <https://www.geeksforgeeks.org/how-to-fix-pip-command-not-found-in-linux/>
 
-#### 10/10
+### 10-10
 
 -   made a shortcut to pip in my directory
 
