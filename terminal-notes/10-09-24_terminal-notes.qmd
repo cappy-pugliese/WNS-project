@@ -51,3 +51,9 @@ editor: visual
 -   able to load in sra toolkit
 
 -   created dir: data/sra_seq
+
+-   set prefetch to new directory
+
+-   prefetched SRX8363356
+
+-   
