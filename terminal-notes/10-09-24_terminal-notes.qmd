@@ -46,4 +46,8 @@ editor: visual
 
 ### 10/11
 
--   
+-   logged onto xanadu cluster
+
+-   able to load in sra toolkit
+
+-   created dir: data/sra_seq
