@@ -43,3 +43,7 @@ editor: visual
 -   storrs HPC doesnt even look like they have SRA toolkit installed
 
     -   may have to use farmington cluster for sequence stuff or download sratoolkit to directory
+
+### 10/11
+
+-   
