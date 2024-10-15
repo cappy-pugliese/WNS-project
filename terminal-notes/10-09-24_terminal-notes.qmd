@@ -65,3 +65,23 @@ editor: visual
     -   looks like I may have run out of memory
 
     -   next time try initiating an interactive session with 2G of memory
+
+### 10/15
+
+-   was able to successfully generate html
+
+-   unable to open html on cluster
+
+    -   \<https://stackoverflow.com/questions/21124869/how-to-view-html-file-in-remote-unix-server\>
+
+    -   tried to open it with a local host --\> did not work
+
+    -   tried trouble shooting --\> still did not work
+
+-   now trying to mirror directory from cluster to current computer (maybe look into file transfering???)
+
+    -   downloaded macfuse and SSHFS software
+
+    -   \<https://github.com/osxfuse/osxfuse/wiki/SSHFS\>
+
+    -   
