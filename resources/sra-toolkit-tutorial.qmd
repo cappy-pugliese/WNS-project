@@ -8,18 +8,12 @@ editor: visual
 
 -   preset download to working directory
 
-    ``` command line
-    vdb-config --prefetch-to-cwd
-    ```
+    `command line vdb-config --prefetch-to-cwd`
 
 -   download the file
 
-    ``` command line
-    prefetch [SRA-id-number]
-    ```
+    `command line prefetch [SRA-id-number]`
 
 -   use fasterq-dump to extract the file
 
-    ``` command line
-    fasterq-dump [SRA-id-number] --split-files
-    ```
+    `command line fasterq-dump [SRA-id-number] --split-files`
