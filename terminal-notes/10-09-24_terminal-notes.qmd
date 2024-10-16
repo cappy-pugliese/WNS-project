@@ -84,6 +84,10 @@ editor: visual
 
     -   <https://github.com/osxfuse/osxfuse/wiki/SSHFS>
 
-    -   
+### 10/16
 
-    -   
+-   tried to use filezilla to transfer files
+
+    -   filezilla was unable to connect to xanadu transfer node
+
+-   trying to figure out how the SSHFS software works
