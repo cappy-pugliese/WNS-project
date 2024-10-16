@@ -72,7 +72,7 @@ editor: visual
 
 -   unable to open html on cluster
 
-    -   \<https://stackoverflow.com/questions/21124869/how-to-view-html-file-in-remote-unix-server\>
+    -   <https://stackoverflow.com/questions/21124869/how-to-view-html-file-in-remote-unix-server>
 
     -   tried to open it with a local host --\> did not work
 
@@ -82,6 +82,8 @@ editor: visual
 
     -   downloaded macfuse and SSHFS software
 
-    -   \<https://github.com/osxfuse/osxfuse/wiki/SSHFS\>
+    -   <https://github.com/osxfuse/osxfuse/wiki/SSHFS>
+
+    -   
 
     -   
