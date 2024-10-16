@@ -91,3 +91,11 @@ editor: visual
     -   filezilla was unable to connect to xanadu transfer node
 
 -   trying to figure out how the SSHFS software works
+
+```         
+sshfs username@server:/path-on-server/ ~/path-to-mount-point
+```
+
+/tmp/data/sra-seq/fastq
+
+/users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/cluster_file-transfers
