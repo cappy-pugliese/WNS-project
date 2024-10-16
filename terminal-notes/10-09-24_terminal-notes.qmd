@@ -92,10 +92,12 @@ editor: visual
 
 -   trying to figure out how the SSHFS software works
 
+    -   OMG IT WORKS!!
+
 ```         
-sshfs username@server:/path-on-server/ ~/path-to-mount-point
+sshfs cpugliese@transfer.cam.uchc.edu:tmp/data/sra-seq/fastq /users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/cluster-mirror
 ```
 
-/tmp/data/sra-seq/fastq
+tmp/data/sra-seq/fastq
 
-/users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/cluster_file-transfers
+/users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/cluster-mirror
