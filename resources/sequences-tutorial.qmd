@@ -1,5 +1,5 @@
 ---
-title: "sra toolkit tutorial"
+title: "Downloading and Processing Sequences"
 format: pdf
 editor: visual
 ---
