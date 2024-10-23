@@ -4,6 +4,8 @@ format: pdf
 editor: visual
 ---
 
+## Using SRA toolkit to download files
+
 -   create data working directory
 
 -   preset download to working directory
@@ -14,6 +16,14 @@ editor: visual
 
     `command line prefetch [SRA-id-number]`
 
+## FastQC
+
 -   use fasterq-dump to extract the file
 
     `command line fasterq-dump [SRA-id-number] --split-files`
+
+## Trimming seq with bbduk
+
+``` bash
+bbduk.sh in1=SRR11812088_1.fastq in2=SRR11812088_2.fastq out1=SRR11812088_1.trimmed.fastq out2=SRR11812088_2.trimmed.fastq t=10 qtrim=rl maq=10 ftl=10 ftr=-139 trimq=15 tpe tbo
+```

@@ -94,7 +94,7 @@ editor: visual
 
     -   OMG IT WORKS!!
 
-```         
+``` bash
 sshfs cpugliese@transfer.cam.uchc.edu:tmp/data/sra-seq/fastq /users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/cluster-mirror
 ```
 
