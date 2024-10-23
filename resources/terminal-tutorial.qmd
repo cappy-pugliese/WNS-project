@@ -124,4 +124,6 @@ editor: visual
 | numjob     | 'squeue 1 wc -1' --\> not entirely sure what this tells you? |
 +------------+--------------------------------------------------------------+
 | cdf        | cd tmp/data/sra-seq/fastq                                    |
+|            |                                                              |
+| cdseq      | cd tmp/data/sra-seq                                          |
 +------------+--------------------------------------------------------------+

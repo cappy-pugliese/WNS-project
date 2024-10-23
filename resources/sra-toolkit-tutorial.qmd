@@ -10,20 +10,26 @@ editor: visual
 
 -   preset download to working directory
 
-    `command line vdb-config --prefetch-to-cwd`
+    `vdb-config --prefetch-to-cwd`
 
 -   download the file
 
-    `command line prefetch [SRA-id-number]`
+    `prefetch [SRA-id-number]`
 
 ## FastQC
 
 -   use fasterq-dump to extract the file
 
-    `command line fasterq-dump [SRA-id-number] --split-files`
+    `fasterq-dump [SRA-id-number] --split-files`
+
+    `fastqc --noextract [fastq-split-file-1] [fastq-split-file-2] [...]`
 
 ## Trimming seq with bbduk
 
 ``` bash
 bbduk.sh in1=SRR11812088_1.fastq in2=SRR11812088_2.fastq out1=SRR11812088_1.trimmed.fastq out2=SRR11812088_2.trimmed.fastq t=10 qtrim=rl maq=10 ftl=10 ftr=-139 trimq=15 tpe tbo
 ```
+
+## Aligning to reference genome
+
+(unsure if reference genome has been properly downloaded or not)
