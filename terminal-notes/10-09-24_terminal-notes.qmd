@@ -101,3 +101,17 @@ sshfs cpugliese@transfer.cam.uchc.edu:tmp/data/sra-seq/fastq /users/caprinapugli
 tmp/data/sra-seq/fastq
 
 /users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/cluster-mirror
+
+\--
+
+### 10/24
+
+-   edited .bashrc on both laptop and xanadu
+
+-   loaded in more modules (and added to .bashrc) to help with mapping the sequences to the reference genome
+
+-   ran bwa-mem code
+
+    `bwa mem -t 8 Pd-ref-genome SRR11812088_1.trimmed.fastq SRR11812088_2.trimmed.fastq | samtools sort -@8 -o SRR11812088.bam`
+
+-   just finished adding picard to the modules list
