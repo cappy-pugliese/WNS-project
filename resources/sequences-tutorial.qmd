@@ -30,6 +30,14 @@ editor: visual
 bbduk.sh in1=SRR11812088_1.fastq in2=SRR11812088_2.fastq out1=SRR11812088_1.trimmed.fastq out2=SRR11812088_2.trimmed.fastq t=10 qtrim=rl maq=10 ftl=10 ftr=-139 trimq=15 tpe tbo
 ```
 
-## Aligning to reference genome
+## Editing bam file
 
-(unsure if reference genome has been properly downloaded or not)
+```         
+picard AddOrReplaceReadGroups I=SRR11812088.bam O=SRR11812088.named.bam RGID=1 RGLB=lib1 RGPL=ILLUMINA RGPU=unit1 RGSM=test
+
+picard MarkDuplicates I=SRR11812088.named.bam O=SRR1182088.dedup.bam M=dedup.txt
+
+samtools sort SRR11812088.dedup.bam -o SRR11812088.sorted.bam
+
+samtools index SRR11812088.sorted.bam
+```
