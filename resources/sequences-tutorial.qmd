@@ -71,3 +71,7 @@ using bcftools
 ```         
 bcftools mpileup SRR11812088.sorted.bam --fasta-ref Pd-ref-genome | bcftools call -m --ploidy 1 -Oz -o test.g.vcf.gz
 ```
+
+-   looks like its not able to open up the Pd-ref-genome file
+
+-   i might have to redownload the reference genome and redo up until this point- I don't know if something is wrong with the file or there's something wrong with the file name??
