@@ -30,14 +30,44 @@ editor: visual
 bbduk.sh in1=SRR11812088_1.fastq in2=SRR11812088_2.fastq out1=SRR11812088_1.trimmed.fastq out2=SRR11812088_2.trimmed.fastq t=10 qtrim=rl maq=10 ftl=10 ftr=-139 trimq=15 tpe tbo
 ```
 
+## Mapping seq to genome
+
+using bwa mem
+
+```         
+bwa mem -t 8 Pd-ref-genome SRR11812088_1.trimmed.fastq SRR11812088_2.trimmed.fastq | samtools sort -@8 -o SRR11812088.bam
+```
+
 ## Editing bam file
 
 ```         
-picard AddOrReplaceReadGroups I=SRR11812088.bam O=SRR11812088.named.bam RGID=1 RGLB=lib1 RGPL=ILLUMINA RGPU=unit1 RGSM=test
+java -jar /isg/shared/apps/picard/picard-tools-2.9.2/picard.jar AddOrReplaceReadGroups \
+      I=SRR11812088.bam \
+      O=SRR11812088.named.bam \
+      RGID=1 \
+      RGLB=lib1 \
+      RGPL=ILLUMINA \
+      RGPU=unit1 \
+      RGSM=test
+```
 
-picard MarkDuplicates I=SRR11812088.named.bam O=SRR1182088.dedup.bam M=dedup.txt
+```         
+java -jar /isg/shared/apps/picard/picard-tools-2.9.2/picard.jar MarkDuplicates \
+I=SRR11812088.named.bam \
+O=SRR11812088.dedup.bam \
+M=dedup.txt
+```
 
+```         
 samtools sort SRR11812088.dedup.bam -o SRR11812088.sorted.bam
 
 samtools index SRR11812088.sorted.bam
+```
+
+## Calling genotypes
+
+using bcftools
+
+```         
+bcftools mpileup SRR11812088.sorted.bam --fasta-ref Pd-ref-genome | bcftools call -m --ploidy 1 -Oz -o test.g.vcf.gz
 ```
