@@ -115,3 +115,33 @@ tmp/data/sra-seq/fastq
     `bwa mem -t 8 Pd-ref-genome SRR11812088_1.trimmed.fastq SRR11812088_2.trimmed.fastq | samtools sort -@8 -o SRR11812088.bam`
 
 -   just finished adding picard to the modules list
+
+### 10/30
+
+-   had trouble getting the picard command to work
+
+    -   had to use java command and tell the computer where picard was
+
+-   successfully edited bam file
+
+-   tried to map to genome, but ran into issues
+
+### 11/6
+
+-   found out during lab meeting that the genome I downloaded was a zip file
+
+    -   might have to go back and do bwa step
+
+    -   also might have to index the genome before I try to map it (samtools FAIDX or samtools index)
+
+### 11/7
+
+-   trying to figure out how to index the genome (it's not working)
+
+-   error saying index files missing
+
+-   don't know if it's an issue with the download or not, but I cannot troubleshoot anymore today because it feels like I am slamming my brain against a brick wall rn
+
+### 11/13
+
+/labs/Dagilis/Projects/WNS/ref
