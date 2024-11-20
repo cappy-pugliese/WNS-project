@@ -174,8 +174,22 @@ bwa mem -t 8 pdestructans.fasta SRR11812088_1.trimmed.fastq SRR11812088_2.trimme
 
 -   probably need to clean up a bit
 
-11/20
+### 11/20
 
 -   cleaned up and reorganized things
 
 -   edited bam file
+
+-   still ran into same "failed to open file" error
+
+    -   looks like I was able to fix it by telling the code the exact location of the files
+
+        ```{bash}
+        bcftools mpileup alignments/SRR11812088.sorted.bam --fasta-ref pd_ref/pdestructans.fasta | bcftools call -m --ploidy 1 -Oz -o test.g.vcf.gz
+        ```
+
+-   last thing left to do is the gatk pipeline
+
+-   gatk isnt a downloaded module --\> was able to download it from github
+
+    -   am not able to get the command to work yet though
