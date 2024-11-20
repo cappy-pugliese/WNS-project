@@ -68,6 +68,16 @@ samtools index SRR11812088.sorted.bam
 
 using bcftools
 
-``` bash
+```{bash}
 bcftools mpileup alignments/SRR11812088.sorted.bam --fasta-ref pd_ref/pdestructans.fasta | bcftools call -m --ploidy 1 -Oz -o test.g.vcf.gz
+```
+
+using GATK pipeline
+
+```{bash}
+gatk HaplotypeCaller -R pd_ref/pdestructans.fasta -I alignments/SRR11812088.sorted.bam -O test2.g.vcf.gz -ERC GVCF -ploidy 1
+
+gatk GenotypeGVCFs -R pd_ref/pdestructans.fasta \
+  -V test2.g.vcf.gz \
+  -O test2.vcf.gz
 ```
