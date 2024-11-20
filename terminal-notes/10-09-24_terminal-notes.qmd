@@ -145,3 +145,31 @@ tmp/data/sra-seq/fastq
 ### 11/13
 
 /labs/Dagilis/Projects/WNS/ref
+
+### 11/19
+
+-   made symlinks to get to lab directory and to Pd genome ref folder
+
+-   moved the extra bam files I created last time to .trash/
+
+-   creating seq dictionary:
+
+    -   `java -jar ~/software/picard.jar CreateSequenceDictionary R=pdestructans.fasta O=pdestructans.dict`
+
+    -   the dictionary I created appears to be larger than the one in the lab reference folder??? (12,677 vs 9,772)
+
+-   trying to remake .bam file with bwa mem
+
+    -   /home/FCAM/cpugliese/tmp/data/sra-seq/downloads/brickwall
+
+```{bash}
+bwa mem -t 8 pdestructans.fasta SRR11812088_1.trimmed.fastq SRR11812088_2.trimmed.fastq | samtools sort -@8 -o SRR11812088-aligned.bam
+```
+
+-   finally got it to work
+
+-   need to go back and re-do all the .bam editing (everything in alignments prob needs to go into .trash/
+
+-   need to move brickwall/ out of downloads and rename to reference genome or something
+
+-   probably need to clean up a bit

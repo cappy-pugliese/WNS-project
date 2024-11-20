@@ -35,7 +35,7 @@ bbduk.sh in1=SRR11812088_1.fastq in2=SRR11812088_2.fastq out1=SRR11812088_1.trim
 using bwa mem
 
 ```         
-bwa mem -t 8 Pd-ref-genome SRR11812088_1.trimmed.fastq SRR11812088_2.trimmed.fastq | samtools sort -@8 -o SRR11812088.bam
+bwa mem -t 8 pdestructans.fasta SRR11812088_1.trimmed.fastq SRR11812088_2.trimmed.fastq | samtools sort -@8 -o SRR11812088-take3.bam
 ```
 
 ## Editing bam file
@@ -69,7 +69,7 @@ samtools index SRR11812088.sorted.bam
 using bcftools
 
 ```         
-bcftools mpileup SRR11812088.sorted.bam --fasta-ref Pd-ref-genome | bcftools call -m --ploidy 1 -Oz -o test.g.vcf.gz
+bcftools mpileup SRR11812088.sorted.bam --fasta-ref p_dest.fna | bcftools call -m --ploidy 1 -Oz -o test.g.vcf.gz
 ```
 
 -   looks like its not able to open up the Pd-ref-genome file
