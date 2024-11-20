@@ -35,14 +35,14 @@ bbduk.sh in1=SRR11812088_1.fastq in2=SRR11812088_2.fastq out1=SRR11812088_1.trim
 using bwa mem
 
 ```         
-bwa mem -t 8 pdestructans.fasta SRR11812088_1.trimmed.fastq SRR11812088_2.trimmed.fastq | samtools sort -@8 -o SRR11812088-take3.bam
+bwa mem -t 8 pdestructans.fasta SRR11812088_1.trimmed.fastq SRR11812088_2.trimmed.fastq | samtools sort -@8 -o SRR11812088-aligned.bam
 ```
 
 ## Editing bam file
 
 ```         
-java -jar /isg/shared/apps/picard/picard-tools-2.9.2/picard.jar AddOrReplaceReadGroups \
-      I=SRR11812088.bam \
+java -jar ~/software/picard.jar AddOrReplaceReadGroups \
+      I=SRR11812088-aligned.bam \
       O=SRR11812088.named.bam \
       RGID=1 \
       RGLB=lib1 \
@@ -52,7 +52,7 @@ java -jar /isg/shared/apps/picard/picard-tools-2.9.2/picard.jar AddOrReplaceRead
 ```
 
 ```         
-java -jar /isg/shared/apps/picard/picard-tools-2.9.2/picard.jar MarkDuplicates \
+java -jar ~/software/picard.jar MarkDuplicates \
 I=SRR11812088.named.bam \
 O=SRR11812088.dedup.bam \
 M=dedup.txt

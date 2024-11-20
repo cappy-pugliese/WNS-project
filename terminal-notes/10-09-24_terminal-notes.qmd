@@ -173,3 +173,9 @@ bwa mem -t 8 pdestructans.fasta SRR11812088_1.trimmed.fastq SRR11812088_2.trimme
 -   need to move brickwall/ out of downloads and rename to reference genome or something
 
 -   probably need to clean up a bit
+
+11/20
+
+-   cleaned up and reorganized things
+
+-   edited bam file
