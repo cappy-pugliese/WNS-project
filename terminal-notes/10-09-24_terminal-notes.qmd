@@ -193,3 +193,8 @@ bwa mem -t 8 pdestructans.fasta SRR11812088_1.trimmed.fastq SRR11812088_2.trimme
 -   gatk isnt a downloaded module --\> was able to download it from github
 
     -   am not able to get the command to work yet though
+    -   actually it is a module, just need to use all caps
+
+-   bcftools view -1000 (prints first 1000 lines)
+
+    -   bcftools stats --\> try to plot stats
