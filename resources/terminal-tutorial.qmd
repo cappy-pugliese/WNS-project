@@ -61,7 +61,7 @@ editor: visual
 | \~  | home directory    |
 | .   | current directory |
 | ..  | one directory up  |
-|     |                   |
+| q   | exits manual page |
 |     |                   |
 
 # Xanadu
