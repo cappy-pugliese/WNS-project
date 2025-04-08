@@ -75,9 +75,13 @@ bcftools mpileup alignments/SRR11812088.sorted.bam --fasta-ref pd_ref/pdestructa
 using GATK pipeline
 
 ```{bash}
-gatk HaplotypeCaller -R pd_ref/pdestructans.fasta -I alignments/SRR11812088.sorted.bam -O test2.g.vcf.gz -ERC GVCF -ploidy 1
+gatk HaplotypeCaller -R pd_ref/pdestructans.fasta -I alignments/SRR11812088.sorted.bam -O test2.gvcf.gz -ERC GVCF -ploidy 1
 
 gatk GenotypeGVCFs -R pd_ref/pdestructans.fasta \
-  -V test2.g.vcf.gz \
+  -V test2.gvcf.gz \
   -O test2.vcf.gz
 ```
+
+output:
+
+-   Either a VCF or GVCF file with raw, unfiltered SNP and indel calls. Regular VCFs must be filtered either by variant recalibration (Best Practice) or hard-filtering before use in downstream analyses. If using the GVCF workflow, the output is a GVCF file that must first be run through GenotypeGVCFs and then filtering before further analysis.
