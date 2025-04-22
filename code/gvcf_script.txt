@@ -2,8 +2,8 @@
 #SBATCH --job-name=GVCF
 #SBATCH -N 1
 #SBATCH -n 1
-#SBATCH -c 1
-#SBATCH --mem=5G
+#SBATCH -c 4
+#SBATCH --mem=20G
 #SBATCH --partition=general
 #SBATCH --qos=general
 #SBATCH --mail-type=ALL
@@ -16,29 +16,36 @@
 hostname
 date
 
-/home/FCAM/cpugliese/wns-lab/bams
+## load modules
+module load GATK/4.3.0.0
+module load parallel/20180122
 
-## Make .gvcf from sorted bam
-
+## load variables
+ACCLIST=/home/FCAM/cpugliese/wns/02_bam2gvcf/03_accessionlist/acclist_without_Pd03.txt
+#### point to paths
 INDIR=/home/FCAM/cpugliese/wns-lab/bams
-OUTDIR=/home/FCAM/cpugliese/wns/02_bam2gvcf
+OUTDIR=/home/FCAM/cpugliese/wns-lab/gvcfs
 REF=/home/FCAM/cpugliese/wns/pd_data/pd_ref/pdestructans.fasta
 
+## files need to be indexed
+#### run indexing script first
+
+## Make .gvcf from sorted bam
 cd $OUTDIR
 
-module load GATK/4.3.0.0
+cat $ACCLIST | parallel -j 5 \
+  gatk HaplotypeCaller \
+    -R $REF \
+    -I $INDIR/{}.deduped.bam \
+    -O {}.g.vcf.gz \
+    -ERC GVCF \
+    -ploidy 1
 
-gatk HaplotypeCaller \
-  -R $REF \
-  -I $INDIR/SRR11812088.sorted.bam \
-  -O SRR11812088.g.vcf.gz \
-  -ERC GVCF \
-  -ploidy 1
+echo "make .gvcf done"
+date
 
 ########### script end
 
-# INDR=/home/FCAM/cpugliese/wns-lab/bams
-# Pd_10.deduped.bam
 
 # link to gatk tool info
 # https://gatk.broadinstitute.org/hc/en-us/articles/9570334998171-HaplotypeCaller

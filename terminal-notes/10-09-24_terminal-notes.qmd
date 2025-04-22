@@ -102,7 +102,7 @@ tmp/data/sra-seq/fastq
 
 /users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/cluster-mirror
 
-\--
+--
 
 ### 10/24
 
