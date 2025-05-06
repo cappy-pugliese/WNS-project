@@ -1,0 +1,38 @@
+---
+title: "grep & awk cheat sheet"
+format: html
+editor: visual
+---
+
+# Grep Cheat Sheet
+
+```         
+grep [options] pattern [files]
+```
+
+<https://www.geeksforgeeks.org/grep-command-in-unixlinux/>
+
+-   \^ link to full options table & code examples
+
+| Option          | Decription                                   |
+|-----------------|----------------------------------------------|
+| -c              | just prints count                            |
+| -i              | ignores case                                 |
+| -n              | displays line numbers along with lines       |
+| -v              | prints everything excluding pattern          |
+| -A n            | also includes n \# of lines after            |
+| -B n            | also includes n \# of lines before           |
+| -C n            | includes n \# of lines both before and after |
+| -f \[filename\] | takes patterns from a file line by line      |
+
+# Awk Cheat Sheet
+
+<https://www.geeksforgeeks.org/awk-command-unixlinux-examples/>
+
+awk -F . '{print \$1, \$5}' completed_runs.txt
+
+grep ".tbi" completed_runs.txt \| awk -F . '{print \$1}'
+
+```         
+grep -f file.txt file2.txt
+```
