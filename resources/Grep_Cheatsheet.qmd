@@ -2,6 +2,7 @@
 title: "grep & awk cheat sheet"
 format: html
 editor: visual
+---py
 ---
 
 # Grep Cheat Sheet
