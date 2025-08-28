@@ -1,9 +1,9 @@
 #!/bin/bash
-#SBATCH --job-name=GVCF_more-mem
+#SBATCH --job-name=GVCF_atmpt2
 #SBATCH -N 1
 #SBATCH -n 1
 #SBATCH -c 4
-#SBATCH --mem=40G
+#SBATCH --mem=20G
 #SBATCH --partition=general
 #SBATCH --qos=general
 #SBATCH --mail-type=ALL
@@ -21,11 +21,11 @@ module load GATK/4.3.0.0
 module load parallel/20180122
 
 ## load variables
-ACCLIST=/home/FCAM/cpugliese/wns/02_bam2gvcf/03_complete-runs/04_runs_not_fully_indexed.txt
+ACCLIST=/home/FCAM/cpugliese/wns/03_bam2gvcf/03_complete-runs/04_runs_not_fully_indexed.txt
 #### point to paths
 INDIR=/home/FCAM/cpugliese/wns-lab/bams
-OUTDIR=/home/FCAM/cpugliese/wns-lab/gvcfs/01_haplotypecaller/run2_for_non-indexed_runs
-REF=/home/FCAM/cpugliese/wns/pd_data/pd_ref/pdestructans.fasta
+OUTDIR=/home/FCAM/cpugliese/wns-lab/gvcfs/01_haplotypecaller/run3_for_non-indexed_runs
+REF=/home/FCAM/cpugliese/wns/02_raw-data/pd_data/pd_ref/pdestructans.fasta
 
 ## files need to be indexed
 #### run indexing script first
@@ -33,7 +33,7 @@ REF=/home/FCAM/cpugliese/wns/pd_data/pd_ref/pdestructans.fasta
 ## Make .gvcf from sorted bam
 cd $OUTDIR
 
-cat $ACCLIST | parallel -j 5 \
+cat $ACCLIST | parallel -j 2 \
   gatk HaplotypeCaller \
     -R $REF \
     -I $INDIR/{}.deduped.bam \
@@ -41,8 +41,6 @@ cat $ACCLIST | parallel -j 5 \
     -ERC GVCF \
     -ploidy 1
 
-echo "make .gvcf done"
-date
 
 ########### script end
 
