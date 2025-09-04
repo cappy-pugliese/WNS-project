@@ -184,6 +184,4 @@ ls -F
 
 `*` is for executables, `/` for directories, `=` for sockets, `>` for doors, `@` for symbolic links, `|` for FIFOs and nothing for regular files
 
-sudo mkdir -p /usr/local/bin
-sudo rm -f /usr/local/bin/julia
-sudo ln -s /Applications/Julia-1.11.app/Contents/Resources/julia/bin/julia /usr/local/bin/julia
+sudo mkdir -p /usr/local/bin sudo rm -f /usr/local/bin/julia sudo ln -s /Applications/Julia-1.11.app/Contents/Resources/julia/bin/julia /usr/local/bin/julia
