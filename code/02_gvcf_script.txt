@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=GVCF_atmpt2
+#SBATCH --job-name=GVCF
 #SBATCH -N 1
 #SBATCH -n 1
 #SBATCH -c 4
@@ -21,10 +21,10 @@ module load GATK/4.3.0.0
 module load parallel/20180122
 
 ## load variables
-ACCLIST=/home/FCAM/cpugliese/wns/03_bam2gvcf/03_complete-runs/04_runs_not_fully_indexed.txt
+ACCLIST=/home/FCAM/cpugliese/wns/03_bam2gvcf/03_complete-runs/05_missing_runs.txt
 #### point to paths
 INDIR=/home/FCAM/cpugliese/wns-lab/bams
-OUTDIR=/home/FCAM/cpugliese/wns-lab/gvcfs/01_haplotypecaller/run3_for_non-indexed_runs
+OUTDIR=/home/FCAM/cpugliese/wns-lab/gvcfs/01_haplotypecaller/02_run2_missing_bams
 REF=/home/FCAM/cpugliese/wns/02_raw-data/pd_data/pd_ref/pdestructans.fasta
 
 ## files need to be indexed
