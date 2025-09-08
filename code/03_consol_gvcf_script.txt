@@ -1,9 +1,9 @@
 #!/bin/bash
-#SBATCH --job-name=Consol_GVCF
+#SBATCH --job-name=consol_GVCF
 #SBATCH -N 1
 #SBATCH -n 1
 #SBATCH -c 5
-#SBATCH --mem=50G
+#SBATCH --mem=10G
 #SBATCH --partition=general
 #SBATCH --qos=general
 #SBATCH --mail-type=ALL
@@ -24,11 +24,12 @@ module load parallel/20180122
 INDIR=/home/FCAM/cpugliese/wns-lab/gvcfs/01_haplotypecaller/01_run_all_bams
 OUTDIR=/home/FCAM/cpugliese/wns-lab/gvcfs/02_consolidate-gvcfs
 
-cd $OUTDIR
+cd $INDIR
 gatk --java-options "-Xmx4g -Xms4g" \
        GenomicsDBImport \
-       --genomicsdb-workspace-path $INDIR \
+       --genomicsdb-workspace-path $OUTDIR \
        --sample-name-map $INDIR/Pd_sample_map.txt \
        --reader-threads 5
+       -L #[imput number here]#
        
 ########### script end
