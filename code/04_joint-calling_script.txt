@@ -1,9 +1,9 @@
 #!/bin/bash
-#SBATCH --job-name=
+#SBATCH --job-name=joint-calling_gvcf
 #SBATCH -N 1
 #SBATCH -n 1
-#SBATCH -c 5
-#SBATCH --mem=10G
+#SBATCH -c 4
+#SBATCH --mem=5G
 #SBATCH --partition=general
 #SBATCH --qos=general
 #SBATCH --mail-type=ALL
@@ -20,19 +20,19 @@ date
 module load GATK/4.3.0.0
 
 ## define variables
-REF=
+REF=/home/FCAM/cpugliese/wns/02_raw-data/pd_data/pd_ref/pdestructans.fasta
 GENDBI=/home/FCAM/cpugliese/wns-lab/gvcfs/02_consolidate-gvcfs/genomicsDBI
 INTLIST=/home/FCAM/cpugliese/wns/02_raw-data/pd_data/pd_ref/pd_ref.bed
-OUTDIR=
-NAME=
+OUTDIR=/home/FCAM/cpugliese/wns-lab/gvcfs/03_joint-calling
+NAME=pd
 
 ## run script
+cd $OUTDIR
 gatk --java-options "-Xmx4g" GenotypeGVCFs \
    -R $REF \
    -V $GENDBI \
    -all-sites \
    -L $INTLIST \
    -O $NAME.vcf.gz \
-   --tmp-dir /path/to/large/tmp
        
 ########### script end
