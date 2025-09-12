@@ -1,0 +1,38 @@
+#!/bin/bash
+#SBATCH --job-name=
+#SBATCH -N 1
+#SBATCH -n 1
+#SBATCH -c 5
+#SBATCH --mem=10G
+#SBATCH --partition=general
+#SBATCH --qos=general
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=caprina.pugliese@uconn.edu
+#SBATCH -o %x_%j.out
+#SBATCH -e %x_%j.err
+
+########### script start
+
+hostname
+date
+
+## load modules
+module load GATK/4.3.0.0
+
+## define variables
+REF=
+GENDBI=/home/FCAM/cpugliese/wns-lab/gvcfs/02_consolidate-gvcfs/genomicsDBI
+INTLIST=/home/FCAM/cpugliese/wns/02_raw-data/pd_data/pd_ref/pd_ref.bed
+OUTDIR=
+NAME=
+
+## run script
+gatk --java-options "-Xmx4g" GenotypeGVCFs \
+   -R $REF \
+   -V $GENDBI \
+   -all-sites \
+   -L $INTLIST \
+   -O $NAME.vcf.gz \
+   --tmp-dir /path/to/large/tmp
+       
+########### script end
