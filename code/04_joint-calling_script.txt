@@ -1,9 +1,9 @@
 #!/bin/bash
-#SBATCH --job-name=joint-calling_gvcf
+#SBATCH --job-name=ploidy-1_joint-cal
 #SBATCH -N 1
 #SBATCH -n 1
-#SBATCH -c 4
-#SBATCH --mem=5G
+#SBATCH -c 2
+#SBATCH --mem=6G
 #SBATCH --partition=general
 #SBATCH --qos=general
 #SBATCH --mail-type=ALL
@@ -23,15 +23,16 @@ module load GATK/4.3.0.0
 REF=/home/FCAM/cpugliese/wns/02_raw-data/pd_data/pd_ref/pdestructans.fasta
 GENDBI=/home/FCAM/cpugliese/wns-lab/gvcfs/02_consolidate-gvcfs/genomicsDBI
 INTLIST=/home/FCAM/cpugliese/wns/02_raw-data/pd_data/pd_ref/pd_ref.bed
-OUTDIR=/home/FCAM/cpugliese/wns-lab/gvcfs/03_joint-calling
-NAME=pd
+OUTDIR=/home/FCAM/cpugliese/wns-lab/gvcfs/03_joint-calling/ploidy-1
+NAME=pd_ploidy-1
 
-## run script
+## run script (ploidy set to 1)
 cd $OUTDIR
 gatk --java-options "-Xmx4g" GenotypeGVCFs \
    -R $REF \
-   -V $GENDBI \
+   -V gendb://$GENDBI \
    -all-sites \
+   -ploidy 1 \
    -L $INTLIST \
    -O $NAME.vcf.gz \
        
