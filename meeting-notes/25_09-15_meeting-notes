@@ -1,0 +1,16 @@
+run vcfr / qc analysis on vcf file
+
+``` 
+-i "MAF > 0.1"
+# or
+-i "QUAL > 10" ## <- phred score (or 20, probs better) ##
+
+```
+filtering depends on file --> need qc step
+- allele freq bins (bcftools stats)
+
+
+pcangst for population structure
+run pixy
+
+look at heterozygocity
