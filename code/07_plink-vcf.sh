@@ -17,19 +17,19 @@ hostname
 date
 
 ## load modules
-module load plink/1.07
+module load plink/2.00a2.3LM
 
 ## set variables
 INDIR=/home/FCAM/cpugliese/wns-lab/vcfs/01_orig-vcfs
-PLDIR=/isg/shared/apps/plink/plink-1.07-x86_64
+PLDIR=/isg/shared/apps/plink/2.00a2.3LM/
 OUTDIR=/home/FCAM/cpugliese/wns-lab/vcfs/03_filtered-vcfs
 
 cd $OUTDIR
 
-$PLDIR/plink --vcf $INDIR/pd.vcf.gz \
+$PLDIR/plink2 --vcf $INDIR/pd.vcf.gz \
 --make-bed \
 --double-id \
---extra-chrs \
+--extra-chrs #wrong filter name, need to fix \
 --maf 0.05 \
 --geno 0.1 \
 --mind 0.5 \
