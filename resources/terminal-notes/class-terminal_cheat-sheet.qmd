@@ -25,7 +25,7 @@ aliases
 #### commands
 
 |  |  |
-|----|----|
+|------------------------------------|------------------------------------|
 | ssh eeb5300usr14\@xanadu-submit-ext.cam.uchc.edu | login (ssheeb) |
 | srun --partition=mcbstudent --qos=mcbstudent --pty bash | reg bash session |
 | scp path/to/data.tar.gz eeb5300usr14\@transfer.cam.uchc.edu:\<Path/to/Destination\> | transfering files from laptop to cluster |
