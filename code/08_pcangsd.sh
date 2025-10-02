@@ -1,8 +1,8 @@
 #!/bin/bash
-#SBATCH --job-name=plink-vcf
+#SBATCH --job-name=pcangsd
 #SBATCH -N 1
 #SBATCH -n 1
-#SBATCH -c 64
+#SBATCH -c 25
 #SBATCH --mem=20G
 #SBATCH --partition=general
 #SBATCH --qos=general
@@ -17,19 +17,19 @@ hostname
 date
 
 ## load modules
-
+module load pcangsd/1.0
+module load python/3.10.1
 
 ## set variables
-INDIR=/home/FCAM/cpugliese/wns-lab/vcfs/03_filtered-vcfs
+INDIR=/home/FCAM/cpugliese/wns-lab/vcfs/03_filtered-vcfs/plink_files
 OURDIR=/home/FCAM/cpugliese/wns-lab/vcfs/04_pcangsd
+PCANGSD="python3 /isg/shared/apps/pcangsd/1.0/pcangsd/pcangsd.py"
 
-mkdir $OUTDIR
 cd $OUTDIR
 
 ## PCAnsd
-pcangsd --plink $INDIR/plink_pd \
---eig 2 \
---threads 64
---out pcangsd_pd
+$PCANGSD -plink $INDIR/plink_pd \
+-threads 25 \
+-out pcangsd_pd
 
 ########### script end
