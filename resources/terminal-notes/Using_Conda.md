@@ -31,6 +31,17 @@ to rename, go into conda directory and change the env directory name itself
 
 ```{bash}
 conda env update -n pcangsd -f /home/FCAM/cpugliese/bin/pcangsd_env.yml
+# got error
+    # Solving environment: failed 
+    # ResolvePackageNotFound: 
+    # [long list of package names]
+
 conda env export -n pcangsd -f /home/FCAM/cpugliese/bin/pcangsd_env.yml --no-builds
 # no builds argument will make it so it ignores platform-specific builds (if there's trouble downloading dependencies)
+# didn't work --> errors similar to the original SRE module mismatch
+
+conda env export -f /home/FCAM/cpugliese/bin/pcangsd_env.yml --format yml --no-builds
+# also didn't work
+# needs to be run inside an active envirionment or provide env name (with -n)
+# also --format is not an actual option here. love when documentation doesn't actually line up with the different verions
 ```
