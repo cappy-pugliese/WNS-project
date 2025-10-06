@@ -1,0 +1,23 @@
+######### Dagilis suggested aliases #########
+alias ls='ls -F'
+alias ll='ls -alF'
+alias bashmem='srun --partition=general --mem=3G --qos=general --pty bash'
+export PATH=$PATH:~bin/:/home/FCAM/cpugliese/bin
+alias sq='squeue -u cpugliese'
+alias numjob='squeue | wc -l'
+
+######### Personal aliases #########
+alias cdf='cd ~/tmp/data/sra-seq/fastq'
+alias cdseq='cd ~/tmp/data/sra-seq'
+alias cdlab='cd /labs/Dagilis'
+alias bash='srun --partition=general --qos=general --pty bash'
+
+######### Modules #########
+#module load sratoolkit/3.0.5
+#module load fastqc/0.12.1
+
+### for mapping sequences ###
+#module load bbmap/39.08
+#module load bwa/0.7.5a
+#module load samtools/1.9
+#module load picard/2.9.2

@@ -22,7 +22,7 @@ module load python/3.10.1
 
 ## set variables
 INDIR=/home/FCAM/cpugliese/wns-lab/vcfs/03_filtered-vcfs/plink_files
-OURDIR=/home/FCAM/cpugliese/wns-lab/vcfs/04_pcangsd
+OUTDIR=/home/FCAM/cpugliese/wns-lab/vcfs/04_pcangsd
 PCANGSD="python3 /isg/shared/apps/pcangsd/1.0/pcangsd/pcangsd.py"
 
 cd $OUTDIR
