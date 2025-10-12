@@ -45,3 +45,28 @@ conda env export -f /home/FCAM/cpugliese/bin/pcangsd_env.yml --format yml --no-b
 # needs to be run inside an active envirionment or provide env name (with -n)
 # also --format is not an actual option here. love when documentation doesn't actually line up with the different verions
 ```
+
+```{bash}
+conda env create -f /home/FCAM/cpugliese/bin/pcangsd_env.yml -n test
+#Using Anaconda Cloud api site https://api.anaconda.org
+#Solving environment: failed
+
+
+```
+
+```{bash}
+#miniconda3
+conda create -f /home/FCAM/cpugliese/bin/pcangsd_env.yml -n pcangsd
+```
+
+```{bash}
+### conda install command ###
+pcangsd dependencies:
+python>=3.10
+cython>3.0.0
+numpy>2.0.0
+scipy>1.14.0
+pip
+
+conda install --file /home/FCAM/cpugliese/bin/miniconda3/envs/pca2/pcangsd_dependencies.txt
+```

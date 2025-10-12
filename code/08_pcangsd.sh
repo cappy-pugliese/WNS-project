@@ -16,20 +16,25 @@
 hostname
 date
 
+sh --verbose
+########## HAVE NOT ADDED THIS LINE IN YET ON CLUSTER
+
 ## load modules
 module load pcangsd/1.0
-module load python/3.10.1
+source /home/FCAM/cpugliese/.bashrc
+conda activate pcangsd
 
 ## set variables
-INDIR=/home/FCAM/cpugliese/wns-lab/vcfs/03_filtered-vcfs/plink_files
-OUTDIR=/home/FCAM/cpugliese/wns-lab/vcfs/04_pcangsd
+INDIR=/home/FCAM/cpugliese/lab_wns/vcfs/03_filtered-vcfs/plink_files
+OUTDIR=/home/FCAM/cpugliese/lab_wns/vcfs/04_pcangsd
 PCANGSD="python3 /isg/shared/apps/pcangsd/1.0/pcangsd/pcangsd.py"
 
 cd $OUTDIR
 
 ## PCAnsd
 $PCANGSD -plink $INDIR/plink_pd \
--threads 25 \
 -out pcangsd_pd
 
+
+conda deactivate
 ########### script end

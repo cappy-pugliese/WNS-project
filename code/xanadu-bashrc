@@ -2,7 +2,7 @@
 alias ls='ls -F'
 alias ll='ls -alF'
 alias bashmem='srun --partition=general --mem=3G --qos=general --pty bash'
-export PATH=$PATH:~bin/:/home/FCAM/cpugliese/bin
+export PATH="$PATH:~bin/:/home/FCAM/cpugliese/bin:/usr/bin/bash:/usr/share/man/man1"
 alias sq='squeue -u cpugliese'
 alias numjob='squeue | wc -l'
 
@@ -13,11 +13,20 @@ alias cdlab='cd /labs/Dagilis'
 alias bash='srun --partition=general --qos=general --pty bash'
 
 ######### Modules #########
-#module load sratoolkit/3.0.5
-#module load fastqc/0.12.1
+#anaconda
+#. /isg/shared/apps/anaconda3/4.1.1/etc/profile.d/conda.sh
 
-### for mapping sequences ###
-#module load bbmap/39.08
-#module load bwa/0.7.5a
-#module load samtools/1.9
-#module load picard/2.9.2
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/FCAM/cpugliese/bin/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/FCAM/cpugliese/bin/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/FCAM/cpugliese/bin/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/FCAM/cpugliese/bin/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
