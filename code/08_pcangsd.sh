@@ -16,7 +16,6 @@
 hostname
 date
 
-sh --verbose
 ########## HAVE NOT ADDED THIS LINE IN YET ON CLUSTER
 
 ## load modules
