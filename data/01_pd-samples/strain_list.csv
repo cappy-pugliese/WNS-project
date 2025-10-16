@@ -1,24 +1,24 @@
-Location,State,Provider,Year,Sequence accession number
-White Cave,NB,K. Vanderwolf,2012,SRR5755627
-Markhamville Mine,NB,K. Vanderwolf,2012,SRR5755628
-White Cave,NB,K. Vanderwolf,2012,SRR5757331
-Glebe Mine,NB,K. Vanderwolf,2013,SRR5755625
-Glebe Mine,NB,K. Vanderwolf,2013,SRR5755626
-Markhamville Mine,NB,K. Vanderwolf,2013,SRR5755631
-Markhamville Mine,NB,K. Vanderwolf,2013,SRR5755632
-Thuringa,Germany,V. Misra,2009,SRR5755629
-Dorchester Mine,NB,K. Vanderwolf,2013,SRR5755630
-Glebe Mine,NB,K. Vanderwolf,2013,SRR5755633
-Williams Hotel,NY,V. Mishra,2008,SRR5755634
-n/a,NS,K. Vanderwolf,2013,SRR5755620
-n/a,NS,K. Vanderwolf,2013,SRR5755621
-Thunder Bay,ON,C. Willis,2015,SRR5755618
-Thunder Bay,ON,C.Willis,2015,SRR5755619
-Thunder Bay,ON,C. Willis,2015,SRR5755623
-White Cave,NB,K. Vanderwolf,2015,SRR5755624
-n/a,PEI,K. Vanderwolf,2013,SRR5755622
-King County,WA,n/a,2016,SRR3545533
-Jackson County,Al,n/a,2015,SRR3545532
-Iowa County,WI,n/a,2016,SRR3545531
-Albany County,NY,n/a,2008,SRR3545530
-Williams Hotel,NY,n/a,2008,SRR1952982
+location,state,country,continent,provider,year,sra,lat,long
+White Cave,NB,Canada,N_America,K. Vanderwolf,2012,SRR5755627,,
+Markhamville Mine,NB,Canada,N_America,K. Vanderwolf,2012,SRR5755628,,
+White Cave,NB,Canada,N_America,K. Vanderwolf,2012,SRR5757331,,
+Glebe Mine,NB,Canada,N_America,K. Vanderwolf,2013,SRR5755625,45.8172,-65.6105
+Glebe Mine,NB,Canada,N_America,K. Vanderwolf,2013,SRR5755626,45.8172,-65.6105
+Markhamville Mine,NB,Canada,N_America,K. Vanderwolf,2013,SRR5755631,,
+Markhamville Mine,NB,Canada,N_America,K. Vanderwolf,2013,SRR5755632,,
+Thuringa,n/a,Germany,Europe,V. Misra,2009,SRR5755629,,
+Dorchester Mine,NB,Canada,N_America,K. Vanderwolf,2013,SRR5755630,,
+Glebe Mine,NB,Canada,N_America,K. Vanderwolf,2013,SRR5755633,45.8172,-65.6105
+Williams Hotel,NY,USA,N_America,V. Mishra,2008,SRR5755634,,
+n/a,NS,Canada,N_America,K. Vanderwolf,2013,SRR5755620,,
+n/a,NS,Canada,N_America,K. Vanderwolf,2013,SRR5755621,,
+Thunder Bay,ON,Canada,N_America,C. Willis,2015,SRR5755618,,
+Thunder Bay,ON,Canada,N_America,C.Willis,2015,SRR5755619,,
+Thunder Bay,ON,Canada,N_America,C. Willis,2015,SRR5755623,,
+White Cave,NB,Canada,N_America,K. Vanderwolf,2015,SRR5755624,,
+n/a,PEI,Canada,N_America,K. Vanderwolf,2013,SRR5755622,,
+King County,WA,USA,N_America,n/a,2016,SRR3545533,,
+Jackson County,Al,USA,N_America,n/a,2015,SRR3545532,,
+Iowa County,WI,USA,N_America,n/a,2016,SRR3545531,,
+Albany County,NY,USA,N_America,n/a,2008,SRR3545530,,
+Williams Hotel,NY,USA,N_America,n/a,2008,SRR1952982,,
