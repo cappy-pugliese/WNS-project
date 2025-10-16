@@ -6,6 +6,7 @@ np <- import("numpy")
 library(readr)
 library(tidyverse)
 library(ggplot2)
+library(see)
 library(vcfR)
 
 setwd("/Users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/data/04_pcangsd")
@@ -22,15 +23,22 @@ for (n in 1:k) {
 }
 colnames(admix) <- pops
 
-setwd("/Users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/data/03_vcfs")
-vcf = read.vcfR("pd.vcf.gz")
-GT = extract.gt(vcf,element="GT",as.numeric=TRUE)
 
-GT <- as.data.frame(GT)
-rownames(admix) = colnames(GT)
-admix$ind = colnames(GT)
+indivs <- read.csv("ind_ids.txt")
+
+
+rownames(admix) = indivs$individuals
+admix$ind = indivs$individuals
+
 
 #Pivot to long format
 df_long = pivot_longer(admix,1:k,names_to="Pop",values_to="admix")
 
-ggplot(df_long,aes(x=ind,y=admix,fill=Pop))+geom_col(col=NA)
+ggplot(df_long,aes(x=ind,y=admix,fill=Pop)) +
+scale_fill_okabeito(
+  palette = "full",
+  reverse = FALSE,
+  order = 1:6,
+  aesthetics = "fill",
+  ) +
+geom_col(col=NA,inherit.aes = TRUE)
