@@ -1,0 +1,16 @@
+
+with ld
+-rw-r--r-- 1 cpugliese domain users 36376112 Oct 14 14:17 pcangsd-w-ld_pd.admix.6.F.npy
+-rw-r--r-- 1 cpugliese domain users     3680 Oct 14 14:17 pcangsd-w-ld_pd.admix.6.Q.npy
+-rw-r--r-- 1 cpugliese domain users      238 Oct 14 14:13 pcangsd-w-ld_pd.args
+-rw-r--r-- 1 cpugliese domain users   137838 Oct 14 14:16 pcangsd-w-ld_pd.cov
+
+without ld (original run)
+-rw-r--r-- 1 cpugliese domain users 36376112 Oct 14 13:40 pcangsd_pd.admix.6.F.npy
+-rw-r--r-- 1 cpugliese domain users     3680 Oct 14 13:40 pcangsd_pd.admix.6.Q.npy
+-rw-r--r-- 1 cpugliese domain users      208 Oct 14 13:37 pcangsd_pd.args
+-rw-r--r-- 1 cpugliese domain users   137838 Oct 14 13:40 pcangsd_pd.cov
+
+
+- `.args` is only different because I added a longer directory path to the one with ld
+- now realizing that maybe i didn't need to do this, because looking at both plink outputs, they are the same except the one with ld also has `.prune.in` and `.prune.out`
