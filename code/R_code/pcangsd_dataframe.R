@@ -30,6 +30,7 @@ pd_locations <- read.csv("/Users/caprinapugliese/Documents/School/Uconn/2024-26_
 rownames(admix) = indivs$individuals
 admix$ind = indivs$individuals
 admix$continent = pd_locations$continent
+admix$country = pd_locations$country
 
 
 #Pivot to long format
