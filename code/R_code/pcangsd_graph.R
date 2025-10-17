@@ -35,3 +35,25 @@ scale_fill_okabeito(
   aesthetics = "fill",
   ) +
 geom_col(col=NA,inherit.aes = TRUE)
+
+# by country
+ggplot(df_long,aes(x=country,y=admix,fill=Pop,group=Pop)) +
+scale_fill_okabeito(
+  palette = "full",
+  reverse = FALSE,
+  order = 1:6,
+  aesthetics = "fill",
+  ) +
+scale_x_discrete(limits = c("USA", "Canada", "Czech Republic","Ukraine","Hungary","France","Germany","Switzerland","Mongolia")) +
+geom_col(col=NA,inherit.aes = TRUE)
+
+# by state- not that great
+ggplot(df_long,aes(x=state,y=admix,fill=Pop,group=Pop)) +
+scale_fill_okabeito(
+  palette = "full",
+  reverse = FALSE,
+  order = 1:6,
+  aesthetics = "fill",
+  ) +
+theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+geom_col(col=NA,inherit.aes = TRUE)
