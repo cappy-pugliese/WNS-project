@@ -31,6 +31,7 @@ rownames(admix) = indivs$individuals
 admix$ind = indivs$individuals
 admix$continent = pd_locations$continent
 admix$country = pd_locations$country
+admix$state = pd_locations$state
 
 
 #Pivot to long format
