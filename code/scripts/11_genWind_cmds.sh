@@ -1,0 +1,24 @@
+mapfile -t chr < chrs.txt
+mapfile -t lengths < lengths.txt
+wnd=10000
+for k in `seq 1 ${#chr[@]}`; do
+        let j=$k-1
+        c=${chr[${j}]}
+        START=0
+        END=${lengths[${j}]}/$wnd+1
+        MAX=${lengths[${j}]}
+        for ((i=$START;i<=$END;i++)); do
+                        let start=$i*$wnd+1
+                        let end=$start+$wnd
+                        end=$((end<MAX ? end : MAX))
+                        echo "##${c}_${i}_wnd${wnd}"
+                        echo "bcftools view -r ${c}:${start}-${end} ${1} > ${c}_${i}_wnd${wnd}.vcf"
+                        echo "~/bin/vcf2phylip.py -m 73 -i ${c}_${i}_wnd${wnd}.vcf"
+                        echo "rm ${c}_${i}_wnd${wnd}.vcf"
+                        echo "iqtree3 -redo -pre ${c}_${i}_wnd${wnd} -nt AUTO -ntmax 4 -bb 1000 -m auto -s ${c}_${i}_wnd${wnd}.min73.phy"
+                done
+        done
+
+
+#You will need a chrs.txt file with a list of chromsomes and lengths.txt
+#then you can just run sh genWind_cmds.sh <your_vcf>
