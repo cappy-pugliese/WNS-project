@@ -22,3 +22,7 @@ for k in `seq 1 ${#chr[@]}`; do
 
 #You will need a chrs.txt file with a list of chromsomes and lengths.txt
 #then you can just run sh genWind_cmds.sh <your_vcf>
+
+######## To dos before running code!!! ########
+#wget vcf2phylip.py in bin and make sure paths are same
+#move filtered vcf and index into same folder when running script just to make things easier
