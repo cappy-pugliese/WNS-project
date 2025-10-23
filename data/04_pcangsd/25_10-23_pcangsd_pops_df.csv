@@ -1,0 +1,75 @@
+ind,continent,country,state,Pop,admix
+Pd_02,N_America,USA,Wisconsin,pop4,0.966781675815582
+Pd_03,Europe,Czech Republic,Central Bohemian Region,pop3,0.699668109416962
+Pd_04,Europe,Czech Republic,Central Bohemian Region,pop3,0.916937410831451
+Pd_05,Europe,Czech Republic,Hradec Kralove,pop3,0.913047730922699
+Pd_06,Europe,Czech Republic,Hradec Kralove,pop3,0.902355194091797
+Pd_07,N_America,Canada,Ontario,pop4,0.999134063720703
+Pd_08,N_America,Canada,Ontario,pop4,0.999015748500824
+Pd_09,N_America,Canada,Nova Scotia,pop4,0.999187648296356
+Pd_10,N_America,Canada,Nova Scotia,pop4,0.99918669462204
+Pd_11,N_America,Canada,Prince Edward Island,pop4,0.999215066432953
+Pd_12,N_America,Canada,Ontario,pop4,0.99913090467453
+Pd_13,N_America,Canada,New Brunswick,pop4,0.99931263923645
+Pd_14,N_America,Canada,New Brunswick,pop4,0.999352693557739
+Pd_15,N_America,Canada,New Brunswick,pop4,0.998882532119751
+Pd_16,N_America,Canada,New Brunswick,pop4,0.998883306980133
+Pd_17,N_America,Canada,New Brunswick,pop4,0.999217212200165
+Pd_18,Europe,Germany,Thuringa,pop3,0.988574862480164
+Pd_19,N_America,Canada,New Brunswick,pop4,0.999141871929169
+Pd_20,N_America,Canada,New Brunswick,pop4,0.999352395534515
+Pd_21,N_America,Canada,New Brunswick,pop4,0.999352872371674
+Pd_22,N_America,Canada,New Brunswick,pop4,0.999338388442993
+Pd_23,N_America,USA,New Brunswick,pop4,0.999144434928894
+Pd_24,N_America,Canada,New Brunswick,pop4,0.999299287796021
+Pd_26,N_America,Canada,New Brunswick,pop4,0.995180428028107
+Pd_27,N_America,Canada,Prince Edward Island,pop4,0.995515823364258
+Pd_28,N_America,USA,New York,pop4,0.998627841472626
+Pd_29,N_America,USA,Minnesota,pop6,0.781525373458862
+Pd_30,N_America,USA,Wisconsin,pop2,0.996977746486664
+Pd_31,N_America,Canada,Alberta,pop6,0.638759970664978
+Pd_32,N_America,USA,Vermont,pop4,0.52996438741684
+Pd_33,N_America,USA,New York,pop4,0.52677184343338
+Pd_34,N_America,USA,Wisconsin,pop5,0.999498426914215
+Pd_35,N_America,USA,Minnesota,pop6,0.96777069568634
+Pd_36,N_America,USA,New York,pop4,0.955388844013214
+Pd_37,N_America,USA,New York,pop4,0.955386400222778
+Pd_39,N_America,USA,New York,pop4,0.955386698246002
+Pd_45,N_America,USA,New York,pop4,0.955389380455017
+Pd_47,Europe,Germany,Thuringa,pop3,0.994204819202423
+Pd_48,Europe,Switzerland,Aargau,pop3,0.997860968112946
+Pd_49,N_America,USA,Pennsylvania,pop4,0.996697068214417
+Pd_50,N_America,USA,New Jersey,pop4,0.995888292789459
+Pd_51,N_America,USA,West Virginia,pop4,0.99700140953064
+Pd_52,N_America,Canada,Ontario,pop4,0.995985805988312
+Pd_53,N_America,USA,Tennessee,pop4,0.996426820755005
+Pd_54,N_America,USA,Vermont,pop4,0.994964063167572
+Pd_55,N_America,USA,Connecticut,pop4,0.995319545269012
+Pd_56,N_America,USA,Virginia,pop4,0.994965791702271
+Pd_57,N_America,USA,Massachussetts,pop4,0.99477630853653
+Pd_58,N_America,USA,Alabama,pop4,0.967659413814545
+Pd_59,N_America,USA,Washington,pop4,0.969130098819733
+Pd_60,Europe,Hungary,Kislod,pop3,0.917984485626221
+Pd_62,N_America,USA,Connecticut,pop4,0.994074642658234
+Pd_63,N_America,USA,Tennessee,pop4,0.993864417076111
+Pd_64,N_America,USA,Maryland,pop4,0.99562394618988
+Pd_65,N_America,USA,New York,pop4,0.99470853805542
+Pd_66,N_America,USA,Vermont,pop4,0.994719803333282
+Pd_67,N_America,Canada,Ontario,pop4,0.994719207286835
+Pd_68,N_America,USA,Tennessee,pop4,0.998178243637085
+Pd_70,Asia,Mongolia,NA,pop3,0.973069190979004
+Pd_71,Asia,Mongolia,NA,pop3,0.972974717617035
+Pd_72,N_America,Canada,New Brunswick,pop4,0.997988164424896
+Pd_73,N_America,USA,Missouri,pop4,0.998997092247009
+Pd_74,N_America,USA,Virginia,pop4,0.996344447135925
+Pd_75,N_America,USA,Tennessee,pop4,0.994938373565674
+Pd_76,N_America,USA,Indiana,pop4,0.997972130775452
+Pd_77,N_America,USA,Indiana,pop4,0.995521485805511
+Pd_78,N_America,USA,Deleware,pop4,0.998203277587891
+Pd_79,N_America,USA,Maine,pop4,0.998428344726562
+Pd_80,Europe,Ukraine,NA,pop3,0.767340898513794
+Pd_81,Europe,France,Aquitaine,pop3,0.92676967382431
+Pd_82,N_America,Canada,Ontario,pop4,0.994203865528107
+Pd_83,N_America,Canada,Nova Scotia,pop4,0.99478018283844
+Pd_84,N_America,Canada,New Brunswick,pop4,0.99564254283905
+Pd_85,N_America,Canada,New Brunswick,pop4,0.995756089687347
