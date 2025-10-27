@@ -1,3 +1,6 @@
+CHR=/home/FCAM/cpugliese/wns/06_iqtree/chrs.txt
+LEN=/home/FCAM/cpugliese/wns/06_iqtree/lengths.txt
+
 mapfile -t chr < $CHR
 mapfile -t lengths < $LEN
 wnd=$2

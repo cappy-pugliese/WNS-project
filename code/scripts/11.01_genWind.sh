@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=genWind
+#SBATCH --job-name=gen_cmds
 #SBATCH -N 1
 #SBATCH -n 1
 #SBATCH -c 2
@@ -22,9 +22,9 @@ module load bcftools/1.20
 ## variables
 INDIR=/home/FCAM/cpugliese/lab_wns/05_vcfs/03_filtered-vcfs
 OUTDIR=/home/FCAM/cpugliese/lab_wns/07_iqtree/01_genWind/02_Cappy-cmds
-CHR=/home/FCAM/cpugliese/lab_wns/07_iqtree/01_genWind/chrs.txt
-LEN=/home/FCAM/cpugliese/lab_wns/07_iqtree/01_genWind/lengths.txt
+GENWIND=/home/FCAM/cpugliese/wns/06_iqtree/scripts/genWind_cmds.sh
 
-sh genWind_cmds.sh pd_filtered.vcf.gz
+cd $OUTDIR
+bash $GENWIND $INDIR/pd_filtered.vcf.gz
 
-
+########### script end
