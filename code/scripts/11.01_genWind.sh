@@ -25,6 +25,7 @@ OUTDIR=/home/FCAM/cpugliese/lab_wns/07_iqtree/01_genWind/02_Cappy-cmds
 GENWIND=/home/FCAM/cpugliese/wns/06_iqtree/scripts/genWind_cmds.sh
 
 cd $OUTDIR
-bash $GENWIND $INDIR/pd_filtered.vcf.gz
+bash $GENWIND $INDIR/pd_filtered.vcf.gz 10000
+## needs to be run: `bash genWind.sh <yourvcf> <window_size>`
 
 ########### script end

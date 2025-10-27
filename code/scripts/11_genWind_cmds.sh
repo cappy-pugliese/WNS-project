@@ -12,7 +12,7 @@ for k in `seq 1 ${#chr[@]}`; do
         MAX=${lengths[${j}]}
         for ((i=$START;i<$END;i++)); do
                         let start=$i*$wnd+1
-                        let end=$start+$wnd
+                        let end=$((start + wnd))
                         end=$((end<MAX ? end : MAX))
                         echo "##${c}_${i}_wnd${wnd}"
                         echo "bcftools view -r ${c}:${start}-${end} ${1} > ${c}_${i}_wnd${wnd}.vcf"
