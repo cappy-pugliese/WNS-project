@@ -20,8 +20,8 @@ date
 module load bcftools/1.9
 
 ## set variables
-INDIR=/home/FCAM/cpugliese/lab_wns/vcfs/01_orig-vcfs
-OUTDIR=/home/FCAM/cpugliese/lab_wns/vcfs/03_filtered-vcfs
+INDIR=/home/FCAM/cpugliese/lab_wns/05_vcfs/01_orig-vcfs
+OUTDIR=/home/FCAM/cpugliese/lab_wns/05_vcfs/03_filtered-vcfs
 
 cd $OUTDIR
 

@@ -1,5 +1,5 @@
-mapfile -t chr < chrs.txt
-mapfile -t lengths < lengths.txt
+mapfile -t chr < $CHR
+mapfile -t lengths < $LEN
 wnd=$2
 for k in `seq 1 ${#chr[@]}`; do
         let j=$k-1
