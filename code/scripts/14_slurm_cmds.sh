@@ -13,19 +13,11 @@
 
 ########### script start
 
-hostname
-date
-
-## load modules
-module load bcftools/1.20
-
 ## variables
-INDIR=/home/FCAM/cpugliese/lab_wns/05_vcfs/03_filtered-vcfs
+INDIR=/home/FCAM/cpugliese/wns/06_iqtree
 OUTDIR=/home/FCAM/cpugliese/lab_wns/07_iqtree/01_genWind/02_Cappy-cmds
-GENWIND=/home/FCAM/cpugliese/wns/06_iqtree/scripts/02_genWind_cmds.sh
+PIPE=/home/FCAM/cpugliese/wns/06_iqtree/scripts/03_pipe2slurm.sh
 
 cd $OUTDIR
-bash $GENWIND $INDIR/pd_filtered.vcf.gz 10000
-## needs to be run: `bash genWind.sh <yourvcf> <window_size>`
-
-########### script end
+$INDIR/gen_cmds.txt | $PIPE
+## ^^ would i do it this way? or would i do it similar to the command last time and do `$PIPE $INDIR/gen_cmds.txt`?
