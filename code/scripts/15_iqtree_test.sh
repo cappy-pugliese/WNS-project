@@ -29,3 +29,6 @@ rm NW_020167520.1_0_wnd10000.vcf
 iqtree3 -redo -pre NW_020167520.1_0_wnd10000 -nt AUTO -ntmax 4 -bb 1000 -s NW_020167520.1_0_wnd10000.phy
 
 ########### script end
+
+# work in scratch space
+/scratch/cpugliese
