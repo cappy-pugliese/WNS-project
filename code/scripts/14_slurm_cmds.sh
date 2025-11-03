@@ -19,5 +19,9 @@ OUTDIR=/home/FCAM/cpugliese/lab_wns/07_iqtree/01_genWind/02_Cappy-cmds
 PIPE=/home/FCAM/cpugliese/wns/06_iqtree/scripts/03_pipe2slurm.sh
 
 cd $OUTDIR
-$INDIR/gen_cmds.txt | $PIPE
+cat $INDIR/gen_cmds.txt | $PIPE
 ## ^^ would i do it this way? or would i do it similar to the command last time and do `$PIPE $INDIR/gen_cmds.txt`?
+
+## making a file executable
+# u is for user, x is for executable
+chmod u+x <file>
