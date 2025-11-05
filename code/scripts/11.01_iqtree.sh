@@ -21,8 +21,8 @@ module load bcftools/1.20
 
 ## variables
 INDIR=/home/FCAM/cpugliese/lab_wns/05_vcfs/03_filtered-vcfs
-OUTDIR=/home/FCAM/cpugliese/lab_wns/07_iqtree/01_genWind/02_Cappy-cmds
 GENWIND=/home/FCAM/cpugliese/wns/06_iqtree/scripts/02_genWind_cmds.sh
+OUTDIR=/home/FCAM/cpugliese/wns/06_iqtree/
 
 cd $OUTDIR
 bash $GENWIND $INDIR/pd_filtered.vcf.gz 10000
