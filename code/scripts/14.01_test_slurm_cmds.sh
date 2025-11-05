@@ -15,21 +15,10 @@
 
 ## variables
 INDIR=/home/FCAM/cpugliese/wns/06_iqtree
-OUTDIR=/home/FCAM/cpugliese/tmp/01_iqtree
+OUTDIR=/home/FCAM/cpugliese/wns/06_iqtree/02_test-run
 PIPE=/home/FCAM/cpugliese/wns/06_iqtree/scripts/03_pipe2slurm.sh
 
 cd $OUTDIR
-cat $INDIR/gen_cmds.txt | $PIPE
+cat $INDIR/test_cmds.txt | $PIPE
 
 ########### script end
-
-
-
-## making a file executable
-# u is for user, x is for executable
-chmod u+x <file>
-
-# work in scratch space
-/scratch/cpugliese
-
-for j in *.sbatch; do sbatch $j; done
