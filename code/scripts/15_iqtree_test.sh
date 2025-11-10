@@ -26,6 +26,11 @@ cd $OUTDIR
 bcftools view -r NW_020167520.1:1-10001 /home/FCAM/cpugliese/lab_wns/05_vcfs/03_filtered-vcfs/pd_filtered.vcf.gz > NW_020167520.1_0_wnd10000.vcf
 plink2 --vcf NW_020167520.1_0_wnd10000.vcf --snps-only --allow-extra-chr --export phylip-phased --out NW_020167520.1_0_wnd10000
 rm NW_020167520.1_0_wnd10000.vcf
-iqtree3 -redo -pre NW_020167520.1_0_wnd10000 -nt AUTO -ntmax 4 -bb 1000 -s NW_020167520.1_0_wnd10000.phy
+iqtree3 -redo -pre NW_020167520.1_0_wnd10000 -ntmax 4 -bb 1000 -s NW_020167520.1_0_wnd10000.phy
 
 ########### script end
+
+# ones that ran:
+    # 0, 2, 5, 9
+# ones that did not run:
+    # 1, 3, 4, 6, 7, 8
