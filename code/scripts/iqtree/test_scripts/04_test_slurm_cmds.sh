@@ -12,11 +12,12 @@
 ########### script start
 
 ## variables
-INDIR=/home/FCAM/cpugliese/wns/06_iqtree/01_text-files/
+CMDSFILE=test3_cmds.txt
+INDIR=/home/FCAM/cpugliese/wns/06_iqtree/01_text-files
 OUTDIR=/home/FCAM/cpugliese/wns/06_iqtree/02_test-runs/02_test-run/
 PIPE=/home/FCAM/cpugliese/wns/06_iqtree/scripts/03_pipe2slurm.sh
 
 cd $OUTDIR
-cat $INDIR/test2_cmds.txt | $PIPE
+cat $INDIR/$CMDSFILE | $PIPE
 
 ########### script end
