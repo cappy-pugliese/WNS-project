@@ -6,8 +6,6 @@
 #SBATCH --mem=3G
 #SBATCH --partition=general
 #SBATCH --qos=general
-#SBATCH --mail-type=ALL
-#SBATCH --mail-user=caprina.pugliese@uconn.edu
 #SBATCH -o %x_%j.out
 #SBATCH -e %x_%j.err
 
@@ -20,12 +18,12 @@ date
 module load bcftools/1.20
 
 ## variables
-INDIR=/home/FCAM/cpugliese/lab_wns/05_vcfs/03_filtered-vcfs
-GENWIND=/home/FCAM/cpugliese/wns/06_iqtree/scripts/02_genWind_cmds.sh
-OUTDIR=/home/FCAM/cpugliese/wns/06_iqtree/
+VCF=/home/FCAM/cpugliese/lab_wns/05_vcfs/03_filtered-vcfs
+GENWIND=/home/FCAM/cpugliese/wns/06_iqtree/scripts/01_genWind_cmds.sh
+INDIR=/home/FCAM/cpugliese/wns/06_iqtree/01_text-files
 
-cd $OUTDIR
-bash $GENWIND $INDIR/pd_filtered.vcf.gz 10000
+cd $INDIR
+bash $GENWIND $VCF/pd_filtered.vcf.gz 10000
 ## needs to be run: `bash genWind.sh <yourvcf> <window_size>`
 
 ########### script end

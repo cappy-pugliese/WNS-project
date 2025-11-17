@@ -18,7 +18,7 @@ module load bcftools/1.20
 module load iqtree/3.0.1
 
 ## set variables
-OUTDIR=/home/FCAM/cpugliese/wns/06_iqtree/test_run
+OUTDIR=/home/FCAM/cpugliese/wns/06_iqtree/02_test-run/test_2
 
 cd $OUTDIR
 
@@ -26,7 +26,7 @@ cd $OUTDIR
 bcftools view -r NW_020167520.1:1-10001 /home/FCAM/cpugliese/lab_wns/05_vcfs/03_filtered-vcfs/pd_filtered.vcf.gz > NW_020167520.1_0_wnd10000.vcf
 plink2 --vcf NW_020167520.1_0_wnd10000.vcf --snps-only --allow-extra-chr --export phylip-phased --out NW_020167520.1_0_wnd10000
 rm NW_020167520.1_0_wnd10000.vcf
-iqtree3 -redo -pre NW_020167520.1_0_wnd10000 -ntmax 4 -cptime 00:19:00 -bb 1000 -s NW_020167520.1_0_wnd10000.phy
+iqtree3 -redo -pre NW_020167520.1_0_wnd10000 -ntmax 4 -cptime 1140 -bb 1000 -s NW_020167520.1_0_wnd10000.phy
 
 ########### script end
 
@@ -37,7 +37,3 @@ iqtree3 -redo -pre NW_020167520.1_0_wnd10000 -ntmax 4 -cptime 00:19:00 -bb 1000 
     # 0, 2, 5, 9
 # ones that did not run:
     # 1, 3, 4, 6, 7, 8
-
-error:
-/var/spool/slurm/slurmd/job9486912/slurm_script: line 23: cd: /home/FCAM/cpugliese/wns/06_iqtree/test_run: No such file or directory
-Expecting integer, but found "00:19:00" instead

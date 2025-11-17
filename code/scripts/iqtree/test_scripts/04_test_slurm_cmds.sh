@@ -6,16 +6,14 @@
 #SBATCH --mem=3G
 #SBATCH --partition=general
 #SBATCH --qos=general
-#SBATCH --mail-type=ALL
-#SBATCH --mail-user=caprina.pugliese@uconn.edu
 #SBATCH -o %x_%j.out
 #SBATCH -e %x_%j.err
 
 ########### script start
 
 ## variables
-INDIR=/home/FCAM/cpugliese/wns/06_iqtree
-OUTDIR=/home/FCAM/cpugliese/wns/06_iqtree/02_test-run
+INDIR=/home/FCAM/cpugliese/wns/06_iqtree/01_text-files/
+OUTDIR=/home/FCAM/cpugliese/wns/06_iqtree/02_test-runs/02_test-run/
 PIPE=/home/FCAM/cpugliese/wns/06_iqtree/scripts/03_pipe2slurm.sh
 
 cd $OUTDIR

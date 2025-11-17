@@ -18,7 +18,7 @@ for k in `seq 1 ${#chr[@]}`; do
                         echo "bcftools view -r ${c}:${start}-${end} ${1} > ${c}_${i}_wnd${wnd}.vcf"
                         echo "plink2 --vcf ${c}_${i}_wnd${wnd}.vcf --snps-only --allow-extra-chr --export phylip-phased --out ${c}_${i}_wnd${wnd}"
                         echo "rm ${c}_${i}_wnd${wnd}.vcf"
-                        echo "iqtree3 -redo -pre ${c}_${i}_wnd${wnd} -nt AUTO -ntmax 4 -bb 1000 -s ${c}_${i}_wnd${wnd}.phy"
+                        echo "iqtree3 -redo -pre ${c}_${i}_wnd${wnd} -ntmax 4 -cptime 1140 -bb 1000 -s ${c}_${i}_wnd${wnd}.phy"
                 done
         done
 

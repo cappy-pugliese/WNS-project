@@ -1,0 +1,7 @@
+01 genWind_cmds --> generates the commands
+02 iqtree.sh --> uses genWind to add the commands to a textfile
+03 pipe2slurm --> add sh header (needs to be executable)
+04 slurm_cmds --> pipes it all and actually generates commands
+05 gen-file-names --> modified genWind script to add textfile will all of the sh commands
+06 file-names.sh --> actual script for gen-file-names
+07 parallel-iqtree --> runs all of the commands in parallel

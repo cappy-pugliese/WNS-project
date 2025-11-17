@@ -14,8 +14,8 @@
 ########### script start
 
 ## variables
-INDIR=/home/FCAM/cpugliese/wns/06_iqtree
-OUTDIR=/home/FCAM/cpugliese/tmp/01_iqtree
+INDIR=/home/FCAM/cpugliese/wns/06_iqtree/01_text-files
+OUTDIR=/home/FCAM/cpugliese/lab_wns/07_iqtree/02_test-run
 PIPE=/home/FCAM/cpugliese/wns/06_iqtree/scripts/03_pipe2slurm.sh
 
 cd $OUTDIR
