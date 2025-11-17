@@ -11,9 +11,6 @@
 
 ########### script start
 
-hostname
-date
-
 ## load modules
 module load bcftools/1.20
 

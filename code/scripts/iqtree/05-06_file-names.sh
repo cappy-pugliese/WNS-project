@@ -39,9 +39,11 @@ module load bcftools/1.20
 
 ## variables
 INDIR=/home/FCAM/cpugliese/lab_wns/05_vcfs/03_filtered-vcfs
-GENWIND=/home/FCAM/cpugliese/wns/06_iqtree/scripts/06_genwind2.sh
-OUTDIR=/home/FCAM/cpugliese/wns/06_iqtree/
+GENWIND=/home/FCAM/cpugliese/wns/06_iqtree/scripts/05_gen-file-names.sh
+OUTDIR=/home/FCAM/cpugliese/wns/06_iqtree/01_text-files/
 
 cd $OUTDIR
-bash $GENWIND $INDIR/pd_filtered.vcf.gz 10000
+bash $GENWIND $INDIR/pd_filtered.vcf.gz 50000
 ## needs to be run: `bash genWind.sh <yourvcf> <window_size>`
+
+########### script end
