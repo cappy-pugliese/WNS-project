@@ -23,7 +23,9 @@ GENWIND=/home/FCAM/cpugliese/wns/06_iqtree/scripts/01_genWind_cmds.sh
 INDIR=/home/FCAM/cpugliese/wns/06_iqtree/01_text-files
 
 cd $INDIR
-bash $GENWIND $VCF/pd_filtered.vcf.gz 10000
+bash $GENWIND $VCF/pd_filtered.vcf.gz 50000
 ## needs to be run: `bash genWind.sh <yourvcf> <window_size>`
+## originally tried with 10,000 window size
+## now trying with 50,000 window size
 
 ########### script end
