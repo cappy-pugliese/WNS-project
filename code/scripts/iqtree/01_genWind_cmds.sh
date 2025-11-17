@@ -14,11 +14,11 @@ for k in `seq 1 ${#chr[@]}`; do
                         echo "##${c}_${i}_wnd${wnd}"
                         echo "source ~/.bashrc"
                         echo "module load bcftools/1.20"
-                        echo "module load iqtree/3.0.1"
+                        echo "module load iqtree/2.2.2"
                         echo "bcftools view -r ${c}:${start}-${end} ${1} > ${c}_${i}_wnd${wnd}.vcf"
                         echo "plink2 --vcf ${c}_${i}_wnd${wnd}.vcf --snps-only --allow-extra-chr --export phylip-phased --out ${c}_${i}_wnd${wnd}"
                         echo "rm ${c}_${i}_wnd${wnd}.vcf"
-                        echo "iqtree3 -redo -pre ${c}_${i}_wnd${wnd} -ntmax 4 -cptime 1140 -bb 1000 -s ${c}_${i}_wnd${wnd}.phy"
+                        echo "iqtree2 -redo -pre ${c}_${i}_wnd${wnd} -ntmax 4 -cptime 1140 -bb 1000 -s ${c}_${i}_wnd${wnd}.phy"
                 done
         done
 
