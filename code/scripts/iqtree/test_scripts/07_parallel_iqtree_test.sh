@@ -21,10 +21,11 @@ module load iqtree/3.0.1
 module load parallel/20180122
 
 ## set variables
-WIND=/home/FCAM/cpugliese/wns/06_iqtree/01_text-files/test_wind.txt
+NAMEFILE=test2_names.txt
+WIND=/home/FCAM/cpugliese/wns/06_iqtree/01_text-files
 TMP=/home/FCAM/cpugliese/wns/06_iqtree/02_test-runs/02_test-run/
 
 cd $TMP
-cat $WIND | parallel -j 2 sbatch {}
+cat $WIND/$NAMEFILE | parallel -j 1 sbatch {}
 
 ########### script end

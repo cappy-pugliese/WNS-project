@@ -17,6 +17,6 @@ OUTDIR=/home/FCAM/cpugliese/wns/06_iqtree/02_test-runs/02_test-run/
 PIPE=/home/FCAM/cpugliese/wns/06_iqtree/scripts/03_pipe2slurm.sh
 
 cd $OUTDIR
-cat $INDIR/test_cmds.txt | $PIPE
+cat $INDIR/test2_cmds.txt | $PIPE
 
 ########### script end
