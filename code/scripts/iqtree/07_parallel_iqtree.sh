@@ -17,7 +17,7 @@ date
 ## load modules
 source ~/.bashrc
 module load bcftools/1.20
-module load iqtree/3.0.1
+module load iqtree/2.2.2
 module load parallel/20180122
 
 ## set variables
