@@ -1,0 +1,43 @@
+#!/bin/bash
+#SBATCH --job-name=haplotypecaller
+#SBATCH -N 1
+#SBATCH -n 1
+#SBATCH -c 4
+#SBATCH --mem=20G
+#SBATCH --partition=general
+#SBATCH --qos=general
+#SBATCH -o %x_%j.out
+#SBATCH -e %x_%j.err
+
+########### script start
+
+hostname
+date
+
+## load modules
+module load GATK/4.3.0.0
+module load parallel/20180122
+
+## load variables
+ACCLIST=/home/FCAM/cpugliese/wns/03_bam2gvcf/02_accessionlists/acclist_only-pd.txt
+#### point to paths
+INDIR=/home/FCAM/cpugliese/lab_wns/03_bams
+OUTDIR=/home/FCAM/cpugliese/lab_wns/04_gvcfs/01_haplotypecaller/02_only-pd
+REF=/home/FCAM/cpugliese/wns/02_raw-data/pd_data/pd_ref/pdestructans.fasta
+
+## files need to be indexed
+#### run indexing script first
+
+## Make .gvcf from sorted bam
+cd $OUTDIR
+
+cat $ACCLIST | parallel -j 2 \
+  gatk HaplotypeCaller \
+    -R $REF \
+    -I $INDIR/{}.deduped.bam \
+    -O {}.g.vcf.gz \
+    -ERC GVCF \
+    -ploidy 1
+
+
+########### script end
