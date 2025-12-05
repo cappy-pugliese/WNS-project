@@ -19,12 +19,12 @@ module load bcftools/1.20
 module load vcftools/0.1.16
 
 ## variables
-INDIR=/home/FCAM/cpugliese/lab_wns/05_vcfs/01_orig-vcfs/only_pd/02_ploidy2/
-VCF=only-pd_ploidy-2.vcf.gz
-SCRIPT=/home/FCAM/cpugliese/wns/04_vcf/scripts/00_stats/03_vcf_analysis_2.0.sh
+INDIR=/home/FCAM/cpugliese/lab_wns/05_vcfs/01_orig-vcfs/only_pd/01_ploidy1
+VCF=only-pd.vcf.gz
+SCRIPT=/home/FCAM/cpugliese/wns/04_vcf/scripts/00_stats/01_vcf_analysis.sh
 
 ## run script
 cd $INDIR
-$SCRIPT $VCF ploidy2
+$SCRIPT $VCF ploidy1
 
 ########### script end
