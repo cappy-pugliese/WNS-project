@@ -30,7 +30,7 @@ plink2 --vcf $INDIR/only-pd-ploidy1-filtered.vcf.gz \
 --maf 0.05 \
 --geno 0.1 \
 --mind 0.5 \
---indep-pairwise 10kb 1000 .5 \
+--indep-pairwise 10kb 1 .5 \
 --out only-pd_ploidy1_filtered_plink
 
 ########### script end
