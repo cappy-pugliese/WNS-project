@@ -11,8 +11,8 @@ library(vcfR)
 
 setwd("/Users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/data/04_pcangsd")
 
-admix <- np$load(file = "pcangsd_pd.admix.6.Q.npy",allow_pickle=FALSE)
-k <- 6
+admix <- np$load(file = "pcangsd_only-pd.admix.15.Q.npy",allow_pickle=FALSE)
+k <- 15
 admix= as.data.frame(admix)
 #head(admix)
 
@@ -24,8 +24,8 @@ for (n in 1:k) {
 colnames(admix) <- pops
 
 
-indivs <- read.csv("ind_ids.txt")
-pd_locations <- read.csv("/Users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/data/01_pd-samples/25_10-16_pd_locations.csv")
+indivs <- read.csv("only-pd_ids.txt")
+pd_locations <- read.csv("/Users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/data/01_pd-samples/25_12-07_only-pd_locations.csv")
 
 rownames(admix) = indivs$individuals
 admix$ind = indivs$individuals
@@ -37,4 +37,4 @@ admix$state = pd_locations$state
 #Pivot to long format
 df_long = pivot_longer(admix,1:k,names_to="Pop",values_to="admix")
 
-write.csv(df_long,file="25_10-16_pd_pcangsd_longdf.csv",row.names=FALSE,quote=FALSE)
+write.csv(df_long,file="25_12-07_only-pd_pcangsd_longdf.csv",row.names=FALSE,quote=FALSE)
