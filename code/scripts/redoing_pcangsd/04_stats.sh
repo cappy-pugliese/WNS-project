@@ -28,3 +28,11 @@ cd $INDIR
 $SCRIPT $VCF ploidy1
 
 ########### script end
+
+## ploidy1
+#Total variants: 35818118
+#SNPs: 206978
+#INDELs: 55726
+#Ts/Tv ratio: 2.4541
+
+## ploidy2 was the same
