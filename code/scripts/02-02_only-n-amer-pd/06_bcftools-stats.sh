@@ -20,14 +20,11 @@ module load bcftools/1.20
 ## Variables
 INDIR=/home/FCAM/cpugliese/lab_wns/05_vcfs/03_filtered-vcfs
 REF=/home/FCAM/cpugliese/wns/02_raw-data/pd_data/pd_ref/pdestructans.fasta
-OUTDIR=/home/FCAM/cpugliese/lab_wns/05_vcfs/02_stats/03_only-pd/01_bcfplots/01_only-pd/02_after-filtering
-VCF=only-pd-ploidy1-filtered.vcf.gz
-NAME=only-pd_filtered_bcftools_stats.vchk
+OUTDIR=/home/FCAM/cpugliese/lab_wns/05_vcfs/02_stats/03_only-pd/01_bcfplots/02_n-amer-pd
+VCF=n-amer-pd-only_filtered.vcf.gz
+NAME=n-amer-pd_bcftools_stats.vchk
 
 ## run bcftools stats
-cd $INDIR
-bcftools index $VCF
-
 cd $OUTDIR
 bcftools stats -F $REF $INDIR/$VCF > $NAME
 
@@ -35,5 +32,3 @@ bcftools stats -F $REF $INDIR/$VCF > $NAME
 plot-vcfstats -p $OUTDIR $NAME
 
 ########### script end
-
-# The final looks can be customized by editing the generated 'outdir/plot.py' script and re-running manually cd outdir && python plot.py && pdflatex summary.tex
