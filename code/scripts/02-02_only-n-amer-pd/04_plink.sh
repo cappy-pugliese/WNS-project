@@ -19,19 +19,17 @@ date
 
 ## set variables
 INDIR=/home/FCAM/cpugliese/lab_wns/05_vcfs/03_filtered-vcfs
-OUTDIR=/home/FCAM/cpugliese/lab_wns/05_vcfs/03_filtered-vcfs/plink_files/04_plink-only-pd
+OUTDIR=/home/FCAM/cpugliese/lab_wns/05_vcfs/03_filtered-vcfs/plink_files/05_plink-n-amer-pd
 
 cd $OUTDIR
 
-plink2 --vcf $INDIR/only-pd-ploidy1-filtered.vcf.gz \
+plink2 --vcf $INDIR/n-amer-pd-only_filtered.vcf.gz \
 --make-bed \
 --double-id \
 --allow-extra-chr \
 --maf 0.05 \
 --geno 0.1 \
 --mind 0.5 \
---out only-pd_ploidy1_filtered_plink
+--out n-amer-pd_ploidy1_filtered_plink
 
 ########### script end
-
-## need to change for n-amer, have not made any changes yet

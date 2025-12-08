@@ -20,21 +20,19 @@ source /home/FCAM/cpugliese/.bashrc
 conda activate pcangsd
 
 ## set variables
-INDIR=/home/FCAM/cpugliese/lab_wns/05_vcfs/03_filtered-vcfs/plink_files/04_plink-only-pd
-OUTDIR=/home/FCAM/cpugliese/lab_wns/06_pcangsd/02_filtered_vcf/only_pd
+INDIR=/home/FCAM/cpugliese/lab_wns/05_vcfs/03_filtered-vcfs/plink_files/05_plink-n-amer-pd/
+OUTDIR=/home/FCAM/cpugliese/lab_wns/06_pcangsd/02_filtered_vcf/02_n-amer-pd
 PCANGSD="python3 /isg/shared/apps/pcangsd/1.0/pcangsd/pcangsd.py"
-PLINAME=only-pd_ploidy1_filtered_plink
+PLINAME=n-amer-pd_ploidy1_filtered_plink
 
 cd $OUTDIR
 
 ## PCAnsd
 $PCANGSD -plink $INDIR/$PLINAME \
 -admix \
--out pcangsd_only-pd
+-out pcangsd_n-amer-pd
 
 
 conda deactivate
 
 ########### script end
-
-## need to change for n-amer, have not made any changes yet
