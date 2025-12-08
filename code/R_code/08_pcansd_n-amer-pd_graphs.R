@@ -1,6 +1,7 @@
 library(ggplot2)
 library(see)
 library(dplyr)
+library(ggh4x)
 
 setwd("/Users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/data/04_pcangsd")
 df_long <- read.csv("25_12-08_n-amer-pd_pcangsd_longdf.csv")
@@ -22,9 +23,21 @@ geom_col(col=NA,inherit.aes = TRUE) +
 facet_wrap( ~ country, strip.position = "bottom", scales = "free_x")
 
 ## grouped by state graph
-ggplot(df_long,aes(x=ind,y=admix,fill=Pop)) +
+df_canada = df_long |> dplyr::filter(country=="Canada")
+df_usa = df_long |> dplyr::filter(country=="USA")
+
+# canada by state
+ggplot(df_canada,aes(x=ind,y=admix,fill=Pop)) +
 scale_fill_viridis_d() +
 geom_col(col=NA,inherit.aes = TRUE) +
 theme(axis.text.x = element_text(angle = 90, hjust = 1, size=8), legend.key.size=unit(0.3, 'cm')) +
 geom_col(col=NA,inherit.aes = TRUE) +
-facet_wrap( country ~ state, strip.position = "bottom", scales = "free_x")
+facet_grid2(~ state, scales = "free_x", space= "free_x")
+
+# usa by state
+ggplot(df_usa,aes(x=ind,y=admix,fill=Pop)) +
+scale_fill_viridis_d() +
+geom_col(col=NA,inherit.aes = TRUE) +
+theme(axis.text.x = element_text(angle = 90, hjust = 1, size=8), legend.key.size=unit(0.3, 'cm')) +
+geom_col(col=NA,inherit.aes = TRUE) +
+facet_grid2(~ state, scales = "free_x", space= "free_x")
