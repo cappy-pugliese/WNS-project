@@ -11,7 +11,8 @@ ggplot(df_long,aes(x=ind,y=admix,fill=Pop)) +
 scale_fill_viridis_d() +
 geom_col(col=NA,inherit.aes = TRUE) +
 theme(axis.text.x = element_text(angle = 90, hjust = 1, size=8), legend.key.size=unit(0.5, 'cm')) +
-geom_col(col=NA,inherit.aes = TRUE)
+geom_col(col=NA,inherit.aes = TRUE) +
+labs(title = "Pd Only Samples PCAngsd Admixture", x = "Individuals", y = "Admix") 
 
 ## grouped by continent graph
 ggplot(df_long,aes(x=ind,y=admix,fill=Pop)) +
@@ -19,4 +20,5 @@ scale_fill_viridis_d() +
 geom_col(col=NA,inherit.aes = TRUE) +
 theme(axis.text.x = element_text(angle = 90, hjust = 1, size=8), legend.key.size=unit(0.3, 'cm')) +
 geom_col(col=NA,inherit.aes = TRUE) +
-facet_wrap( ~ continent, strip.position = "bottom", scales = "free_x")
+facet_grid( ~ continent, scales = "free_x", space="free_x") +
+labs(title = "Pd Only Samples by Continent", x = "Individuals", y = "Admix")
