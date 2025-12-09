@@ -4,7 +4,7 @@ library(dplyr)
 library(ggh4x)
 
 setwd("/Users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/data/04_pcangsd")
-df_long <- read.csv("25_12-08_n-amer-pd_pcangsd_longdf.csv")
+df_long <- read.csv("25_12-09_n-amer-pd_pcangsd_longdf.csv")
 df_continent <- df_long |> group_by(continent) |> arrange(.by_group = TRUE)
 
 # og graph

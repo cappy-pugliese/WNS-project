@@ -19,7 +19,7 @@ admix= as.data.frame(admix)
 ########## making the graph ##########
 pops <- c()
 for (n in 1:k) {
-    pops <- c(pops, paste0("pop", n))
+    pops <- c(pops, paste0("pop", sprintf("%02d", n)))
 }
 colnames(admix) <- pops
 
@@ -38,4 +38,4 @@ admix$state = pd_locations$state
 #Pivot to long format
 df_long = pivot_longer(admix,1:k,names_to="Pop",values_to="admix")
 
-write.csv(df_long,file="25_12-08_n-amer-pd_pcangsd_longdf.csv",row.names=FALSE,quote=FALSE)
+write.csv(df_long,file="25_12-09_n-amer-pd_pcangsd_longdf.csv",row.names=FALSE,quote=FALSE)
