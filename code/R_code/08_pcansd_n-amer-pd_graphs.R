@@ -1,6 +1,7 @@
 library(ggplot2)
 library(see)
 library(dplyr)
+#library(colorblindr)
 
 setwd("/Users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/data/04_pcangsd")
 df_long <- read.csv("25_12-09_n-amer-pd_pcangsd_longdf.csv")
