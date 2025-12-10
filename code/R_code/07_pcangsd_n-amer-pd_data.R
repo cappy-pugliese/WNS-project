@@ -33,6 +33,7 @@ admix$ind = indivs$individuals
 admix$continent = pd_locations$continent
 admix$country = pd_locations$country
 admix$state = pd_locations$state
+admix$year = pd_locations$year
 
 
 #Pivot to long format

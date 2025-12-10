@@ -1,0 +1,358 @@
+ind,continent,country,state,year,Pop,admix
+Pd_02,N_America,USA,Wisconsin,2016,pop01,0.000100299126643222
+Pd_02,N_America,USA,Wisconsin,2016,pop02,0.000100299126643222
+Pd_02,N_America,USA,Wisconsin,2016,pop03,0.000100299126643222
+Pd_02,N_America,USA,Wisconsin,2016,pop04,0.999398171901703
+Pd_02,N_America,USA,Wisconsin,2016,pop05,0.000100299126643222
+Pd_02,N_America,USA,Wisconsin,2016,pop06,0.000100299126643222
+Pd_02,N_America,USA,Wisconsin,2016,pop07,0.000100299126643222
+Pd_07,N_America,Canada,Ontario,2015,pop01,9.99957774183713e-05
+Pd_07,N_America,Canada,Ontario,2015,pop02,0.00696313194930553
+Pd_07,N_America,Canada,Ontario,2015,pop03,9.99957774183713e-05
+Pd_07,N_America,Canada,Ontario,2015,pop04,0.000112758745672181
+Pd_07,N_America,Canada,Ontario,2015,pop05,0.00230344920419157
+Pd_07,N_America,Canada,Ontario,2015,pop06,0.99032074213028
+Pd_07,N_America,Canada,Ontario,2015,pop07,9.99957774183713e-05
+Pd_08,N_America,Canada,Ontario,2015,pop01,9.86158920568414e-05
+Pd_08,N_America,Canada,Ontario,2015,pop02,9.86158920568414e-05
+Pd_08,N_America,Canada,Ontario,2015,pop03,0.0543136782944202
+Pd_08,N_America,Canada,Ontario,2015,pop04,0.0127304522320628
+Pd_08,N_America,Canada,Ontario,2015,pop05,0.0238540098071098
+Pd_08,N_America,Canada,Ontario,2015,pop06,0.908806025981903
+Pd_08,N_America,Canada,Ontario,2015,pop07,9.86158920568414e-05
+Pd_09,N_America,Canada,Nova Scotia,2013,pop01,0.000550671713426709
+Pd_09,N_America,Canada,Nova Scotia,2013,pop02,9.99007097561844e-05
+Pd_09,N_America,Canada,Nova Scotia,2013,pop03,0.0285218674689531
+Pd_09,N_America,Canada,Nova Scotia,2013,pop04,0.00114146200940013
+Pd_09,N_America,Canada,Nova Scotia,2013,pop05,0.000100655204732902
+Pd_09,N_America,Canada,Nova Scotia,2013,pop06,0.969485521316528
+Pd_09,N_America,Canada,Nova Scotia,2013,pop07,9.99007097561844e-05
+Pd_10,N_America,Canada,Nova Scotia,2013,pop01,0.000343191291904077
+Pd_10,N_America,Canada,Nova Scotia,2013,pop02,0.000500463414937258
+Pd_10,N_America,Canada,Nova Scotia,2013,pop03,0.000911905022803694
+Pd_10,N_America,Canada,Nova Scotia,2013,pop04,0.00295594893395901
+Pd_10,N_America,Canada,Nova Scotia,2013,pop05,0.00870574172586203
+Pd_10,N_America,Canada,Nova Scotia,2013,pop06,0.946730971336365
+Pd_10,N_America,Canada,Nova Scotia,2013,pop07,0.0398517958819866
+Pd_11,N_America,Canada,Prince Edward Island,2013,pop01,0.000100351498986129
+Pd_11,N_America,Canada,Prince Edward Island,2013,pop02,0.00294857169501483
+Pd_11,N_America,Canada,Prince Edward Island,2013,pop03,9.99433250399306e-05
+Pd_11,N_America,Canada,Prince Edward Island,2013,pop04,0.000610864080954343
+Pd_11,N_America,Canada,Prince Edward Island,2013,pop05,0.00884947367012501
+Pd_11,N_America,Canada,Prince Edward Island,2013,pop06,0.114032655954361
+Pd_11,N_America,Canada,Prince Edward Island,2013,pop07,0.873358130455017
+Pd_12,N_America,Canada,Ontario,2015,pop01,0.000100569828646258
+Pd_12,N_America,Canada,Ontario,2015,pop02,0.000213052830076776
+Pd_12,N_America,Canada,Ontario,2015,pop03,0.000100093733635731
+Pd_12,N_America,Canada,Ontario,2015,pop04,0.000100093733635731
+Pd_12,N_America,Canada,Ontario,2015,pop05,0.000100093733635731
+Pd_12,N_America,Canada,Ontario,2015,pop06,0.999243378639221
+Pd_12,N_America,Canada,Ontario,2015,pop07,0.000142681994475424
+Pd_13,N_America,Canada,New Brunswick,2015,pop01,0.00305993319489062
+Pd_13,N_America,Canada,New Brunswick,2015,pop02,0.00225122855044901
+Pd_13,N_America,Canada,New Brunswick,2015,pop03,0.000100100798590574
+Pd_13,N_America,Canada,New Brunswick,2015,pop04,0.000100100798590574
+Pd_13,N_America,Canada,New Brunswick,2015,pop05,0.000100100798590574
+Pd_13,N_America,Canada,New Brunswick,2015,pop06,0.791775226593018
+Pd_13,N_America,Canada,New Brunswick,2015,pop07,0.202613294124603
+Pd_14,N_America,Canada,New Brunswick,2012,pop01,0.000103526086604688
+Pd_14,N_America,Canada,New Brunswick,2012,pop02,0.000100835248304065
+Pd_14,N_America,Canada,New Brunswick,2012,pop03,0.000101453879324254
+Pd_14,N_America,Canada,New Brunswick,2012,pop04,0.00308737368322909
+Pd_14,N_America,Canada,New Brunswick,2012,pop05,9.99152398435399e-05
+Pd_14,N_America,Canada,New Brunswick,2012,pop06,9.99152398435399e-05
+Pd_14,N_America,Canada,New Brunswick,2012,pop07,0.996407032012939
+Pd_15,N_America,Canada,New Brunswick,2013,pop01,9.92167260847054e-05
+Pd_15,N_America,Canada,New Brunswick,2013,pop02,9.92167260847054e-05
+Pd_15,N_America,Canada,New Brunswick,2013,pop03,0.155750751495361
+Pd_15,N_America,Canada,New Brunswick,2013,pop04,0.0124702900648117
+Pd_15,N_America,Canada,New Brunswick,2013,pop05,0.00891696661710739
+Pd_15,N_America,Canada,New Brunswick,2013,pop06,0.0506432168185711
+Pd_15,N_America,Canada,New Brunswick,2013,pop07,0.77202033996582
+Pd_16,N_America,Canada,New Brunswick,2012,pop01,9.97485985863023e-05
+Pd_16,N_America,Canada,New Brunswick,2012,pop02,0.000103508238680661
+Pd_16,N_America,Canada,New Brunswick,2012,pop03,0.127400636672974
+Pd_16,N_America,Canada,New Brunswick,2012,pop04,0.00828182604163885
+Pd_16,N_America,Canada,New Brunswick,2012,pop05,0.000101340745459311
+Pd_16,N_America,Canada,New Brunswick,2012,pop06,0.0498054064810276
+Pd_16,N_America,Canada,New Brunswick,2012,pop07,0.814207553863525
+Pd_17,N_America,Canada,New Brunswick,2012,pop01,0.000100895631476305
+Pd_17,N_America,Canada,New Brunswick,2012,pop02,0.0010155604686588
+Pd_17,N_America,Canada,New Brunswick,2012,pop03,0.000100042401754763
+Pd_17,N_America,Canada,New Brunswick,2012,pop04,0.000100042401754763
+Pd_17,N_America,Canada,New Brunswick,2012,pop05,0.000100042401754763
+Pd_17,N_America,Canada,New Brunswick,2012,pop06,0.000100042401754763
+Pd_17,N_America,Canada,New Brunswick,2012,pop07,0.99848335981369
+Pd_19,N_America,Canada,New Brunswick,2013,pop01,9.94883157545701e-05
+Pd_19,N_America,Canada,New Brunswick,2013,pop02,0.0205982942134142
+Pd_19,N_America,Canada,New Brunswick,2013,pop03,0.00966398604214191
+Pd_19,N_America,Canada,New Brunswick,2013,pop04,0.0169330090284348
+Pd_19,N_America,Canada,New Brunswick,2013,pop05,0.0307304672896862
+Pd_19,N_America,Canada,New Brunswick,2013,pop06,0.156276851892471
+Pd_19,N_America,Canada,New Brunswick,2013,pop07,0.765697956085205
+Pd_20,N_America,Canada,New Brunswick,2013,pop01,0.0118486108258367
+Pd_20,N_America,Canada,New Brunswick,2013,pop02,9.99486583168618e-05
+Pd_20,N_America,Canada,New Brunswick,2013,pop03,9.99486583168618e-05
+Pd_20,N_America,Canada,New Brunswick,2013,pop04,9.99486583168618e-05
+Pd_20,N_America,Canada,New Brunswick,2013,pop05,0.00656397035345435
+Pd_20,N_America,Canada,New Brunswick,2013,pop06,0.136339962482452
+Pd_20,N_America,Canada,New Brunswick,2013,pop07,0.844947576522827
+Pd_21,N_America,Canada,New Brunswick,2013,pop01,0.00785650219768286
+Pd_21,N_America,Canada,New Brunswick,2013,pop02,9.99207622953691e-05
+Pd_21,N_America,Canada,New Brunswick,2013,pop03,9.99207622953691e-05
+Pd_21,N_America,Canada,New Brunswick,2013,pop04,9.99207622953691e-05
+Pd_21,N_America,Canada,New Brunswick,2013,pop05,0.019941084086895
+Pd_21,N_America,Canada,New Brunswick,2013,pop06,0.971802651882172
+Pd_21,N_America,Canada,New Brunswick,2013,pop07,9.99207622953691e-05
+Pd_22,N_America,Canada,New Brunswick,2013,pop01,9.8915166745428e-05
+Pd_22,N_America,Canada,New Brunswick,2013,pop02,0.000151193424244411
+Pd_22,N_America,Canada,New Brunswick,2013,pop03,0.000100729186669923
+Pd_22,N_America,Canada,New Brunswick,2013,pop04,0.0117594329640269
+Pd_22,N_America,Canada,New Brunswick,2013,pop05,0.0186320506036282
+Pd_22,N_America,Canada,New Brunswick,2013,pop06,0.162523359060287
+Pd_22,N_America,Canada,New Brunswick,2013,pop07,0.806734263896942
+Pd_23,N_America,USA,New York,2008,pop01,9.90186308627017e-05
+Pd_23,N_America,USA,New York,2008,pop02,9.90186308627017e-05
+Pd_23,N_America,USA,New York,2008,pop03,0.0787234157323837
+Pd_23,N_America,USA,New York,2008,pop04,0.00999968498945236
+Pd_23,N_America,USA,New York,2008,pop05,0.00568139087408781
+Pd_23,N_America,USA,New York,2008,pop06,0.150522127747536
+Pd_23,N_America,USA,New York,2008,pop07,0.754875361919403
+Pd_24,N_America,Canada,New Brunswick,2012,pop01,0.00388147379271686
+Pd_24,N_America,Canada,New Brunswick,2012,pop02,9.95853843051009e-05
+Pd_24,N_America,Canada,New Brunswick,2012,pop03,0.00188947201240808
+Pd_24,N_America,Canada,New Brunswick,2012,pop04,0.0054034236818552
+Pd_24,N_America,Canada,New Brunswick,2012,pop05,9.95853843051009e-05
+Pd_24,N_America,Canada,New Brunswick,2012,pop06,0.107089810073376
+Pd_24,N_America,Canada,New Brunswick,2012,pop07,0.881536722183228
+Pd_26,N_America,Canada,New Brunswick,2012,pop01,0.00010001368355006
+Pd_26,N_America,Canada,New Brunswick,2012,pop02,0.00010001368355006
+Pd_26,N_America,Canada,New Brunswick,2012,pop03,0.00010001368355006
+Pd_26,N_America,Canada,New Brunswick,2012,pop04,0.00444210506975651
+Pd_26,N_America,Canada,New Brunswick,2012,pop05,0.995057821273804
+Pd_26,N_America,Canada,New Brunswick,2012,pop06,0.00010001368355006
+Pd_26,N_America,Canada,New Brunswick,2012,pop07,0.00010001368355006
+Pd_27,N_America,Canada,Prince Edward Island,2012,pop01,9.98662944766693e-05
+Pd_27,N_America,Canada,Prince Edward Island,2012,pop02,9.98662944766693e-05
+Pd_27,N_America,Canada,Prince Edward Island,2012,pop03,9.98662944766693e-05
+Pd_27,N_America,Canada,Prince Edward Island,2012,pop04,0.00010319735883968
+Pd_27,N_America,Canada,Prince Edward Island,2012,pop05,0.942944169044495
+Pd_27,N_America,Canada,Prince Edward Island,2012,pop06,0.0454784743487835
+Pd_27,N_America,Canada,Prince Edward Island,2012,pop07,0.0111745400354266
+Pd_28,N_America,USA,New York,2008,pop01,9.72779089352116e-05
+Pd_28,N_America,USA,New York,2008,pop02,9.72779089352116e-05
+Pd_28,N_America,USA,New York,2008,pop03,0.120363660156727
+Pd_28,N_America,USA,New York,2008,pop04,0.0243386924266815
+Pd_28,N_America,USA,New York,2008,pop05,0.545536279678345
+Pd_28,N_America,USA,New York,2008,pop06,0.0820455029606819
+Pd_28,N_America,USA,New York,2008,pop07,0.227521359920502
+Pd_49,N_America,USA,Pennsylvania,2009,pop01,0.0319347344338894
+Pd_49,N_America,USA,Pennsylvania,2009,pop02,0.298791021108627
+Pd_49,N_America,USA,Pennsylvania,2009,pop03,0.653413593769073
+Pd_49,N_America,USA,Pennsylvania,2009,pop04,0.0155603177845478
+Pd_49,N_America,USA,Pennsylvania,2009,pop05,0.000103635531559121
+Pd_49,N_America,USA,Pennsylvania,2009,pop06,9.82852652668953e-05
+Pd_49,N_America,USA,Pennsylvania,2009,pop07,9.82852652668953e-05
+Pd_50,N_America,USA,New Jersey,2009,pop01,0.132425382733345
+Pd_50,N_America,USA,New Jersey,2009,pop02,0.232140883803368
+Pd_50,N_America,USA,New Jersey,2009,pop03,0.618851780891418
+Pd_50,N_America,USA,New Jersey,2009,pop04,0.0162873473018408
+Pd_50,N_America,USA,New Jersey,2009,pop05,9.82086494332179e-05
+Pd_50,N_America,USA,New Jersey,2009,pop06,9.82086494332179e-05
+Pd_50,N_America,USA,New Jersey,2009,pop07,9.82086494332179e-05
+Pd_51,N_America,USA,West Virginia,2009,pop01,0.0330514721572399
+Pd_51,N_America,USA,West Virginia,2009,pop02,0.148384869098663
+Pd_51,N_America,USA,West Virginia,2009,pop03,0.735782206058502
+Pd_51,N_America,USA,West Virginia,2009,pop04,0.0184396095573902
+Pd_51,N_America,USA,West Virginia,2009,pop05,0.0317528806626797
+Pd_51,N_America,USA,West Virginia,2009,pop06,0.0323410369455814
+Pd_51,N_America,USA,West Virginia,2009,pop07,0.000247974589001387
+Pd_52,N_America,Canada,Ontario,2010,pop01,0.487379223108292
+Pd_52,N_America,Canada,Ontario,2010,pop02,0.0616255328059196
+Pd_52,N_America,Canada,Ontario,2010,pop03,0.440033972263336
+Pd_52,N_America,Canada,Ontario,2010,pop04,0.0106479562819004
+Pd_52,N_America,Canada,Ontario,2010,pop05,0.000116124101623427
+Pd_52,N_America,Canada,Ontario,2010,pop06,9.86451559583656e-05
+Pd_52,N_America,Canada,Ontario,2010,pop07,9.86451559583656e-05
+Pd_53,N_America,USA,Tennessee,2010,pop01,0.344729900360107
+Pd_53,N_America,USA,Tennessee,2010,pop02,0.300797045230865
+Pd_53,N_America,USA,Tennessee,2010,pop03,0.33977735042572
+Pd_53,N_America,USA,Tennessee,2010,pop04,0.0144016249105334
+Pd_53,N_America,USA,Tennessee,2010,pop05,9.80090990196913e-05
+Pd_53,N_America,USA,Tennessee,2010,pop06,9.80090990196913e-05
+Pd_53,N_America,USA,Tennessee,2010,pop07,9.80090990196913e-05
+Pd_54,N_America,USA,Vermont,2008,pop01,0.396153330802917
+Pd_54,N_America,USA,Vermont,2008,pop02,0.603335022926331
+Pd_54,N_America,USA,Vermont,2008,pop03,0.000100454242783599
+Pd_54,N_America,USA,Vermont,2008,pop04,0.000100454242783599
+Pd_54,N_America,USA,Vermont,2008,pop05,0.000100454242783599
+Pd_54,N_America,USA,Vermont,2008,pop06,0.000103914055216592
+Pd_54,N_America,USA,Vermont,2008,pop07,0.000106256273284089
+Pd_55,N_America,USA,Connecticut,2009,pop01,0.585720956325531
+Pd_55,N_America,USA,Connecticut,2009,pop02,0.204340040683746
+Pd_55,N_America,USA,Connecticut,2009,pop03,0.199195936322212
+Pd_55,N_America,USA,Connecticut,2009,pop04,0.0104478495195508
+Pd_55,N_America,USA,Connecticut,2009,pop05,9.84198413789272e-05
+Pd_55,N_America,USA,Connecticut,2009,pop06,9.84198413789272e-05
+Pd_55,N_America,USA,Connecticut,2009,pop07,9.84198413789272e-05
+Pd_56,N_America,USA,Virginia,2009,pop01,0.584625244140625
+Pd_56,N_America,USA,Virginia,2009,pop02,0.414868950843811
+Pd_56,N_America,USA,Virginia,2009,pop03,0.000101145313237794
+Pd_56,N_America,USA,Virginia,2009,pop04,0.000101145313237794
+Pd_56,N_America,USA,Virginia,2009,pop05,0.000101145313237794
+Pd_56,N_America,USA,Virginia,2009,pop06,0.000101145313237794
+Pd_56,N_America,USA,Virginia,2009,pop07,0.000101145313237794
+Pd_57,N_America,USA,Massachussetts,2008,pop01,0.00010015549196396
+Pd_57,N_America,USA,Massachussetts,2008,pop02,0.72752445936203
+Pd_57,N_America,USA,Massachussetts,2008,pop03,0.257074296474457
+Pd_57,N_America,USA,Massachussetts,2008,pop04,0.00399848725646734
+Pd_57,N_America,USA,Massachussetts,2008,pop05,0.011102250777185
+Pd_57,N_America,USA,Massachussetts,2008,pop06,0.00010015549196396
+Pd_57,N_America,USA,Massachussetts,2008,pop07,0.00010015549196396
+Pd_58,N_America,USA,Alabama,2015,pop01,0.000101291749160737
+Pd_58,N_America,USA,Alabama,2015,pop02,0.000101291749160737
+Pd_58,N_America,USA,Alabama,2015,pop03,0.000101291749160737
+Pd_58,N_America,USA,Alabama,2015,pop04,0.999392211437225
+Pd_58,N_America,USA,Alabama,2015,pop05,0.000101291749160737
+Pd_58,N_America,USA,Alabama,2015,pop06,0.000101291749160737
+Pd_58,N_America,USA,Alabama,2015,pop07,0.000101291749160737
+Pd_59,N_America,USA,Washington,2016,pop01,9.99500116449781e-05
+Pd_59,N_America,USA,Washington,2016,pop02,9.99500116449781e-05
+Pd_59,N_America,USA,Washington,2016,pop03,9.99500116449781e-05
+Pd_59,N_America,USA,Washington,2016,pop04,0.999400198459625
+Pd_59,N_America,USA,Washington,2016,pop05,9.99500116449781e-05
+Pd_59,N_America,USA,Washington,2016,pop06,9.99500116449781e-05
+Pd_59,N_America,USA,Washington,2016,pop07,9.99500116449781e-05
+Pd_62,N_America,USA,Connecticut,2008,pop01,9.97886309050955e-05
+Pd_62,N_America,USA,Connecticut,2008,pop02,0.843092858791351
+Pd_62,N_America,USA,Connecticut,2008,pop03,0.139963209629059
+Pd_62,N_America,USA,Connecticut,2008,pop04,0.0165446605533361
+Pd_62,N_America,USA,Connecticut,2008,pop05,9.97886309050955e-05
+Pd_62,N_America,USA,Connecticut,2008,pop06,9.97886309050955e-05
+Pd_62,N_America,USA,Connecticut,2008,pop07,9.97886309050955e-05
+Pd_63,N_America,USA,Tennessee,2010,pop01,0.966300845146179
+Pd_63,N_America,USA,Tennessee,2010,pop02,0.0328528694808483
+Pd_63,N_America,USA,Tennessee,2010,pop03,0.000175613909959793
+Pd_63,N_America,USA,Tennessee,2010,pop04,0.000355558033334091
+Pd_63,N_America,USA,Tennessee,2010,pop05,0.000104023631138261
+Pd_63,N_America,USA,Tennessee,2010,pop06,0.000107360414403956
+Pd_63,N_America,USA,Tennessee,2010,pop07,0.000103718113678042
+Pd_64,N_America,USA,Maryland,2010,pop01,9.83249847195111e-05
+Pd_64,N_America,USA,Maryland,2010,pop02,0.754821419715881
+Pd_64,N_America,USA,Maryland,2010,pop03,0.230787813663483
+Pd_64,N_America,USA,Maryland,2010,pop04,0.013997420668602
+Pd_64,N_America,USA,Maryland,2010,pop05,9.83249847195111e-05
+Pd_64,N_America,USA,Maryland,2010,pop06,9.83249847195111e-05
+Pd_64,N_America,USA,Maryland,2010,pop07,9.83249847195111e-05
+Pd_65,N_America,USA,New York,2009,pop01,0.551457405090332
+Pd_65,N_America,USA,New York,2009,pop02,0.448038727045059
+Pd_65,N_America,USA,New York,2009,pop03,0.000100756333267782
+Pd_65,N_America,USA,New York,2009,pop04,0.000100756333267782
+Pd_65,N_America,USA,New York,2009,pop05,0.000100756333267782
+Pd_65,N_America,USA,New York,2009,pop06,0.000100756333267782
+Pd_65,N_America,USA,New York,2009,pop07,0.000100756333267782
+Pd_66,N_America,USA,Vermont,2010,pop01,0.747775256633759
+Pd_66,N_America,USA,Vermont,2010,pop02,9.28610243136063e-05
+Pd_66,N_America,USA,Vermont,2010,pop03,0.153783470392227
+Pd_66,N_America,USA,Vermont,2010,pop04,0.0980697870254517
+Pd_66,N_America,USA,Vermont,2010,pop05,9.28610243136063e-05
+Pd_66,N_America,USA,Vermont,2010,pop06,9.28610243136063e-05
+Pd_66,N_America,USA,Vermont,2010,pop07,9.28610243136063e-05
+Pd_67,N_America,Canada,Ontario,2010,pop01,0.000101469006040134
+Pd_67,N_America,Canada,Ontario,2010,pop02,0.904921412467957
+Pd_67,N_America,Canada,Ontario,2010,pop03,0.0869048163294792
+Pd_67,N_America,Canada,Ontario,2010,pop04,0.00777161074802279
+Pd_67,N_America,Canada,Ontario,2010,pop05,0.000100225144706201
+Pd_67,N_America,Canada,Ontario,2010,pop06,0.000100225144706201
+Pd_67,N_America,Canada,Ontario,2010,pop07,0.000100225144706201
+Pd_68,N_America,USA,Tennessee,2010,pop01,9.84790895017795e-05
+Pd_68,N_America,USA,Tennessee,2010,pop02,9.84787620836869e-05
+Pd_68,N_America,USA,Tennessee,2010,pop03,0.540554225444794
+Pd_68,N_America,USA,Tennessee,2010,pop04,0.0234154053032398
+Pd_68,N_America,USA,Tennessee,2010,pop05,0.0144733572378755
+Pd_68,N_America,USA,Tennessee,2010,pop06,0.421261548995972
+Pd_68,N_America,USA,Tennessee,2010,pop07,9.84787620836869e-05
+Pd_72,N_America,Canada,New Brunswick,2012,pop01,9.70867913565598e-05
+Pd_72,N_America,Canada,New Brunswick,2012,pop02,9.70867913565598e-05
+Pd_72,N_America,Canada,New Brunswick,2012,pop03,0.11436539888382
+Pd_72,N_America,Canada,New Brunswick,2012,pop04,0.0246652998030186
+Pd_72,N_America,Canada,New Brunswick,2012,pop05,0.552767813205719
+Pd_72,N_America,Canada,New Brunswick,2012,pop06,0.118727333843708
+Pd_72,N_America,Canada,New Brunswick,2012,pop07,0.189279913902283
+Pd_73,N_America,USA,Missouri,2012,pop01,9.94276415440254e-05
+Pd_73,N_America,USA,Missouri,2012,pop02,9.94276415440254e-05
+Pd_73,N_America,USA,Missouri,2012,pop03,9.94276415440254e-05
+Pd_73,N_America,USA,Missouri,2012,pop04,9.94276415440254e-05
+Pd_73,N_America,USA,Missouri,2012,pop05,0.318934500217438
+Pd_73,N_America,USA,Missouri,2012,pop06,0.287199586629868
+Pd_73,N_America,USA,Missouri,2012,pop07,0.393468230962753
+Pd_74,N_America,USA,Virginia,2011,pop01,0.0600949265062809
+Pd_74,N_America,USA,Virginia,2011,pop02,0.712113261222839
+Pd_74,N_America,USA,Virginia,2011,pop03,0.225322812795639
+Pd_74,N_America,USA,Virginia,2011,pop04,0.00217040721327066
+Pd_74,N_America,USA,Virginia,2011,pop05,9.94797810562886e-05
+Pd_74,N_America,USA,Virginia,2011,pop06,9.94797810562886e-05
+Pd_74,N_America,USA,Virginia,2011,pop07,9.94797810562886e-05
+Pd_75,N_America,USA,Tennessee,2011,pop01,0.100106246769428
+Pd_75,N_America,USA,Tennessee,2011,pop02,0.899385154247284
+Pd_75,N_America,USA,Tennessee,2011,pop03,0.000100072538771201
+Pd_75,N_America,USA,Tennessee,2011,pop04,0.000100072538771201
+Pd_75,N_America,USA,Tennessee,2011,pop05,0.000100072538771201
+Pd_75,N_America,USA,Tennessee,2011,pop06,0.000108203290437814
+Pd_75,N_America,USA,Tennessee,2011,pop07,0.000100072538771201
+Pd_76,N_America,USA,Indiana,2011,pop01,9.85343285719864e-05
+Pd_76,N_America,USA,Indiana,2011,pop02,9.85343285719864e-05
+Pd_76,N_America,USA,Indiana,2011,pop03,0.733065247535706
+Pd_76,N_America,USA,Indiana,2011,pop04,0.020362377166748
+Pd_76,N_America,USA,Indiana,2011,pop05,0.0215513836592436
+Pd_76,N_America,USA,Indiana,2011,pop06,0.210585698485374
+Pd_76,N_America,USA,Indiana,2011,pop07,0.0142382979393005
+Pd_77,N_America,USA,Indiana,2011,pop01,0.000100350735010579
+Pd_77,N_America,USA,Indiana,2011,pop02,0.968530058860779
+Pd_77,N_America,USA,Indiana,2011,pop03,0.00773851526901126
+Pd_77,N_America,USA,Indiana,2011,pop04,0.00281881517730653
+Pd_77,N_America,USA,Indiana,2011,pop05,0.000100350735010579
+Pd_77,N_America,USA,Indiana,2011,pop06,0.000100350735010579
+Pd_77,N_America,USA,Indiana,2011,pop07,0.0206115171313286
+Pd_78,N_America,USA,Deleware,2012,pop01,9.94116635411046e-05
+Pd_78,N_America,USA,Deleware,2012,pop02,9.94116635411046e-05
+Pd_78,N_America,USA,Deleware,2012,pop03,0.339176833629608
+Pd_78,N_America,USA,Deleware,2012,pop04,0.0140281934291124
+Pd_78,N_America,USA,Deleware,2012,pop05,9.94116635411046e-05
+Pd_78,N_America,USA,Deleware,2012,pop06,0.581766486167908
+Pd_78,N_America,USA,Deleware,2012,pop07,0.0647301748394966
+Pd_79,N_America,USA,Maine,2011,pop01,9.91590859484859e-05
+Pd_79,N_America,USA,Maine,2011,pop02,9.91590859484859e-05
+Pd_79,N_America,USA,Maine,2011,pop03,0.565722703933716
+Pd_79,N_America,USA,Maine,2011,pop04,0.0123140271753073
+Pd_79,N_America,USA,Maine,2011,pop05,0.00010785643098643
+Pd_79,N_America,USA,Maine,2011,pop06,0.407553285360336
+Pd_79,N_America,USA,Maine,2011,pop07,0.0141039034351707
+Pd_82,N_America,Canada,Ontario,2014,pop01,0.0629694610834122
+Pd_82,N_America,Canada,Ontario,2014,pop02,0.000100156365078874
+Pd_82,N_America,Canada,Ontario,2014,pop03,0.000100156365078874
+Pd_82,N_America,Canada,Ontario,2014,pop04,0.000100156365078874
+Pd_82,N_America,Canada,Ontario,2014,pop05,0.936529755592346
+Pd_82,N_America,Canada,Ontario,2014,pop06,0.000100156365078874
+Pd_82,N_America,Canada,Ontario,2014,pop07,0.000100156365078874
+Pd_83,N_America,Canada,Nova Scotia,2013,pop01,0.000100401877716649
+Pd_83,N_America,Canada,Nova Scotia,2013,pop02,0.0179373230785131
+Pd_83,N_America,Canada,Nova Scotia,2013,pop03,0.000100401877716649
+Pd_83,N_America,Canada,Nova Scotia,2013,pop04,0.000100401877716649
+Pd_83,N_America,Canada,Nova Scotia,2013,pop05,0.975788712501526
+Pd_83,N_America,Canada,Nova Scotia,2013,pop06,0.000103110854979604
+Pd_83,N_America,Canada,Nova Scotia,2013,pop07,0.00586963957175612
+Pd_84,N_America,Canada,New Brunswick,2012,pop01,0.0010968433925882
+Pd_84,N_America,Canada,New Brunswick,2012,pop02,0.0162032712250948
+Pd_84,N_America,Canada,New Brunswick,2012,pop03,0.0189288910478354
+Pd_84,N_America,Canada,New Brunswick,2012,pop04,0.00943128112703562
+Pd_84,N_America,Canada,New Brunswick,2012,pop05,0.954140424728394
+Pd_84,N_America,Canada,New Brunswick,2012,pop06,9.96272792690434e-05
+Pd_84,N_America,Canada,New Brunswick,2012,pop07,9.96272792690434e-05
+Pd_85,N_America,Canada,New Brunswick,2012,pop01,9.85147635219619e-05
+Pd_85,N_America,Canada,New Brunswick,2012,pop02,0.00661848112940788
+Pd_85,N_America,Canada,New Brunswick,2012,pop03,0.00898165907710791
+Pd_85,N_America,Canada,New Brunswick,2012,pop04,0.0149700650945306
+Pd_85,N_America,Canada,New Brunswick,2012,pop05,0.949781000614166
+Pd_85,N_America,Canada,New Brunswick,2012,pop06,0.0194517895579338
+Pd_85,N_America,Canada,New Brunswick,2012,pop07,9.85147635219619e-05
