@@ -89,9 +89,11 @@ editor: visual
 +------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
 | commands                                                                                                                                                   | action                                                                                                                  |
 +============================================================================================================================================================+=========================================================================================================================+
-| ssh cpugliese\@xanadu-submit-ext.cam.uchc.edu                                                                                                              | log in to head computer                                                                                                 |
+| ssh cpugliese\@xanadu-submit-ext.cam.uchc.edu                                                                                                              | (sshxan) log in to head computer, xanadu                                                                                |
 |                                                                                                                                                            |                                                                                                                         |
-|                                                                                                                                                            | password is og password                                                                                                 |
+|                                                                                                                                                            | password is og password, 1324!!!                                                                                        |
++------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+| ssh cpugliese\@login.hpc.cam.uchc.edu                                                                                                                      | (sshman) logs into mantis                                                                                               |
 +------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
 | srun --partition=general --qos=general --pty bash                                                                                                          | starts regular interactive session                                                                                      |
 +------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
@@ -185,3 +187,13 @@ ls -F
 `*` is for executables, `/` for directories, `=` for sockets, `>` for doors, `@` for symbolic links, `|` for FIFOs and nothing for regular files
 
 sudo mkdir -p /usr/local/bin sudo rm -f /usr/local/bin/julia sudo ln -s /Applications/Julia-1.11.app/Contents/Resources/julia/bin/julia /usr/local/bin/julia
+
+1/12/26
+
+mantis is only letting me type in one command if any before crashing and receiving a broken pipe error.
+
+-   was able to get onto a node successfully but the same thing happened there
+
+-   was still connected to the vpn, maybe that was the problem???
+
+    -   looks like it was the vpn that was causing the problem
