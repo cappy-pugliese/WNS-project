@@ -1,0 +1,17 @@
+---
+title: "Algatr"
+format: pdf
+editor: visual
+---
+
+-   algatr help website: <https://thewanglab.github.io/algatr/>
+
+-   algatr github: <https://github.com/TheWangLab/algatr_workshop>
+
+```{r}
+
+library(installr) install.packages.zip("https://cran.csiro.au/bin/macosx/big-sur-x86_64/contrib/4.5/wingen_2.2.0.tgz")
+
+```
+
+\^ for installing packages using zip file from cran Installing it just using base r `install.packages` wasn't working for some reason, it was returning a 404 error page.
