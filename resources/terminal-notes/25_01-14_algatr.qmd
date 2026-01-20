@@ -10,7 +10,8 @@ editor: visual
 
 ```{r}
 
-library(installr) install.packages.zip("https://cran.csiro.au/bin/macosx/big-sur-x86_64/contrib/4.5/wingen_2.2.0.tgz")
+library(installr) 
+install.packages.zip("https://cran.csiro.au/bin/macosx/big-sur-x86_64/contrib/4.5/wingen_2.2.0.tgz")
 
 
 cp -R -i -n /Library/Frameworks/R.framework/Versions/4.3-x86_64/Resources/library/ /Library/Frameworks/R.framework/Resources/library
@@ -73,29 +74,32 @@ Tutorials:
 library(raster)
 library(sp)
 library(geodata)
-library(leaflet)
+library(algatr)
 
 raster_path = "/Users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/data/climate_data/wc2.1_data"
 
 bio <- worldclim_global(path=raster_path, var="bio", res=2.5)
 
-USA_bio <- worldclim_country(country="USA", path=raster_path, var="bio", res=2.5)
-
-CAN_bio <- worldclim_country(country="CAN", path=raster_path, var="bio", res=2.5)
-
 # information on the coordinate system
-crs(bio_m, proj = TRUE, describe = TRUE)
+crs(CAN_bio, proj = TRUE, describe = TRUE)
+crs(USA_bio, proj = TRUE, describe = TRUE)
 
 plot(bio[[12]])
-plot(USA_bio[[1]])
+plot(CAN_bio[[12]])
 
+# crop Raster* with Spatial* object
+NoA <- as(extent(-135, -55, 25, 60), 'SpatialPolygons')
+crs(NoA) <- crs(bio)
+NoA_bio <- crop(bio, NoA)
+plot(NoA_bio[[12]])
 
-map <- addTiles(leaflet())
-# save the widget in a html file if needed.
-# library(htmlwidgets)
-# saveWidget(m, file=paste0( getwd(), "/HtmlWidget/backgroundMapBasic.html"))
+## https://stackoverflow.com/questions/75739085/running-a-pca-on-a-rasterstack-in-r
+## pca code
+pca <- prcomp(NoA_bio)
+x <- predict(NoA_bio, pca)
+plot(x)
 
-
+NoA_pca_map <- plotRGB(scaleRGB(x),r=1,g=2,b=3)
 ```
 
 ```{r}
@@ -112,4 +116,18 @@ library(ggplot2)
 ggplot(bio) +
   geom_sf(fill = "#69b3a2", color = "white") +
   theme_void()
+
+library(leaflet)
+map <- addTiles(leaflet())
+# save the widget in a html file if needed.
+# library(htmlwidgets)
+# saveWidget(m, file=paste0( getwd(), "/HtmlWidget/backgroundMapBasic.html"))
+
+map 
 ```
+
+-   data
+
+    -   x –\> long min: -121.5, max: -62
+
+    -   y –\> lat min: 34.5, max: 48.5
