@@ -134,6 +134,8 @@ editor: visual
 | commands                                | action                                    |
 +=========================================+===========================================+
 | ssh clp20001\@hpc2.storrs.hpc.uconn.edu | logs into storrs log in node              |
+|                                         |                                           |
+|                                         | (og uconn school password)                |
 +-----------------------------------------+-------------------------------------------+
 | srun -n 1 --pty bash                    | -n = number of cores                      |
 |                                         |                                           |
@@ -151,7 +153,7 @@ editor: visual
 +--------------------+------------------------------------------------------------------+
 | ll                 | ls -alF (long list)                                              |
 +--------------------+------------------------------------------------------------------+
-| ls                 | ls -A                                                            |
+| ls                 | ls -F                                                            |
 +--------------------+------------------------------------------------------------------+
 | intsession         | runs interactive session with 32G of memory                      |
 +--------------------+------------------------------------------------------------------+
@@ -181,8 +183,6 @@ editor: visual
 |           |                               |
 |           |                               |
 |           |                               |
-
-ls -F
 
 `*` is for executables, `/` for directories, `=` for sockets, `>` for doors, `@` for symbolic links, `|` for FIFOs and nothing for regular files
 
