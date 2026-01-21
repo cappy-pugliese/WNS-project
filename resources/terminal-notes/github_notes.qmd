@@ -1,0 +1,96 @@
+## Gitlab/github
+
+-   cloning gitlab using terminal
+
+    -   git clone git\@gitlab.com:\<url.git\>
+
+-   branches
+
+    -   git branch \<new branch name\>
+
+    -   git checkout \<branch name\>
+
+    -   git branch (shows what branch you are on)
+
+-   creating new git on terminal
+
+    -   cd into directory
+
+    -   `git init`
+
+    -   `nano .gitignore` for anything to ignore
+
+    -   add first commit
+
+        -   `git add <file>`
+
+        -   `git commit -m "add message"`
+
+    -   `git remote add origin <git user url>`
+
+    -   <https://github.com/cappy-pugliese>
+
+```         
+ssh-keygen -t rsa -b 4096 -C "cappy.pugliese@gmail.com"
+eval "$(ssh-agent -s)" 
+ssh-add ~/.ssh/id_rsa
+```
+
+url to repository needs to be: [`ssh://git@github.com/path/to/repository`](ssh://git@github.com/path/to/repository)
+
+------------------------------------------------------------------------
+
+-   Pushing to git
+
+    -   git add
+
+        -   pushes edits to staging area
+
+        -   can add single file or single directory (by typing name after command)
+
+        -   git add . will add everything except deleted files
+
+        -   git add -A
+
+    -   git status
+
+        -   can see files in the staging area
+
+    -   git commit
+
+        -   pushes stage data to git repository
+
+        -   git commit -m \<message explaining commit\>
+
+    -   git fetch origin
+
+        -   gets origin repository information
+
+    -   git diff origin/\<branch name\> \<branch name\>
+
+        -   looks at differences between two reposititories
+
+        -   origin/branch is the online repository
+
+    -   git pull origin \<branch name\>
+
+        -   pulls from online repository
+
+    -   git push -u origin --all
+
+        -   pushes everything online
+
+-   pulling everything over from origin (overrides local directory)
+
+    ```         
+    git fetch --all
+    git branch backup-main
+    git reset --hard origin/main
+    ```
+
+    -   deleting local branch:
+
+        ```         
+        git branch -d <branch_name>
+        # uppercase -D will force delete the branch
+        ```
