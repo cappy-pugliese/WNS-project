@@ -131,3 +131,20 @@ map
     -   x –\> long min: -121.5, max: -62
 
     -   y –\> lat min: 34.5, max: 48.5
+
+## Using TESS
+
+-   recommend using `ld_prune()` algatr function first
+
+    -   "ld_prune prunes SNPs based on linkage disequilibrium using SNPRelate and SeqArray packages"
+
+        ```{r}
+        library(here)
+
+
+
+        ld_prune(vcf=vcf,out_name="ld_prun_vcf",out_format="vcf",ld.threshold = 0.6,method = c("corr"),save_output = TRUE)
+        # vcf is biallelic
+
+        gt <- extract.gt(vcf)
+        ```
