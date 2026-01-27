@@ -139,12 +139,47 @@ map
     -   "ld_prune prunes SNPs based on linkage disequilibrium using SNPRelate and SeqArray packages"
 
         ```{r}
-        library(here)
+        tess_packages()
 
 
 
         ld_prune(vcf=vcf,out_name="ld_prun_vcf",out_format="vcf",ld.threshold = 0.6,method = c("corr"),save_output = TRUE)
         # vcf is biallelic
+        # this command was not working
+            # first couldn't find library "here" and had to install that
+            # then got this error:
+                # Error in `SNPRelate::snpgdsVCF2GDS()`:
+                # is.character(vcf.fn) & is.vector(vcf.fn) is not TRUE
 
         gt <- extract.gt(vcf)
         ```
+
+        -   ended up just ld pruning with plink and outputting a vcf file and transferring that over instead
+
+            ```{r}
+            # north america no clones, filtered vcf
+            File attributes:
+              meta lines: 120
+              header_line: 121
+              variant count: 506864
+              column count: 60
+
+            # north america no clones, filtered, ld pruned vcf
+            File attributes:
+              meta lines: 102
+              header_line: 103
+              variant count: 1176
+              column count: 60
+
+            # only the regular vcf has NA values, the prunned one does not
+            > any(is.na(pruned_dosage))
+            [1] FALSE
+            > any(is.na(dosage))
+            [1] TRUE
+            > any(is.na(simple_dos))
+            [1] FALSE
+            ```
+
+linkage disequalibrium:
+
+"For other analyses - such as genotype-environment association methods like RDA and LFMM - SNPs in LD are sometimes removed prior to running such analyses, but we do not recommend this because SNPs most strongly associated with environmental variables may have been pruned out. However, failing to account for linkage may result in overinflated conclusions about environmental associations. A solution to this is to perform LD-pruning after having run GEA methods; one approach to do so is to retain SNPs with the strongest association (i.e., lowest p-value) and removing all others that are in linkage with that particular SNP (see the approach described in Capblancq & Forester 2021 for more information)" -algatr tutorial

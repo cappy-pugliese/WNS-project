@@ -53,3 +53,5 @@ data/climate_data/wc2.1_data/climate/wc2.1_2.5m/wc2.1_2.5m_bio_16.tif
 data/climate_data/wc2.1_data/climate/wc2.1_2.5m/wc2.1_2.5m_bio_17.tif
 data/climate_data/wc2.1_data/climate/wc2.1_2.5m/wc2.1_2.5m_bio_18.tif
 data/climate_data/wc2.1_data/climate/wc2.1_2.5m/wc2.1_2.5m_bio_19.tif
+data/05_algatr/n-amer-no-clones_ploidy1_filtered_plink-ld.vcf
+**.DS_Store

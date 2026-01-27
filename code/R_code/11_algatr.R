@@ -4,10 +4,11 @@ library(geodata)
 library(algatr)
 library(vcfR)
 
-setwd("/Users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project")
+setwd("/Users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/data/05_algatr/")
 raster_path = "/Users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/data/climate_data/wc2.1_data"
-coords <- read.csv("data/05_algatr/NoA_Pd_coords.csv")
-vcf <- read.vcfR("data/05_algatr/n-amer-no-clones_filtered.vcf")
+coords <- read.csv("NoA_Pd_coords.csv")
+vcf <- read.vcfR("n-amer-no-clones_filtered.vcf")
+ld_pruned_vcf <- read.vcfR("n-amer-no-clones_ploidy1_filtered_plink-ld.vcf")
 
 # load bioclimatic data
 bio <- worldclim_global(path=raster_path, var="bio", res=2.5)
@@ -41,3 +42,36 @@ do_everything_for_me(Pd_vcf, coords, NoA_pca_map)
 #! vector memory limit of 16.0 Gb reached, see mem.maxVSize()
 
 ### looks like my computer does not have enough memory to run this lol
+
+###################################
+
+# Genetic Data Processing
+dosage <- vcf_to_dosage(vcf)
+pruned_dosage <- vcf_to_dosage(ld_pruned_vcf)
+
+#k = 7
+#str_dos <- str_impute(gen = dosage, K = 7, entropy = TRUE, repetitions = 3, quiet = FALSE, save_output = FALSE)
+# ^neither code worked
+  # there was something wrong with the NA's
+    # Error in `.f()`:
+    # ! Missing data must be encoded as 9.
+simple_dos <- simple_impute(dosage)
+# ^this one works
+
+# ld prune function still doesn't work, even with using dosage variable instead
+# so just going to stick with using the plink ld prune vcf file
+# it also doesn't have na's, so I don't have to worry about that either
+
+# Environmental data processing
+
+
+
+# genetic distances
+
+###################################
+
+# TESS
+tess_packages()
+ld_pruned_vcf <- read.vcfR("n-amer-no-clones_ploidy1_filtered_plink-ld.vcf")
+
+
