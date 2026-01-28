@@ -5,6 +5,9 @@ library(algatr)
 library(vcfR)
 library(sf)
 library(viridis)
+#library(RStoolbox)
+library(terra)
+library(ggplot2)
 
 setwd("/Users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/data/05_algatr/")
 raster_path = "/Users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/data/climate_data/wc2.1_data"
@@ -52,51 +55,61 @@ pruned_dosage <- vcf_to_dosage(ld_pruned_vcf)
 envirodata_packages()
 # coordniates
 coords_longlat <- st_as_sf(x=coords, coords = c("x", "y"), crs = "+proj=longlat")
-
 # load bioclimatic data
 bio <- worldclim_global(path=raster_path, var="bio", res=2.5)
-
 # crop Raster* with Spatial* object
 NoA <- as(extent(-135, -55, 25, 60), 'SpatialPolygons')
 crs(NoA) <- crs(bio)
 NoA_bio <- crop(bio, NoA)
-
 # make map (biovariable 1) with points
 plot(NoA_bio[[1]], col = turbo(100), axes = FALSE)
 points(coords_longlat, pch = 19)
 
 # checking collinearity among environmental layers
-cors_env <- check_env(NoA_bio)
-#Warning: The extracted values for 31 pairs of variables had correlation coefficients > 0.7. algatr recommends reducing collinearity by removing correlated variables or performing a PCA before proceeeding.
-
+  #cors_env <- check_env(NoA_bio)
 # checking collinearity of extracted environmental values at each coordinate
-check_result <- check_vals(NoA_bio, coords_longlat)
-#Warning: The extracted values for 25 pairs of variables had correlation coefficients > 0.7. algatr recommends reducing collinearity by removing correlated variables or performing a PCA before proceeeding.
-
+  #check_result <- check_vals(NoA_bio, coords_longlat)
 # checking collinearity between distances
-check_results <- check_dists(NoA_bio, coords_longlat)
-#Warning: The distances for 142 pairs of variables are significantly correlated. algatr recommends reducing collinearity by removing correlated variables or performing a PCA before proceeeding.
+  #check_results <- check_dists(NoA_bio, coords_longlat)
 
 # performing a raster PCA
-env_pcs <- rasterPCA(NoA_bio, spca = TRUE)
-  # ^did not work
-    # Error in `princomp.default()`:
-    # ! covariance matrix is not non-negative definite
-
 #######################################
-# where i left off: https://thewanglab.github.io/algatr/articles/enviro_data_vignette.html
+# tutorial: https://thewanglab.github.io/algatr/articles/enviro_data_vignette.html
 #######################################
-
-### from a different tutorial (prob don't need):
+### from a different tutorial:
 ## https://stackoverflow.com/questions/75739085/running-a-pca-on-a-rasterstack-in-r
 ## pca code
-#pca <- prcomp(NoA_bio)
-og_envpcs <- predict(NoA_bio, pca)
-#cors_pca_env <- check_env(x)
-# plot(x)
-#NoA_pca_map <- plotRGB(scaleRGB(x),r=1,g=2,b=3)
+pca <- prcomp(NoA_bio)
+##################
+### plotting pca data
+# https://www.geeksforgeeks.org/r-language/prcomp-in-r/
+pca_data <- data.frame(
+  Component = 1:length(pca$sdev),
+  Variance = pca$sdev^2 / sum(pca$sdev^2)
+)
 
-plots <- lapply(1:3, function(x) ggR(og_envpcs$map, x, geom_raster = TRUE))
+scree_plot <- ggplot(pca_data, aes(x = Component, y = Variance)) +
+  geom_bar(stat = "identity", fill = "steelblue") +
+  geom_line() +
+  geom_point() +
+  xlab("Principal Components") +
+  ylab("Proportion of Variance Explained") +
+  ggtitle("Scree Plot")
+##################
+og_envpcs <- predict(NoA_bio, pca, index=1:3)
+
+cors_pca_env <- check_env(og_envpcs)
+check_result <- check_vals(og_envpcs, coords_longlat)
+check_results <- check_dists(og_envpcs, coords_longlat)
+  # Warning: The distances for 6 pairs of variables are significantly correlated
+  # PC 1 and PC 3 seem to be on the higher side (r ~ 0.65)
+
+# Single composite raster plot with 3 PCs 
+NoA_pca_map <- ggRGB(og_envpcs, 1, 2, 3, stretch = "lin", q = 0, geom_raster = TRUE)
+
+# calculate environmental distances
+env <- raster::extract(NoA_pca_map, coords_longlat)
+# unable to find an inherited method for function ‘extract’ for signature ‘x = "ggplot2::ggplot", y = "sf"’
 
 
 ###########
