@@ -83,6 +83,10 @@ env_pcs <- rasterPCA(NoA_bio, spca = TRUE)
     # Error in `princomp.default()`:
     # ! covariance matrix is not non-negative definite
 
+#######################################
+# where i left off: https://thewanglab.github.io/algatr/articles/enviro_data_vignette.html
+#######################################
+
 ### from a different tutorial (prob don't need):
 ## https://stackoverflow.com/questions/75739085/running-a-pca-on-a-rasterstack-in-r
 ## pca code
