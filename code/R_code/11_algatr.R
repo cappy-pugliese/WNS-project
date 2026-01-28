@@ -3,33 +3,18 @@ library(sp)
 library(geodata)
 library(algatr)
 library(vcfR)
+library(sf)
+library(viridis)
 
 setwd("/Users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/data/05_algatr/")
 raster_path = "/Users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/data/climate_data/wc2.1_data"
 coords <- read.csv("NoA_Pd_coords.csv")
-vcf <- read.vcfR("n-amer-no-clones_filtered.vcf")
+#vcf <- read.vcfR("n-amer-no-clones_filtered.vcf")
 ld_pruned_vcf <- read.vcfR("n-amer-no-clones_ploidy1_filtered_plink-ld.vcf")
 
-# load bioclimatic data
-bio <- worldclim_global(path=raster_path, var="bio", res=2.5)
+###################################
 
-# crop Raster* with Spatial* object
-NoA <- as(extent(-135, -55, 25, 60), 'SpatialPolygons')
-crs(NoA) <- crs(bio)
-NoA_bio <- crop(bio, NoA)
-# plot(NoA_bio[[12]])
-
-## https://stackoverflow.com/questions/75739085/running-a-pca-on-a-rasterstack-in-r
-## pca code
-pca <- prcomp(NoA_bio)
-x <- predict(NoA_bio, pca)
-# plot(x)
-
-NoA_pca_map <- plotRGB(scaleRGB(x),r=1,g=2,b=3)
-
-
-####
-do_everything_for_me(Pd_vcf, coords, NoA_pca_map)
+#do_everything_for_me(Pd_vcf, coords, NoA_pca_map)
 #Please be aware: the do_everything functions are meant to be exploratory. We do not recommend their use for final analyses unless certain they are properly parameterized.
 #Loading required namespace: adegenet
 #Registered S3 method overwritten by 'ecodist':
@@ -45,8 +30,9 @@ do_everything_for_me(Pd_vcf, coords, NoA_pca_map)
 
 ###################################
 
+###########
 # Genetic Data Processing
-dosage <- vcf_to_dosage(vcf)
+#dosage <- vcf_to_dosage(vcf)
 pruned_dosage <- vcf_to_dosage(ld_pruned_vcf)
 
 #k = 7
@@ -55,23 +41,67 @@ pruned_dosage <- vcf_to_dosage(ld_pruned_vcf)
   # there was something wrong with the NA's
     # Error in `.f()`:
     # ! Missing data must be encoded as 9.
-simple_dos <- simple_impute(dosage)
+#simple_dos <- simple_impute(dosage)
 # ^this one works
-
 # ld prune function still doesn't work, even with using dosage variable instead
 # so just going to stick with using the plink ld prune vcf file
 # it also doesn't have na's, so I don't have to worry about that either
 
+###########
 # Environmental data processing
+envirodata_packages()
+# coordniates
+coords_longlat <- st_as_sf(x=coords, coords = c("x", "y"), crs = "+proj=longlat")
+
+# load bioclimatic data
+bio <- worldclim_global(path=raster_path, var="bio", res=2.5)
+
+# crop Raster* with Spatial* object
+NoA <- as(extent(-135, -55, 25, 60), 'SpatialPolygons')
+crs(NoA) <- crs(bio)
+NoA_bio <- crop(bio, NoA)
+
+# make map (biovariable 1) with points
+plot(NoA_bio[[1]], col = turbo(100), axes = FALSE)
+points(coords_longlat, pch = 19)
+
+# checking collinearity among environmental layers
+cors_env <- check_env(NoA_bio)
+#Warning: The extracted values for 31 pairs of variables had correlation coefficients > 0.7. algatr recommends reducing collinearity by removing correlated variables or performing a PCA before proceeeding.
+
+# checking collinearity of extracted environmental values at each coordinate
+check_result <- check_vals(NoA_bio, coords_longlat)
+#Warning: The extracted values for 25 pairs of variables had correlation coefficients > 0.7. algatr recommends reducing collinearity by removing correlated variables or performing a PCA before proceeeding.
+
+# checking collinearity between distances
+check_results <- check_dists(NoA_bio, coords_longlat)
+#Warning: The distances for 142 pairs of variables are significantly correlated. algatr recommends reducing collinearity by removing correlated variables or performing a PCA before proceeeding.
+
+# performing a raster PCA
+env_pcs <- rasterPCA(NoA_bio, spca = TRUE)
+  # ^did not work
+    # Error in `princomp.default()`:
+    # ! covariance matrix is not non-negative definite
+
+### from a different tutorial (prob don't need):
+## https://stackoverflow.com/questions/75739085/running-a-pca-on-a-rasterstack-in-r
+## pca code
+#pca <- prcomp(NoA_bio)
+og_envpcs <- predict(NoA_bio, pca)
+#cors_pca_env <- check_env(x)
+# plot(x)
+#NoA_pca_map <- plotRGB(scaleRGB(x),r=1,g=2,b=3)
+
+plots <- lapply(1:3, function(x) ggR(og_envpcs$map, x, geom_raster = TRUE))
 
 
-
+###########
 # genetic distances
 
 ###################################
 
 # TESS
 tess_packages()
-ld_pruned_vcf <- read.vcfR("n-amer-no-clones_ploidy1_filtered_plink-ld.vcf")
+
 
 
