@@ -8,6 +8,8 @@ library(viridis)
 #library(RStoolbox)
 library(terra)
 library(ggplot2)
+library(tidyr)
+library(tibble)
 
 setwd("/Users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/data/05_algatr/")
 raster_path = "/Users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/data/climate_data/wc2.1_data"
@@ -105,16 +107,47 @@ check_results <- check_dists(og_envpcs, coords_longlat)
   # PC 1 and PC 3 seem to be on the higher side (r ~ 0.65)
 
 # Single composite raster plot with 3 PCs 
-NoA_pca_map <- ggRGB(og_envpcs, 1, 2, 3, stretch = "lin", q = 0, geom_raster = TRUE)
+#NoA_pca_map <- ggRGB(og_envpcs, 1, 2, 3, stretch = "lin", q = 0, geom_raster = TRUE)
+NoA_pca_map <- plotRGB(scaleRGB(og_envpcs),r=1,g=2,b=3)
 
 # calculate environmental distances
-env <- raster::extract(NoA_pca_map, coords_longlat)
-# unable to find an inherited method for function ‘extract’ for signature ‘x = "ggplot2::ggplot", y = "sf"’
+env <- raster::extract(og_envpcs, coords_longlat)
+#head(env)
 
+env_dist <- env_dist(env)
+plot(env_dist$PC1)
+plot(env_dist$PC2)
+plot(env_dist$PC3)
 
+# needs tidyr & tibble libraries
+as.data.frame(env_dist$PC1) %>%
+  rownames_to_column("sample") %>%
+  pivot_longer(-"sample", names_to = "sample_comp", values_to = "dist") %>%
+  ggplot(aes(x = as.numeric(sample), y = as.numeric(sample_comp), fill = dist)) +
+  geom_tile() +
+  coord_equal() +
+  scale_fill_viridis() +
+  xlab("Sample") +
+  ylab("Sample")
+
+# calculate geographic distance
+geo_dist <- geo_dist(coords, type = "Euclidean")
+plot(geo_dist)
+# Make a fun heat map with the pairwise distances
+geo_dist <- as.data.frame(geo_dist)
+colnames(geo_dist) <- rownames(geo_dist)
+geo_dist %>%
+  rownames_to_column("sample") %>%
+  gather("sample_comp", "dist", -"sample") %>%
+  ggplot(aes(x = as.numeric(sample), y = as.numeric(sample_comp), fill = dist)) +
+  geom_tile() +
+  coord_equal() +
+  scale_fill_viridis() +
+  xlab("Sample") +
+  ylab("Sample")
 ###########
 # genetic distances
-
+#https://thewanglab.github.io/algatr/articles/gen_dist_vignette.html
 ###################################
 
 # TESS
