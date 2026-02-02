@@ -40,9 +40,9 @@ pca <- prcomp(NoA_bio)
 ##################
 og_envpcs <- predict(NoA_bio, pca, index=1:3)
 
+############ this line of code is what produces the map
 # Single composite raster plot with 3 PCs 
-#NoA_pca_map <- ggRGB(og_envpcs, 1, 2, 3, stretch = "lin", q = 0, geom_raster = TRUE)
-NoA_pca_map <- plotRGB(scaleRGB(og_envpcs),r=1,g=2,b=3)
+#NoA_pca_map <- plotRGB(scaleRGB(og_envpcs),r=1,g=2,b=3)
 
 # calculate environmental distances
 env <- raster::extract(og_envpcs, coords_longlat)
