@@ -39,6 +39,7 @@ ld_pruned_vcf <- read.vcfR("n-amer-no-clones_ploidy1_filtered_plink-ld.vcf")
 # Genetic Data Processing
 #dosage <- vcf_to_dosage(vcf)
 pruned_dosage <- vcf_to_dosage(ld_pruned_vcf)
+rownames(pruned_dosage) <- sub("^(.*?_\\d+)_.*$", "\\1", rownames(pruned_dosage))
 
 #k = 7
 #str_dos <- str_impute(gen = dosage, K = 7, entropy = TRUE, repetitions = 3, quiet = FALSE, save_output = FALSE)
@@ -145,10 +146,23 @@ geo_dist %>%
   scale_fill_viridis() +
   xlab("Sample") +
   ylab("Sample")
+
 ###########
 # genetic distances
 #https://thewanglab.github.io/algatr/articles/gen_dist_vignette.html
 ###################################
+gen_dist_packages()
+library(cowplot)
+################################### genetic distance matrix ###################################
+euc_dists <- gen_dist(pruned_dosage, dist_type = "euclidean")
+gen_dist_hm(euc_dists) + 
+  scale_fill_viridis() +
+  labs(title="Genetic Distances (Euclidean)")
+
+#dps_dists <- gen_dist(vcf, dist_type = "dps")
+#gen_dist_hm(dps_dists) + 
+ # scale_fill_viridis() +
+  #labs(title="Genetic Distances (DPS)")
 
 # TESS
 tess_packages()
