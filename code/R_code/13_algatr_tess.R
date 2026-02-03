@@ -8,8 +8,8 @@ setwd("/Users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis
 
 ## load tess libraires
 tess_packages()
-library(cowplot)
 
+## begin tess
 krig_raster <- raster::aggregate(og_envpcs, fact = 6)
 
 tess3_result <- tess_ktest(pruned_dosage, coords, Kvals = 1:10, ploidy = 2, K_selection = "auto")
@@ -40,6 +40,22 @@ tess_ggplot(krig_admix,
   plot_method = "maxQ", minQ = 0.1,
   plot_axes = TRUE, 
   coords = coords_longlat)
-
 ## isn't doing what it's supposed to do??? or everything is just the same color??? I'm not too zoomed out am I?????
   # tried changing the aggregate fact from 6 to 2 --> didn't change anything
+
+dev.off()
+# ^ will reset par() function
+
+
+## attempting to use base(?) tess
+coords_proj_mat <- st_coordinates(coords_longlat)
+plot(qmat,
+  coords_proj_mat,
+  method = "map.max",
+  interpol = FieldsKrigModel(10),
+  main = "Ancestry coefficients",
+  xlab = "x", ylab = "y",
+  col.palette = CreatePalette(),
+  resolution = c(300, 300), cex = .4
+)
+# oh hey it worked just using base tess
