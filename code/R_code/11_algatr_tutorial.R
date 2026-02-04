@@ -164,8 +164,5 @@ gen_dist_hm(euc_dists) +
  # scale_fill_viridis() +
   #labs(title="Genetic Distances (DPS)")
 
-# TESS
-tess_packages()
-
 
 

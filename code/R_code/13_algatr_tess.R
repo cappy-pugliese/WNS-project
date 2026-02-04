@@ -8,6 +8,17 @@ setwd("/Users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis
 
 ## load tess libraires
 tess_packages()
+library(here)
+library(wingen)
+library(tess3r)
+library(ggplot2)
+library(terra)
+library(raster)
+library(fields)
+library(rworldmap)
+library(automap)
+library(cowplot)
+library(sf)
 
 ## begin tess
 krig_raster <- raster::aggregate(og_envpcs, fact = 6)
@@ -21,7 +32,9 @@ bestK <- tess3_result[["K"]]
 # Get Qmatrix with ancestry coefficients
 qmat <- qmatrix(tess3_obj, K = bestK)
 
-krig_raster <- terra::project(krig_raster, "+proj=longlat")
+coords_longlat <- st_transform(coords_longlat, crs = 3857)
+krig_raster <- terra::project(krig_raster, "epsg:3857")
+
 
 krig_admix <- tess_krig(qmat, coords_longlat, krig_raster)
 
@@ -39,7 +52,8 @@ par(mfrow = c(2, 2), pty = "s", mar = rep(0, 4))
 tess_ggplot(krig_admix,
   plot_method = "maxQ", minQ = 0.1,
   plot_axes = TRUE, 
-  coords = coords_longlat)
+  coords = coords_longlat,
+  list = TRUE)
 ## isn't doing what it's supposed to do??? or everything is just the same color??? I'm not too zoomed out am I?????
   # tried changing the aggregate fact from 6 to 2 --> didn't change anything
 
