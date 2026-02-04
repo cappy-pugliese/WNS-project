@@ -20,6 +20,9 @@ library(automap)
 library(cowplot)
 library(sf)
 
+#my libraries
+library(patchwork)
+
 ## begin tess
 krig_raster <- raster::aggregate(og_envpcs, fact = 6)
 
@@ -49,13 +52,15 @@ tess_ggbarplot(qmat)
 
 ### plotting using tess
 par(mfrow = c(2, 2), pty = "s", mar = rep(0, 4))
-tess_ggplot(krig_admix,
-  plot_method = "maxQ", minQ = 0.1,
+tessplot <- tess_ggplot(krig_admix,
+  plot_method = "maxQ", minQ = 0.2,
+  ggplot_fill = scale_fill_manual(values = c("#D55E00", "#DACE1E","#0072B2")),
   plot_axes = TRUE, 
   coords = coords_longlat,
   list = TRUE)
-## isn't doing what it's supposed to do??? or everything is just the same color??? I'm not too zoomed out am I?????
-  # tried changing the aggregate fact from 6 to 2 --> didn't change anything
+
+tessplot$plot + tessplot$legend
+
 
 dev.off()
 # ^ will reset par() function
