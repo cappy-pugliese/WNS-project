@@ -31,4 +31,14 @@ wgd <- window_gd(ld_pruned_vcf,
 # Plot map of pi
 ggplot_gd(wgd, bkg = envlayer) + ggtitle("Moving window pi")
 
-kgd <- krig_gd(wgd, index = 1:2, pd_lyr, disagg_grd = 5)
+setwd("/Users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/data/05_algatr")
+kgd <- terra::rast("wingen_kgd.tif")
+#kgd <- krig_gd(wgd, index = 1:2, pd_lyr, disagg_grd = 5)
+# worked, but also produced warnings + took long time
+# Warning messages:
+  #1: `krig_gd()` was deprecated in wingen 2.2.0. ℹ Please use `wkrig_gd()` instead. This warning is displayed once per session. Call lifecycle::last_lifecycle_warnings() to see where this warning was generated. 
+  #2: In sqrt(krige_result$var1.var) : NaNs produced
+  #3: In sqrt(krige_result$var1.var) : NaNs produced
+#setwd("/Users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/data/05_algatr")
+# S4 method for class 'SpatRaster,character'
+#writeRaster(kgd, "wingen_kgd.tif", overwrite=FALSE)
