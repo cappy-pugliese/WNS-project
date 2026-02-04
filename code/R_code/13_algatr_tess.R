@@ -11,14 +11,10 @@ tess_packages()
 library(here)
 library(wingen)
 library(tess3r)
-library(ggplot2)
-library(terra)
-library(raster)
 library(fields)
 library(rworldmap)
 library(automap)
 library(cowplot)
-library(sf)
 
 #my libraries
 library(patchwork)
@@ -60,6 +56,7 @@ tessplot <- tess_ggplot(krig_admix,
   list = TRUE)
 
 tessplot$plot + tessplot$legend
+# legend = ancestry coefficient (Q) vs k value
 
 
 dev.off()
