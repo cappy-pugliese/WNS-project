@@ -1,7 +1,9 @@
 R_code_path <- "/Users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/code/R_code/"
-source(paste0(R_code_path, "12_algatr_src.R"))
+pcangsd_data_path <- "/Users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/data/01_pd-samples/"
 
+source(paste0(R_code_path, "12_algatr_src.R"))
 setwd("/Users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/graphs/02_algatr/")
+pd_info <- read.csv(paste0(pcangsd_data_path, "25_12-10_n-amer-no-clones_locations.csv"))
 
 ##### tess tutorial
 ## https://thewanglab.github.io/algatr/articles/TESS_vignette.html
@@ -18,6 +20,10 @@ library(cowplot)
 
 #my libraries
 library(patchwork)
+library(dplyr)
+
+## color scheme
+colors <- c("#D55E00", "#DACE1E","#0072B2")
 
 ## begin tess
 krig_raster <- raster::aggregate(og_envpcs, fact = 6)
@@ -40,6 +46,25 @@ krig_admix <- tess_krig(qmat, coords_longlat, krig_raster)
 ## bar plot of Q values, k=3
 tess_ggbarplot(qmat)
 
+df_qmat <- as.data.frame(qmat)
+colnames(df_qmat) <- c("K1","K2","K3")
+df_qmat$Sample <- rownames(pruned_dosage)
+df_qmat$year <- pd_info$year
+df_qmat <- df_qmat |> dplyr::relocate(Sample, year, .before = K1)
+df_long_qmat <- df_qmat |> pivot_longer(cols=c('K1','K2','K3'),
+                            names_to = 'K_value',
+                            values_to = 'Q_value')
+
+
+plot1 <- ggplot(df_long_qmat,aes(x=Sample,y=Q_value,fill=K_value)) +
+scale_fill_manual(values = colors) +
+geom_col(col=NA,inherit.aes = TRUE) +
+theme(axis.text.x = element_text(angle = 90, hjust = 1, size=8), legend.key.size=unit(0.5, 'cm')) +
+geom_col(col=NA,inherit.aes = TRUE) +
+facet_grid( ~ year, scales = "free_x", space="free_x", switch = "x") +
+labs(title = "LD Pruned North American Pd Samples", x = "Individuals", y = "Q Value") 
+plot1
+
 ## bar plot of Q values, k=7
 #tess3_obj_K7 <- tess3(pruned_dosage, coord = as.matrix(coords), K = 7, method = "projected.ls", ploidy = 2)
 #pcangsd_k <- 7
@@ -47,31 +72,38 @@ tess_ggbarplot(qmat)
 #tess_ggbarplot(qmat_k7)
 
 ### plotting using tess
-par(mfrow = c(2, 2), pty = "s", mar = rep(0, 4))
 tessplot <- tess_ggplot(krig_admix,
   plot_method = "maxQ", minQ = 0.2,
-  ggplot_fill = scale_fill_manual(values = c("#D55E00", "#DACE1E","#0072B2")),
+  ggplot_fill = scale_fill_manual(values = colors),
   plot_axes = TRUE, 
   coords = coords_longlat,
   list = TRUE)
 
 tessplot$plot + tessplot$legend
 # legend = ancestry coefficient (Q) vs k value
+tessplot_poly <- tess_ggplot(krig_admix,
+  plot_method = "allQ_poly", minQ = 0.20,
+  ggplot_fill = scale_fill_manual(values = colors),
+  plot_axes = TRUE, 
+  coords = coords_longlat,
+  list = TRUE)
 
+tessplot_poly
+ 
 
-dev.off()
+#dev.off()
 # ^ will reset par() function
 
 
 ## attempting to use base(?) tess
-coords_proj_mat <- st_coordinates(coords_longlat)
-plot(qmat,
-  coords_proj_mat,
-  method = "map.max",
-  interpol = FieldsKrigModel(10),
-  main = "Ancestry coefficients",
-  xlab = "x", ylab = "y",
-  col.palette = CreatePalette(),
-  resolution = c(300, 300), cex = .4
-)
+#coords_proj_mat <- st_coordinates(coords_longlat)
+#plot(qmat,
+#  coords_proj_mat,
+#  method = "map.max",
+#  interpol = FieldsKrigModel(10),
+#  main = "Ancestry coefficients",
+#  xlab = "x", ylab = "y",
+#  col.palette = CreatePalette(),
+#  resolution = c(300, 300), cex = .4
+#)
 # oh hey it worked just using base tess
