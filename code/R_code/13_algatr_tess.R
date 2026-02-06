@@ -47,10 +47,10 @@ krig_admix <- tess_krig(qmat, coords_longlat, krig_raster)
 tess_ggbarplot(qmat)
 
 df_qmat <- as.data.frame(qmat)
-colnames(df_qmat) <- c("K1","K2","K3")
+colnames(df_qmat) <- c("K3","K1","K2")
 df_qmat$Sample <- rownames(pruned_dosage)
 df_qmat$year <- pd_info$year
-df_qmat <- df_qmat |> dplyr::relocate(Sample, year, .before = K1)
+df_qmat <- df_qmat |> dplyr::relocate(Sample, year, K1, K2, K3)
 df_long_qmat <- df_qmat |> pivot_longer(cols=c('K1','K2','K3'),
                             names_to = 'K_value',
                             values_to = 'Q_value')
@@ -62,7 +62,7 @@ geom_col(col=NA,inherit.aes = TRUE) +
 theme(axis.text.x = element_text(angle = 90, hjust = 1, size=8), legend.key.size=unit(0.5, 'cm')) +
 geom_col(col=NA,inherit.aes = TRUE) +
 facet_grid( ~ year, scales = "free_x", space="free_x", switch = "x") +
-labs(title = "LD Pruned North American Pd Samples", x = "Individuals", y = "Q Value") 
+labs(title = "LD Pruned North American Pd Samples", x = "Individuals by Year", y = "Q Value") 
 plot1
 
 ## bar plot of Q values, k=7
@@ -90,6 +90,8 @@ tessplot_poly <- tess_ggplot(krig_admix,
 
 tessplot_poly
  
+par(mfrow = c(2, 2), mar = (c(1, 4, 1, 4) + 0.1), oma = rep(1, 4), mai = c(1,1,1,1))
+tess_plot_allK(krig_admix, col_breaks = 20, legend.width = 2)
 
 #dev.off()
 # ^ will reset par() function
