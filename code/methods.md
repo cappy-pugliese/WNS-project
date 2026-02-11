@@ -45,3 +45,4 @@ GATK pipeline (GATK/4.3.0.0)
     - Wingen
 
 ## IQtree
+iqtree/2.2.2
