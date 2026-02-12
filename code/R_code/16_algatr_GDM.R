@@ -43,8 +43,10 @@ maprgb <- map$pcaRastRGB
 
 # Now, use `extrap_mask()` to do buffer-based masking 
 # (i.e., mask out areas outside a buffer around our sampling coordinates)
-map_mask <- extrap_mask(liz_coords, maprgb, method = "buffer", buffer_width = 1.25)
-
+#map_mask <- extrap_mask(coords, maprgb, method = "buffer", buffer_width = 3)
+#terra::plotRGB(maprgb)
+#terra::plot(map_mask, col = "white", add = TRUE, legend = FALSE, alpha = 0.6)
+#terra::points(coords_longlat,)
 
 
 
@@ -54,6 +56,6 @@ map_mask <- extrap_mask(liz_coords, maprgb, method = "buffer", buffer_width = 1.
 date <- "26_02-11"
 plot_title <- "05_map"
 paste0(date, "_gdm_", plot_title)
-png(file=paste0(plot_path, date, "_gdm_", plot_title),width=620, height=450)
-plot
-dev.off()
+#png(file=paste0(plot_path, date, "_gdm_", plot_title),width=620, height=450)
+#plot
+#dev.off()
