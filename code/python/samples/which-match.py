@@ -24,3 +24,8 @@ for x in range(85):
 df_tot_samps = pd.DataFrame(total_samps)
 
 ### finish the tutorial from here
+# Merge dataframes on columns 'A' and 'B' (default is inner join)
+matching_rows = pd.merge(df_pd_samples, df_tot_samps, how='inner')
+print(matching_rows)
+
+## do not worry about adding more data
