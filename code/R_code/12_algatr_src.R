@@ -10,10 +10,13 @@ library(terra)
 library(ggplot2)
 library(tidyr)
 library(tibble)
+library(dplyr)
+
 
 setwd("/Users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/data/05_algatr/")
 raster_path = "/Users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/data/climate_data/wc2.1_data"
-coords <- read.csv("NoA_Pd_coords.csv")
+#coords <- read.csv("NoA_Pd_coords.csv")
+coords <- read.csv("no-washington_coords.csv")
 #vcf <- read.vcfR("n-amer-no-clones_filtered.vcf")
 ld_pruned_vcf <- read.vcfR("n-amer-no-clones_ploidy1_filtered_plink-ld.vcf")
 
@@ -26,11 +29,12 @@ rownames(pruned_dosage) <- sub("^(.*?_\\d+)_.*$", "\\1", rownames(pruned_dosage)
 # Environmental data processing
 envirodata_packages()
 # coordniates
+coords <- coords |> dplyr::select(x,y)
 coords_longlat <- st_as_sf(x=coords, coords = c("x", "y"), crs = "+proj=longlat")
 # load bioclimatic data
 bio <- worldclim_global(path=raster_path, var="bio", res=2.5)
 # crop Raster* with Spatial* object
-NoA <- as(extent(-135, -55, 25, 60), 'SpatialPolygons')
+NoA <- as(extent(-96, -55, 25, 55), 'SpatialPolygons')
 crs(NoA) <- crs(bio)
 NoA_bio <- crop(bio, NoA)
 
