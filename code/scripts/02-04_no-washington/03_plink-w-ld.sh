@@ -19,8 +19,8 @@ date
 
 ## set variables
 IN_VCF=/home/FCAM/cpugliese/lab_wns/05_vcfs/03_filtered-vcfs/n-amer-no-washington.vcf.gz
-OUTDIR=/home/FCAM/cpugliese/lab_wns/05_vcfs/03_filtered-vcfs/plink_files/07_plink-n-amer-no-wiscon
-OUTNAME=n-amer-no-wiscon_ploidy1_filtered_plink-ld
+OUTDIR=/home/FCAM/cpugliese/lab_wns/05_vcfs/03_filtered-vcfs/plink_files/07_plink-n-amer-no-washington/
+OUTNAME=n-amer-no-washington_ploidy1_filtered_plink-ld
 
 cd $OUTDIR
 
