@@ -20,8 +20,8 @@ source /home/FCAM/cpugliese/.bashrc
 conda activate pcangsd
 
 ## set variables
-INDIR=/home/FCAM/cpugliese/lab_wns/05_vcfs/03_filtered-vcfs/plink_files/07_plink-n-amer-no-wiscon
-PLINAME=n-amer-no-wiscon_ploidy1_filtered_plink-ld
+INDIR=/home/FCAM/cpugliese/lab_wns/05_vcfs/03_filtered-vcfs/plink_files/07_plink-n-amer-no-washington
+PLINAME=n-amer-no-washington_ploidy1_filtered_plink-ld
 OUTDIR=/home/FCAM/cpugliese/lab_wns/06_pcangsd/02_filtered_vcf/04_n-amer-no-wiscon
 PCANGSD="python3 /isg/shared/apps/pcangsd/1.0/pcangsd/pcangsd.py"
 
@@ -30,7 +30,7 @@ cd $OUTDIR
 ## PCAnsd
 $PCANGSD -plink $INDIR/$PLINAME \
 -admix \
--out pcangsd_n-amer-no-wiscon
+-out pcangsd_n-amer-no-washington
 
 
 conda deactivate

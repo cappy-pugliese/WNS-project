@@ -19,7 +19,7 @@ module load bcftools/1.20
 
 ## set variables
 INDIR=/home/FCAM/cpugliese/lab_wns/05_vcfs/03_filtered-vcfs/
-VCF=n-amer-no-wisconsin_filtered.vcf.gz
+VCF=n-amer-no-washington.vcf.gz
 
 cd $INDIR
 

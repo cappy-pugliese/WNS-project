@@ -16,9 +16,9 @@ date
 
 ## variables
 IN_VCF=/home/FCAM/cpugliese/lab_wns/05_vcfs/01_orig-vcfs/01_all-samples/ploidy-1/pd_ploidy-1.vcf.gz
-SAMPLES=/home/FCAM/cpugliese/wns/04_vcf/02_other-vcf-scritps/04_no-wisconsin/n-amer-no-wisconsin.txt
+SAMPLES=/home/FCAM/cpugliese/wns/04_vcf/02_other-vcf-scritps/04_no-washington/n-amer-no-washington.txt
 OUTDIR=/home/FCAM/cpugliese/lab_wns/05_vcfs/03_filtered-vcfs
-OUTNAME=n-amer-no-wisconsin_filtered.vcf.gz
+OUTNAME=n-amer-no-washington.vcf.gz
 
 ## load modules
 module load bcftools/1.9
