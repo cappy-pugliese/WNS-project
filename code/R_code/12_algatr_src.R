@@ -12,13 +12,12 @@ library(tidyr)
 library(tibble)
 library(dplyr)
 
-
 setwd("/Users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/data/05_algatr/")
 raster_path = "/Users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/data/climate_data/wc2.1_data"
 #coords <- read.csv("NoA_Pd_coords.csv")
 coords <- read.csv("no-washington_coords.csv")
 #vcf <- read.vcfR("n-amer-no-clones_filtered.vcf")
-ld_pruned_vcf <- read.vcfR("n-amer-no-clones_ploidy1_filtered_plink-ld.vcf")
+ld_pruned_vcf <- read.vcfR("n-amer-no-washington_ploidy1_filtered_plink-ld.vcf")
 
 ###########
 # Genetic Data Processing
