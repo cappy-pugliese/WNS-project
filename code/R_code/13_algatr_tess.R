@@ -20,10 +20,9 @@ library(cowplot)
 
 #my libraries
 library(patchwork)
-library(dplyr)
 
 ## color scheme
-colors <- c("#D55E00", "#DACE1E","#0072B2")
+colors <- c("#0072B2", "#D55E00", "#DACE1E")
 
 ## begin tess
 krig_raster <- raster::aggregate(og_envpcs, fact = 6)
