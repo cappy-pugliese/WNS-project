@@ -28,3 +28,5 @@ mmrr_table(results_full, digits = 2, summary_stats = TRUE)
 
 mmrr_plot(Y, X, mod = results_best$mod, plot_type = "all", stdz = TRUE)
 mmrr_table(results_best, digits = 2, summary_stats = TRUE)
+
+mmrr_full_everything <- mmrr_do_everything(euc_dists, coords_longlat, env = og_envpcs, geo = TRUE, model = "full")
