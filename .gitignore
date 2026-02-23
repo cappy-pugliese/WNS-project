@@ -78,3 +78,8 @@ data/05_algatr/NoA_rivers_and_lakes_shapefile/NA_Lakes_and_Rivers/data/rivers_l/
 data/05_algatr/NoA_rivers_and_lakes_shapefile/NA_Lakes_and_Rivers/data/rivers_l/northamerica_rivers_cec_2023.sbx
 data/05_algatr/NoA_rivers_and_lakes_shapefile/NA_Lakes_and_Rivers/data/rivers_l/northamerica_rivers_cec_2023.shp
 data/05_algatr/NoA_rivers_and_lakes_shapefile/NA_Lakes_and_Rivers/data/rivers_l/northamerica_rivers_cec_2023.shp.xml
+data/04_pcangsd/04_n-amer-no-washington/pcangsd_n-amer-no-washington.admix.8.F.npy
+data/04_pcangsd/Demo1pop.info
+data/04_pcangsd/04_n-amer-no-washington/pcangsd_n-amer-no-washington.admix.8.Q.npy
+data/04_pcangsd/04_n-amer-no-washington/pcangsd_n-amer-no-washington.cov
+data/04_pcangsd/04_n-amer-no-washington/pcangsd_n-amer-no-washington.args
