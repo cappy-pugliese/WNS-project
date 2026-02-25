@@ -1,1 +1,3 @@
 - Installing on cluster
+    - successfully installed?
+    - conda environment: feems
