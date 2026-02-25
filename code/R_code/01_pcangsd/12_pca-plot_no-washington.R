@@ -18,11 +18,19 @@ e <- eigen(cov)
 df_e <- as.data.frame(e$vectors)
 
 #### by year
+###### pc1 vs pc2
 ggplot(data=df_e,aes(x=V1,y=V2,color=info$year)) +
   geom_point() +
   scale_colour_paletteer_c("grDevices::Zissou 1") +
   theme_cowplot() +
   labs(x = "PC1", y = "PC2", color="Year", title="Individual Allele Frequency")
+
+###### pc2 vs pc3
+ggplot(data=df_e,aes(x=V2,y=V3,color=info$year)) +
+  geom_point() +
+  scale_colour_paletteer_c("grDevices::Zissou 1") +
+  theme_cowplot() +
+  labs(x = "PC2", y = "PC3", color="Year", title="Individual Allele Frequency")
 
 #### by long(or lat)
 ggplot(data=df_e,aes(x=V1,y=V2,color=info$long)) +

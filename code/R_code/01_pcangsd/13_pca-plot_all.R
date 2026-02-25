@@ -38,11 +38,19 @@ ggplot(data=df_e,aes(x=V1,y=V2,color=info$lat)) +
   labs(x = "PC1", y = "PC2", color="lat", title="Individual Allele Frequency")
 
 #### by continent
+##### PC1 vs PC2
 ggplot(data=df_e,aes(x=V1,y=V2,color=info$continent)) +
   geom_point(aes(alpha=0.5),size=2.5) +
   scale_color_manual(values=c("#56B4E9","#064061","#D55E00")) +
   theme_cowplot() +
   labs(x = "PC1", y = "PC2", color="continent", title="Individual Allele Frequency")
+
+##### PC2 vs PC3
+ggplot(data=df_e,aes(x=V2,y=V3,color=info$continent)) +
+  geom_point(aes(alpha=0.5),size=2.5) +
+  scale_color_manual(values=c("#56B4E9","#064061","#D55E00")) +
+  theme_cowplot() +
+  labs(x = "PC2", y = "PC3", color="continent", title="Individual Allele Frequency")
 
 #### by instrument
 ggplot(data=df_e,aes(x=V1,y=V2,fill=info$instrument)) +
@@ -63,10 +71,6 @@ ggplot(data=df_e,aes(x=V1,y=V2,color=info$strat)) +
   scale_color_manual(values=c("#56B4E9","#D55E00")) +
   theme_cowplot() +
   labs(x = "PC1", y = "PC2", color="Strat", title="Individual Allele Frequency")
-
-
-cols <- c("#064061", "#56B4E9","#009E73","#E69F00","#9C4907")
-c(7,8,15:17)
 
 #### by instrument and year
 ggplot(data=df_e,aes(x=V1,y=V2,color=info$year)) +
