@@ -36,7 +36,7 @@ ggplot(data=df_e,aes(x=V1,y=V2,color=info$instrument)) +
   geom_point() +
   scale_color_manual(values=c("#064061", "#56B4E9","#009E73","#E69F00","#9C4907")) +
   theme_cowplot() +
-  labs(x = "PC1", y = "PC2", color="Strat", title="Individual Allele Frequency")
+  labs(x = "PC1", y = "PC2", color="Instrument", title="Individual Allele Frequency")
 
 cols <- c("#064061", "#56B4E9","#009E73","#E69F00","#9C4907")
 c(7,8,15:17)
