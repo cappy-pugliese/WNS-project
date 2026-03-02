@@ -15,6 +15,7 @@ library(paletteer)
 info <- read.csv("26_02-23_n-amer-no-washington_pca-info.csv")
 cov <- as.matrix(read.table("pcangsd_n-amer-no-washington.cov"))
 e <- eigen(cov)
+evals = e$values/sum(e$values)
 df_e <- as.data.frame(e$vectors)
 
 #### by year
@@ -23,7 +24,7 @@ ggplot(data=df_e,aes(x=V1,y=V2,color=info$year)) +
   geom_point() +
   scale_colour_paletteer_c("grDevices::Zissou 1") +
   theme_cowplot() +
-  labs(x = "PC1", y = "PC2", color="Year", title="Individual Allele Frequency")
+  labs(x = paste("PC1 (",round(evals[1]*100,2),"%)",sep=""), y = paste("PC2 (",round(evals[2]*100,2),"%)",sep=""), color="Year", title="Individual Allele Frequency")
 
 ###### pc2 vs pc3
 ggplot(data=df_e,aes(x=V2,y=V3,color=info$year)) +
