@@ -18,13 +18,10 @@ source /home/FCAM/cpugliese/.bashrc
 conda activate pixyenv
 
 ## variables
-VCF=/home/FCAM/cpugliese/lab_wns/05_vcfs/03_filtered-vcfs/n-amer-no-clones_filtered.vcf.gz
+VCF=/home/FCAM/cpugliese/lab_wns/05_vcfs/01_orig-vcfs/01_all-samples/ploidy-1/pd_ploidy-1.vcf.gz
 POP=01_ids-by-year.txt
 OUTDIR=/home/FCAM/cpugliese/lab_wns/08_pixy/01_n-amer-no-clones/
 PREFIX=n-amer-no-clones_by-year
-
-# try again using an unfiltered vcf and seeing if it is able to find invariants now
-# if not, message andrius
 
 cd $OUTDIR
 
@@ -36,7 +33,7 @@ pixy --stats pi dxy fst tajima_d \
     --n_cores 2 \
     --output_prefix $PREFIX \
     --output_folder $OUTDIR \
-
+    --fst_type hudson
 
 conda deactivate
 
