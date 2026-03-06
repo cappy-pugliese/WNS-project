@@ -2,8 +2,8 @@
 #SBATCH --job-name=pixy
 #SBATCH -N 1
 #SBATCH -n 1
-#SBATCH -c 2
-#SBATCH --mem=5G
+#SBATCH -c 4
+#SBATCH --mem=4G
 #SBATCH --partition=general
 #SBATCH --qos=general
 #SBATCH -o logs/%x_%j.out
@@ -19,9 +19,9 @@ conda activate pixyenv
 
 ## variables
 VCF=/home/FCAM/cpugliese/lab_wns/05_vcfs/01_orig-vcfs/01_all-samples/ploidy-1/pd_ploidy-1.vcf.gz
-POP=01_ids-by-year.txt
-OUTDIR=/home/FCAM/cpugliese/lab_wns/08_pixy/01_n-amer-no-clones/
-PREFIX=n-amer-no-clones_by-year
+POP=02_ids-by-pcansd-pops.txt
+OUTDIR=/home/FCAM/cpugliese/lab_wns/08_pixy/01_n-amer-no-clones
+PREFIX=n-amer-no-clones_by-pops
 
 cd $OUTDIR
 
@@ -30,19 +30,11 @@ pixy --stats pi dxy fst tajima_d \
     --vcf $VCF \
     --pop $POP \
     --window_size 1000 \
-    --n_cores 2 \
+    --n_cores 4 \
     --output_prefix $PREFIX \
-    --output_folder $OUTDIR \
+    --output_folder $OUTDIR/02_by-pops/ \
     --fst_type hudson
 
 conda deactivate
 
 ########### script end
-
---populations
-# headerless, sep by tabs
-# column names:
-# SampleID Population
-
-pixy --help
-# tells you required arguments
