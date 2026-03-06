@@ -8,7 +8,7 @@ pi_df <- read_tsv("n-amer-no-clones_by-year_pi.txt")
 dxy_df <- read_tsv("n-amer-no-clones_by-year_dxy.txt")
 tajima_d_df <- read_tsv("n-amer-no-clones_by-year_tajima_d.txt")
 
-
+###### fixing fst NAs ######
 dxy_df2 <- dxy_df |> mutate(.before=pop1 ,row_order = as.numeric(gsub("\\D+", "",(paste(chromosome,window_pos_1,pop1,pop2, sep = "_"))))) |> arrange(row_order)
 
 fst_df2 <- fst_df |> mutate(.before=pop1 , row_order = as.numeric(gsub("\\D+", "",(paste(chromosome,window_pos_1,pop1,pop2, sep = "_"))))) |> arrange(row_order)
@@ -26,3 +26,6 @@ selected_fst_dxy$avg_hudson_fst[is.na(selected_fst_dxy$avg_hudson_fst) & selecte
 #merged_fst_dxy |> summarise(across(avg_hudson_fst, ~ sum(is.na(.))))
 # fixed 5663333 NAs, still have 27216 NAs
 # got rid of 99.5% of the NAs though lol
+
+## removes the rest of the rows with NAs
+no_nas_fst_dxy <- selected_fst_dxy[complete.cases(selected_fst_dxy[ , 6]),]
