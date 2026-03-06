@@ -197,3 +197,5 @@ mantis is only letting me type in one command if any before crashing and receivi
 -   was still connected to the vpn, maybe that was the problem???
 
     -   looks like it was the vpn that was causing the problem
+
+scp cpugliese\@transfer.hpc.cam.uchc.edu:\<remote_file_path\> \<local_file_path\>
