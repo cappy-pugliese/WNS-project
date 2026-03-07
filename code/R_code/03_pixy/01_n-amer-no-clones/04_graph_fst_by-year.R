@@ -29,5 +29,9 @@ pop1_compar_df <- fst_dxy_df |> mutate(.before=pop1 , year_compar = paste(as.cha
 
 year1_compar_plot <- ggplot(data=pop1_compar_df, aes(x=year_compar, y=avg_hudson_fst)) +
   geom_violin() +
-  labs(title = "Fst for Year1 vs all others", x = "Year Comparisons", y = "Average Fst")
+  labs(title = "Fst for 2008 vs all other years, North America Samples", x = "Year Comparisons", y = "Average Fst")
 year1_compar_plot
+
+
+
+pop1_compar_df <- fst_dxy_df |> mutate(.before=pop1 , year_compar = as.character((abs((as.numeric(gsub("\\D+", "",(paste(pop1)))) + 2007) - (as.numeric(gsub("\\D+", "",(paste(pop2)))) + 2007)) + 1) + 2007)) |> filter(pop1=="pop1" | pop2 =="pop1")

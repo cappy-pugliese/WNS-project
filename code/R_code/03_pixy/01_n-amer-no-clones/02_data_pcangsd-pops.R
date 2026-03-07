@@ -6,6 +6,7 @@ df_long <- read.csv("25_12-10_n-amer-no-clones_pcangsd_longdf.csv")
 
 pop_df <- df_long |> dplyr::filter(admix > 0.5 | ind == "Pd_52"|ind =="Pd_53"|ind =="Pd_73") |> filter(admix > 0.34) |> filter(!row_number() %in% 26)
 
+setwd("/Users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/data/06_pixy/01_n-amer-no-clones/01_pop-data")
 
 #missing <- df_long |> dplyr::filter(ind == "Pd_52"|ind =="Pd_53"|ind =="Pd_73") |> dplyr::select(ind,Pop,admix) |> slice(1,8,21)
 #missing = 52, 53, 73
@@ -15,3 +16,9 @@ write.csv(pop_df,file="26_03-04_n-amer-no-clones_pops_df.csv",row.names=FALSE,qu
 
 pixy_df <- pop_df |> dplyr::select(ind,Pop)
 write.table(pixy_df, file="26_03-04_n-amer-no-clones_pops_df.tsv", quote=FALSE, sep='\t', col.names = FALSE,row.names=FALSE)
+
+
+pop_count_df <- pop_df |> dplyr::select(ind,Pop,year)
+sample_n_by_pop <- pop_count_df  |> group_by(Pop)  |> count()
+
+write_tsv(sample_n_by_pop,file="26_03-06_no-clones_sample-n-by-pop.txt")
