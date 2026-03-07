@@ -1,0 +1,8 @@
+Pop	n
+pop01	7
+pop02	8
+pop03	6
+pop04	3
+pop05	8
+pop06	8
+pop07	11

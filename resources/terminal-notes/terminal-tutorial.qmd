@@ -198,4 +198,8 @@ mantis is only letting me type in one command if any before crashing and receivi
 
     -   looks like it was the vpn that was causing the problem
 
-scp cpugliese\@transfer.hpc.cam.uchc.edu:\<remote_file_path\> \<local_file_path\>
+scp cpugliese\@transfer.cam.uchc.edu:\<remote_file_path\> \<local_file_path\>
+
+scp cpugliese\@transfer.cam.uchc.edu:/home/FCAM/cpugliese/lab_wns/08_pixy/01_n-amer-no-clones/03_by-year_10000/n-amer-no-clones_by-year2\_\* /Users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/data/06_pixy/01_n-amer-no-clones/02_pixy-output/02_larger_window/01_by-year/
+
+scp cpugliese\@transfer.cam.uchc.edu:/home/FCAM/cpugliese/lab_wns/08_pixy/01_n-amer-no-clones/04_by-pops_10000/n-amer-no-clones_by-pops2\* /Users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/data/06_pixy/01_n-amer-no-clones/02_pixy-output/02_larger_window/02_by-pops/
