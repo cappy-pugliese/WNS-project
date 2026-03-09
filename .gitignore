@@ -112,3 +112,6 @@ data/06_pixy/01_n-amer-no-clones/02_pixy-output/01_small_window/01_by-year/26_03
 .gitignore
 data/06_pixy/01_n-amer-no-clones/02_pixy-output/02_larger_window/01_by-year/26_03-06_fst_dxy_no_nas_10000.csv
 resources/feems_getting-started.ipynb
+data/07_feems/n-amer-no-washington_ploidy1_filtered_plink-ld.bed
+data/07_feems/n-amer-no-washington_ploidy1_filtered_plink-ld.bim
+data/07_feems/n-amer-no-washington_ploidy1_filtered_plink-ld.fam
