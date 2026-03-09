@@ -111,3 +111,4 @@ data/06_pixy/01_n-amer-no-clones/02_pixy-output/02_larger_window/02_by-pops/n-am
 data/06_pixy/01_n-amer-no-clones/02_pixy-output/01_small_window/01_by-year/26_03-06_fst_dxy_no_nas.csv
 .gitignore
 data/06_pixy/01_n-amer-no-clones/02_pixy-output/02_larger_window/01_by-year/26_03-06_fst_dxy_no_nas_10000.csv
+resources/feems_getting-started.ipynb

@@ -1,22 +1,3 @@
--   Installing on cluster
-    -   successfully installed?
-    -   conda environment: feems (`conda activate feems`)
--   lies I'm installing on my mac instead so I can use interactive mode
-
-```{bash}
-curl https://repo.anaconda.com/miniconda/Miniconda3-py310_25.5.1-0-MacOSX-x86_64.sh -o miniconda.sh
-bash ./miniconda.sh -b -u -p ./miniconda3
-rm ./miniconda.sh
-
-source ./miniconda3/bin/activate
-conda init
-```
-
--   took a while, but finally connected conda environment to positron successfully
-
-Import packages:
-
-```{python}
 ############ load libraries
 # base
 import numpy as np
@@ -24,11 +5,11 @@ from importlib import resources #don't need after tutorial
 from sklearn.impute import SimpleImputer
 from pandas_plink import read_plink
 import statsmodels.api as sm
+import os
 
 # viz
 import matplotlib.pyplot as plt
 import cartopy.crs as ccrs
-import cartopy.feature as cfeature
 
 # feems
 from feems.utils import prepare_graph_inputs, cov_to_dist
@@ -36,25 +17,27 @@ from feems.objective import comp_mats
 from feems.viz import draw_FEEMSmix_surface, plot_FEEMSmix_summary
 from feems import SpatialGraph, Objective, Viz
 
+# viz again
+import cartopy.feature as cfeature
+
 # change matplotlib fonts
 plt.rcParams["font.family"] = "Arial"
 plt.rcParams["font.sans-serif"] = "Arial"
 
 ############ set variables
-data_path = str(resources.files('feems') / 'data')
+data_path = '/Users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/data/07_feems'
 
 ############ read in files
 # read the genotype data and mean impute missing data
-(bim, fam, G) = read_plink("{}/wolvesadmix".format(data_path))
+(bim, fam, G) = read_plink("{}/n-amer-no-washington_ploidy1_filtered_plink-ld".format(data_path))
 imp = SimpleImputer(missing_values=np.nan, strategy="mean")
 genotypes = imp.fit_transform((np.array(G)).T)
 
 print("n_samples={}, n_snps={}".format(genotypes.shape[0], genotypes.shape[1]))
 
 ############ set up graph
-%%time
 # setup graph
-coord = np.loadtxt("{}/wolvesadmix.coord".format(data_path))  # sample coordinates
+coord = np.loadtxt("{}/no-washington_coords.txt".format(data_path))  # sample coordinates
 outer = np.loadtxt("{}/wolvesadmix.outer".format(data_path))  # outer coordinates
 grid_path = "{}/grid_100.shp".format(data_path)  # path to discrete global grid
 
@@ -89,16 +72,3 @@ for edge in edges:
 # add sample points
 ax.scatter(coord[:, 0], coord[:, 1], s=8, color='black', zorder=2,transform=ccrs.PlateCarree(), label='sample points')
 plt.legend()
-
-
-
-
-
-
-#####
-import sys
-
-print("Modules currently in sys.modules:")
-for module_name in sys.modules.keys():
-    print(module_name)
-```
