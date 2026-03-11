@@ -10,15 +10,13 @@ import os
 # viz
 import matplotlib.pyplot as plt
 import cartopy.crs as ccrs
+import cartopy.feature as cfeature
 
 # feems
 from feems.utils import prepare_graph_inputs, cov_to_dist
 from feems.objective import comp_mats
 from feems.viz import draw_FEEMSmix_surface, plot_FEEMSmix_summary
 from feems import SpatialGraph, Objective, Viz
-
-# viz again
-import cartopy.feature as cfeature
 
 # change matplotlib fonts
 plt.rcParams["font.family"] = "Arial"
@@ -87,3 +85,52 @@ v.draw_map(longlat=True)
 v.draw_samples()
 v.draw_edges(use_weights=False)
 v.draw_obs_nodes(use_ids=False)
+
+
+############ fit feems ############
+### from cross validation:
+## lamb = 2.15
+## lamb_q = 1.00
+
+sp_graph.fit(lamb = 2.15, lamb_q = 1.00, optimize_q = 'n-dim')
+
+fig = plt.figure(dpi=300)
+ax = fig.add_subplot(1, 1, 1, projection=projection)  
+v = Viz(ax, sp_graph, projection=projection, edge_width=.5, 
+        edge_alpha=1, edge_zorder=100, sample_pt_size=20, 
+        obs_node_size=7.5, sample_pt_color="black", 
+        cbar_font_size=10)
+v.draw_map()
+v.draw_edges(use_weights=True)
+v.draw_obs_nodes(use_ids=False) 
+v.draw_edge_colorbar()
+
+
+## feems fit plot
+# creating an obj 
+obj = Objective(sp_graph); obj.inv(); obj.grad(reg=False)
+# computing distances matrice for fit (expected) vs empirical (observed) 
+fit_cov, _, emp_cov = comp_mats(obj)
+# subsetting matrices to arrays 
+fit_dist = cov_to_dist(fit_cov)[np.tril_indices(sp_graph.n_observed_nodes, k=-1)]
+emp_dist = cov_to_dist(emp_cov)[np.tril_indices(sp_graph.n_observed_nodes, k=-1)]
+
+# fitting a linear model to the observed distances
+X = sm.add_constant(fit_dist)
+mod = sm.OLS(emp_dist, X)
+res = mod.fit()
+muhat, betahat = res.params
+
+## plot
+plt.figure(dpi=100)
+plt.plot(fit_dist, emp_dist, 'o', color='k', alpha=0.8, markersize=4)
+plt.axline((0.5,0.5*betahat+muhat), slope=betahat, color='orange', ls='--', lw=3)
+plt.text(5, 0.5, "R²={:.3f}".format(res.rsquared), fontsize=15)
+plt.xlabel('Fitted distance'); plt.ylabel('Genetic distance')
+plt.title(r"$\tt{FEEMS}$ fit with estimated node-specific variances")
+
+
+
+############################
+### left off at fit FEEMSmix
+############################
