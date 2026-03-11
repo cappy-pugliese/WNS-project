@@ -115,3 +115,6 @@ resources/feems_getting-started.ipynb
 data/07_feems/n-amer-no-washington_ploidy1_filtered_plink-ld.bed
 data/07_feems/n-amer-no-washington_ploidy1_filtered_plink-ld.bim
 data/07_feems/n-amer-no-washington_ploidy1_filtered_plink-ld.fam
+data/01_pd-samples/26_03-10_sraruns.csv
+data/01_pd-samples/26_03-10_SraRunTable.csv
+data/01_pd-samples/26_03-10_SraRunTable2.csv
