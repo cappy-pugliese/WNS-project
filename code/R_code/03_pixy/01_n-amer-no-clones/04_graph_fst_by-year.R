@@ -15,19 +15,53 @@ pop1_2 <- pop1_2 |> mutate(.before=pop1, window_order = (paste(chromosome,window
 pop1_2 <- pop1_2 |> 
   mutate(genome_group = factor(ceiling(row_number() / 968)))
 
-
+############# across the genome plots
+####### 2008 vs 2009
 ggplot(data=pop1_2_summary, aes(x=x,y=avg)) +
   geom_point() +
   labs(title = "Fst for Year1 vs Year2", x = "genome scaffolds", y = "Average Fst") 
 
-violin_plot <- ggplot(data=pop1_2, aes(x=genome_group, y=avg_hudson_fst)) +
+across_genome_1_2 <- ggplot(data=pop1_2, aes(x=genome_group, y=avg_hudson_fst)) +
   geom_violin() +
-  labs(title = "Fst for Year1 vs Year2", x = "Moving across the genome", y = "Average Fst")
-#ggplot(fst_dxy_df, aes(x=window_pos_1, y=)
+  labs(title = "Fst for 2008 vs 2009", x = "Moving across the genome", y = "Average Fst")
+across_genome_1_2
 
+############# across the genome plots
+####### 2008 vs 2012
+pop9_1 <- fst_dxy_df |> filter(pop1 == "pop9" & pop2 == "pop1") |> arrange(chromosome,window_pos_1)
+pop9_1 <- pop9_1 |> mutate(.before=pop1, window_order = (paste(chromosome,window_pos_1, sep = "_"))) |> select(window_order, pop1, pop2, chromosome, avg_hudson_fst, avg_dxy)
+pop9_1 <- pop9_1 |> 
+  mutate(genome_group = factor(ceiling(row_number() / 968)))
+
+across_genome_9_1 <- ggplot(data=pop9_1, aes(x=genome_group, y=avg_hudson_fst)) +
+  geom_violin() +
+  labs(title = "Fst for 2008 vs 2016", x = "Moving across the genome", y = "Average Fst")
+across_genome_9_1
+
+############# across the genome plots
+####### 2008 vs 2016
+pop9_1 <- fst_dxy_df |> filter(pop1 == "pop9" & pop2 == "pop1") |> arrange(chromosome,window_pos_1)
+pop9_1 <- pop9_1 |> mutate(.before=pop1, window_order = (paste(chromosome,window_pos_1, sep = "_"))) |> select(window_order, pop1, pop2, chromosome, avg_hudson_fst, avg_dxy)
+pop9_1 <- pop9_1 |> 
+  mutate(genome_group = factor(ceiling(row_number() / 968)))
+
+across_genome_9_1 <- ggplot(data=pop9_1, aes(x=genome_group, y=avg_hudson_fst)) +
+  geom_violin() +
+  labs(title = "Fst for 2008 vs 2016", x = "Moving across the genome", y = "Average Fst")
+across_genome_9_1
+
+################# fst: 2008 compared to all other years
 pop1_compar_df <- fst_dxy_df |> mutate(.before=pop1 , year_compar = as.character((abs((as.numeric(gsub("\\D+", "",(paste(pop1)))) + 2007) - (as.numeric(gsub("\\D+", "",(paste(pop2)))) + 2007)) + 1) + 2007)) |> filter(pop1=="pop1" | pop2 =="pop1")
 
 year1_compar_plot <- ggplot(data=pop1_compar_df, aes(x=year_compar, y=avg_hudson_fst)) +
   geom_violin() +
   labs(title = "Fst for 2008 vs all other years, North America Samples", x = "Year Comparisons", y = "Average Fst")
 year1_compar_plot
+
+################# fst: 2016 compared to all other years
+pop9_compar_df <- fst_dxy_df |> mutate(.before=pop1 , year_compar = as.character(2017 - (abs((as.numeric(gsub("\\D+", "",(paste(pop1)))) - 2016) - (as.numeric(gsub("\\D+", "",(paste(pop2)))) - 2016)) + 1))) |> filter(pop1=="pop9" | pop2 =="pop9")
+
+year9_compar_plot <- ggplot(data=pop9_compar_df, aes(x=year_compar, y=avg_hudson_fst)) +
+  geom_violin() +
+  labs(title = "Fst for 2016 vs all other years, North America Samples", x = "Year Comparisons", y = "Average Fst")
+year9_compar_plot
