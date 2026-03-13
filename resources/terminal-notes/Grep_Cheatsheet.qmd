@@ -37,3 +37,16 @@ grep ".tbi" completed_runs.txt \| awk -F . '{print \$1}'
 ```         
 grep -f file.txt file2.txt
 ```
+
+### 
+
+## Using both
+
+-   getting info out of .gff
+
+```{bash}
+head -n 30 pdestructans.gff | grep "^NW" | awk '{print $1, $2, $3, $4, $5,}'
+# "^" tells grep to look for a pattern at the start of a line
+
+maybe use gtf for gene id???? or stick with gff????
+```
