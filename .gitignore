@@ -118,3 +118,15 @@ data/07_feems/n-amer-no-washington_ploidy1_filtered_plink-ld.fam
 data/01_pd-samples/26_03-10_sraruns.csv
 data/01_pd-samples/26_03-10_SraRunTable.csv
 data/01_pd-samples/26_03-10_SraRunTable2.csv
+code/R_code/03_pixy/scaffold_placements.R
+code/python/samples/scaffold_lengths.py
+code/python/samples/scaffold_lengths.txt
+data/01_pd-samples/26_03-13_sequence_report.tsv
+data/06_pixy/01_n-amer-no-clones/02_pixy-output/03_genes/01_by-year/n-amer-no-clones_by-year_dxy.txt
+data/06_pixy/01_n-amer-no-clones/02_pixy-output/03_genes/01_by-year/n-amer-no-clones_by-year_fst.txt
+data/06_pixy/01_n-amer-no-clones/02_pixy-output/03_genes/01_by-year/n-amer-no-clones_by-year_pi.txt
+data/06_pixy/01_n-amer-no-clones/02_pixy-output/03_genes/01_by-year/n-amer-no-clones_by-year_tajima_d.txt
+data/06_pixy/01_n-amer-no-clones/02_pixy-output/03_genes/02_by-pop/n-amer-no-clones_by-pops_genes_dxy.txt
+data/06_pixy/01_n-amer-no-clones/02_pixy-output/03_genes/02_by-pop/n-amer-no-clones_by-pops_genes_fst.txt
+data/06_pixy/01_n-amer-no-clones/02_pixy-output/03_genes/02_by-pop/n-amer-no-clones_by-pops_genes_pi.txt
+data/06_pixy/01_n-amer-no-clones/02_pixy-output/03_genes/02_by-pop/n-amer-no-clones_by-pops_genes_tajima_d.txt

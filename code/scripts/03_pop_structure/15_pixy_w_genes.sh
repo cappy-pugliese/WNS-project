@@ -20,8 +20,9 @@ conda activate pixyenv
 ## variables
 VCF=/home/FCAM/cpugliese/lab_wns/05_vcfs/01_orig-vcfs/01_all-samples/ploidy-1/pd_ploidy-1.vcf.gz
 POP=../02_ids-by-pcansd-pops.txt
-OUTDIR=/home/FCAM/cpugliese/lab_wns/08_pixy/01_n-amer-no-clones/04_by-pops_10000/
-PREFIX=n-amer-no-clones_by-pops2
+BED=/home/FCAM/cpugliese/wns/02_raw-data/pd_data/pd_ref/pd_gene_ref.bed
+OUTDIR=/home/FCAM/cpugliese/lab_wns/08_pixy/01_n-amer-no-clones/06_by-pops_genes
+PREFIX=n-amer-no-clones_by-pops_genes
 
 cd $OUTDIR
 
@@ -29,7 +30,7 @@ cd $OUTDIR
 pixy --stats pi dxy fst tajima_d \
     --vcf $VCF \
     --pop $POP \
-    --window_size 10000 \
+    --bed_file $BED \
     --n_cores 4 \
     --output_prefix $PREFIX \
     --output_folder $OUTDIR \
