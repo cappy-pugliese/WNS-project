@@ -130,3 +130,11 @@ data/06_pixy/01_n-amer-no-clones/02_pixy-output/03_genes/02_by-pop/n-amer-no-clo
 data/06_pixy/01_n-amer-no-clones/02_pixy-output/03_genes/02_by-pop/n-amer-no-clones_by-pops_genes_fst.txt
 data/06_pixy/01_n-amer-no-clones/02_pixy-output/03_genes/02_by-pop/n-amer-no-clones_by-pops_genes_pi.txt
 data/06_pixy/01_n-amer-no-clones/02_pixy-output/03_genes/02_by-pop/n-amer-no-clones_by-pops_genes_tajima_d.txt
+data/06_pixy/01_n-amer-no-clones/02_pixy-output/04_scaffolds/01_by-year/n-amer-no-clones_by-year_scaffolds_dxy.txt
+data/06_pixy/01_n-amer-no-clones/02_pixy-output/04_scaffolds/01_by-year/n-amer-no-clones_by-year_scaffolds_fst.txt
+data/06_pixy/01_n-amer-no-clones/02_pixy-output/04_scaffolds/01_by-year/n-amer-no-clones_by-year_scaffolds_pi.txt
+data/06_pixy/01_n-amer-no-clones/02_pixy-output/04_scaffolds/01_by-year/n-amer-no-clones_by-year_scaffolds_tajima_d.txt
+data/06_pixy/01_n-amer-no-clones/02_pixy-output/04_scaffolds/02_by-pop/n-amer-no-clones_by-pops_scaffolds_dxy.txt
+data/06_pixy/01_n-amer-no-clones/02_pixy-output/04_scaffolds/02_by-pop/n-amer-no-clones_by-pops_scaffolds_fst.txt
+data/06_pixy/01_n-amer-no-clones/02_pixy-output/04_scaffolds/02_by-pop/n-amer-no-clones_by-pops_scaffolds_pi.txt
+data/06_pixy/01_n-amer-no-clones/02_pixy-output/04_scaffolds/02_by-pop/n-amer-no-clones_by-pops_scaffolds_tajima_d.txt

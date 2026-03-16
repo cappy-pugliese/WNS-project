@@ -200,6 +200,6 @@ mantis is only letting me type in one command if any before crashing and receivi
 
 scp cpugliese\@transfer.cam.uchc.edu:\<remote_file_path\> \<local_file_path\>
 
-scp cpugliese\@transfer.cam.uchc.edu:/home/FCAM/cpugliese/lab_wns/08_pixy/01_n-amer-no-clones/06_by-pops_genes/n-amer-no-clones\_\* /Users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/data/06_pixy/01_n-amer-no-clones/02_pixy-output/03_genes/02_by-pop
+scp cpugliese\@transfer.cam.uchc.edu:/home/FCAM/cpugliese/lab_wns/08_pixy/01_n-amer-no-clones/08_by-pops_scaffolds/n-amer-no-clones\_\* /Users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/data/06_pixy/01_n-amer-no-clones/02_pixy-output/04_scaffolds/02_by-pop
 
 scp cpugliese\@transfer.cam.uchc.edu:/home/FCAM/cpugliese/lab_wns/05_vcfs/03_filtered-vcfs/plink_files/07_plink-n-amer-no-washington/02_n-amer-no-washington_ploidy1_filtered_plink-no-ld\* /Users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/data/07_feems

@@ -1,14 +1,44 @@
-library(ggplot2)
 library(dplyr)
+library(readr)
+library(ggplot2)
 
-setwd("/Users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/data/06_pixy/01_n-amer-no-clones/02_pixy-output/02_larger_window/01_by-year")
+setwd("/Users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/data/06_pixy/01_n-amer-no-clones/02_pixy-output/02_larger_window/02_by-pops")
 
-fst_dxy_df <- read.csv("26_03-06_fst_dxy_no_nas_10000.csv")
+fst_df <- read_tsv("n-amer-no-clones_by-pops2_fst.txt")
+pi_df <- read_tsv("n-amer-no-clones_by-pops2_pi.txt")
+dxy_df <- read_tsv("n-amer-no-clones_by-pops2_dxy.txt")
+tajima_d_df <- read_tsv("n-amer-no-clones_by-pops2_tajima_d.txt")
 
-pop1_2_summary <- fst_dxy_df |> filter(pop1 == "pop1" & pop2 == "pop2") |> group_by(chromosome) |> summarize(avg = mean(avg_hudson_fst))
+###### fixing fst NAs ######
+dxy_df <- dxy_df |> mutate(.before=pop1 ,row_order = as.numeric(gsub("\\D+", "",(paste(chromosome,window_pos_1,pop1,pop2, sep = "_"))))) |> arrange(row_order)
+
+fst_df <- fst_df |> mutate(.before=pop1 , row_order = as.numeric(gsub("\\D+", "",(paste(chromosome,window_pos_1,pop1,pop2, sep = "_"))))) |> arrange(row_order)
+
+dxy_df <- dxy_df |> select(row_order,avg_dxy,no_sites,count_diffs,count_comparisons,count_missing)
+
+merged_fst_dxy <- left_join(fst_df, dxy_df, by = "row_order")
+
+selected_fst_dxy <- merged_fst_dxy |> select(row_order, pop1, pop2, chromosome, window_pos_1, avg_hudson_fst, avg_dxy)
+
+# conditional statement: sets fst NAs to zero if dxy is also zero
+selected_fst_dxy$avg_hudson_fst[is.na(selected_fst_dxy$avg_hudson_fst) & selected_fst_dxy$avg_dxy == 0] <- 0
+
+#selected_fst_dxy |> summarise(across(avg_hudson_fst, ~ sum(is.na(.))))
+#merged_fst_dxy |> summarise(across(avg_hudson_fst, ~ sum(is.na(.))))
+# fixed 481812 NAs, still have 19339 NAs
+# got rid of 96.1 % of NAs
+
+## removes the rest of the rows with NAs
+fst_dxy_df <- selected_fst_dxy[complete.cases(selected_fst_dxy[ , 6]),]
+
+##########################
+## part2 
+##########################
+
+pop1_2_summary <- fst_dxy_df |> filter(pop1 == "pop01" & pop2 == "pop02") |> group_by(chromosome) |> summarize(avg = mean(avg_hudson_fst))
 pop1_2_summary$x <- 1:83
 
-pop1_2 <- fst_dxy_df |> filter(pop1 == "pop1" & pop2 == "pop2") |> arrange(chromosome,window_pos_1)
+pop1_2 <- fst_dxy_df |> filter(pop1 == "pop01" & pop2 == "pop02") |> arrange(chromosome,window_pos_1)
 
 pop1_2 <- pop1_2 |> mutate(.before=pop1, window_order = (paste(chromosome,window_pos_1, sep = "_"))) |> select(window_order, pop1, pop2, chromosome, avg_hudson_fst, avg_dxy)
 
@@ -19,24 +49,35 @@ pop1_2 <- pop1_2 |>
 ####### 2008 vs 2009
 ggplot(data=pop1_2_summary, aes(x=x,y=avg)) +
   geom_point() +
-  labs(title = "Fst for Year1 vs Year2", x = "genome scaffolds", y = "Average Fst") 
+  labs(title = "Fst for pop1 vs pop2", x = "genome scaffolds", y = "Average Fst") 
 
 across_genome_1_2 <- ggplot(data=pop1_2, aes(x=genome_group, y=avg_hudson_fst)) +
   geom_violin() +
-  labs(title = "Fst for 2008 vs 2009", x = "Moving across the genome", y = "Average Fst")
+  labs(title = "Fst for pop1 vs pop2", x = "Moving across the genome", y = "Average Fst")
 across_genome_1_2
 
 ############# across the genome plots
 ####### 2008 vs 2016
-pop9_1 <- fst_dxy_df |> filter(pop1 == "pop9" & pop2 == "pop1") |> arrange(chromosome,window_pos_1)
-pop9_1 <- pop9_1 |> mutate(.before=pop1, window_order = (paste(chromosome,window_pos_1, sep = "_"))) |> select(window_order, pop1, pop2, chromosome, avg_hudson_fst, avg_dxy)
-pop9_1 <- pop9_1 |> 
+pop7_1 <- fst_dxy_df |> filter(pop1 == "pop07" & pop2 == "pop01") |> arrange(chromosome,window_pos_1)
+pop7_1 <- pop7_1 |> mutate(.before=pop1, window_order = (paste(chromosome,window_pos_1, sep = "_"))) |> select(window_order, pop1, pop2, chromosome, avg_hudson_fst, avg_dxy)
+pop7_1 <- pop7_1 |> 
   mutate(genome_group = factor(ceiling(row_number() / 968)))
 
-across_genome_9_1 <- ggplot(data=pop9_1, aes(x=genome_group, y=avg_hudson_fst)) +
+across_genome_7_1 <- ggplot(data=pop7_1, aes(x=genome_group, y=avg_hudson_fst)) +
   geom_violin() +
-  labs(title = "Fst for 2008 vs 2016", x = "Moving across the genome", y = "Average Fst")
-across_genome_9_1
+  labs(title = "Fst for pop1 vs pop7", x = "Moving across the genome", y = "Average Fst")
+across_genome_7_1
+
+
+
+##############################
+## left off here!
+##############################
+
+## might have to just make new graphs
+## compare everything
+
+
 
 ################# fst: 2008 compared to all other years
 pop1_compar_df <- fst_dxy_df |> mutate(.before=pop1 , year_compar = as.character((abs((as.numeric(gsub("\\D+", "",(paste(pop1)))) + 2007) - (as.numeric(gsub("\\D+", "",(paste(pop2)))) + 2007)) + 1) + 2007)) |> filter(pop1=="pop1" | pop2 =="pop1")
