@@ -1,19 +1,49 @@
-library(ggplot2)
 library(dplyr)
+library(readr)
+library(ggplot2)
 
-setwd("/Users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/data/06_pixy/01_n-amer-no-clones/02_pixy-output/02_larger_window/01_by-year")
+setwd("/Users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/data/06_pixy/01_n-amer-no-clones/02_pixy-output/03_genes/01_by-year")
 
-fst_dxy_df <- read.csv("26_03-06_fst_dxy_no_nas_10000.csv")
+fst_df <- read_tsv("n-amer-no-clones_by-year_fst.txt")
+pi_df <- read_tsv("n-amer-no-clones_by-year_pi.txt")
+dxy_df <- read_tsv("n-amer-no-clones_by-year_dxy.txt")
+tajima_d_df <- read_tsv("n-amer-no-clones_by-year_tajima_d.txt")
 
-pop1_2_summary <- fst_dxy_df |> filter(pop1 == "pop1" & pop2 == "pop2") |> group_by(chromosome) |> summarize(avg = mean(avg_hudson_fst))
-pop1_2_summary$x <- 1:83
+###### fixing fst NAs ######
+dxy_df <- dxy_df |> mutate(.before=pop1 ,row_order = as.numeric(gsub("\\D+", "",(paste(chromosome,window_pos_1,pop1,pop2, sep = "_"))))) |> arrange(row_order)
+
+fst_df <- fst_df |> mutate(.before=pop1 , row_order = as.numeric(gsub("\\D+", "",(paste(chromosome,window_pos_1,pop1,pop2, sep = "_"))))) |> arrange(row_order)
+
+dxy_df <- dxy_df |> select(row_order,avg_dxy,no_sites,count_diffs,count_comparisons,count_missing)
+
+merged_fst_dxy <- left_join(fst_df, dxy_df, by = "row_order")
+
+selected_fst_dxy <- merged_fst_dxy |> select(row_order, pop1, pop2, chromosome, window_pos_1, avg_hudson_fst, avg_dxy)
+
+# conditional statement: sets fst NAs to zero if dxy is also zero
+selected_fst_dxy$avg_hudson_fst[is.na(selected_fst_dxy$avg_hudson_fst) & selected_fst_dxy$avg_dxy == 0] <- 0
+
+#selected_fst_dxy |> summarise(across(avg_hudson_fst, ~ sum(is.na(.))))
+#merged_fst_dxy |> summarise(across(avg_hudson_fst, ~ sum(is.na(.))))
+# fixed 481812 NAs, still have 19339 NAs
+# got rid of 96.1 % of NAs
+
+## removes the rest of the rows with NAs
+fst_dxy_df <- selected_fst_dxy[complete.cases(selected_fst_dxy[ , 6]),]
+
+###########################################################################
+
+#########################
+## making the graphs
+#########################
+
+pop1_2_summary <- fst_dxy_df |> filter(pop1 == "pop9" & pop2 == "pop1") |> group_by(chromosome) |> summarize(avg = mean(avg_hudson_fst))
+pop1_2_summary$x <- 1:70
 
 pop1_2 <- fst_dxy_df |> filter(pop1 == "pop1" & pop2 == "pop2") |> arrange(chromosome,window_pos_1)
-
 pop1_2 <- pop1_2 |> mutate(.before=pop1, window_order = (paste(chromosome,window_pos_1, sep = "_"))) |> select(window_order, pop1, pop2, chromosome, avg_hudson_fst, avg_dxy)
-
 pop1_2 <- pop1_2 |> 
-  mutate(genome_group = factor(ceiling(row_number() / 968)))
+  mutate(genome_group = factor(ceiling(row_number() / 2930.7)))
 
 ############# across the genome plots
 ####### 2008 vs 2009
@@ -65,7 +95,7 @@ year1_compar_plot_weighted
 
 year1_compar_plot2 <- ggplot(data=pop1_compar_df2, aes(x=year_compar, y=(weights1*100))) +
   geom_point() +
-  labs(title = "Fst for 2008 vs all other years, North America Samples", x = "Year Comparisons", y = "Percent of Fst > 0")
+  labs(title = "Fst for 2008 vs all other years, North America Samples", x = "Year Comparisons", y = "Percentage of Fst > 0")
 year1_compar_plot2
 
 ################# fst: 2016 compared to all other years
@@ -90,5 +120,18 @@ year9_compar_plot_weighted
 
 year9_compar_plot2 <- ggplot(data=pop9_compar_df2, aes(x=year_compar, y=(weights1*100))) +
   geom_point() +
-  labs(title = "Fst for 2016 vs all other years, North America Samples", x = "Year Comparisons", y = "Percent of Fst > 0")
+  labs(title = "Fst for 2016 vs all other years, North America Samples", x = "Year Comparisons", y = "Percentage of Fst > 0")
 year9_compar_plot2
+
+####################################################################################
+
+######################
+# making a new graph
+######################
+
+highest_fst_genes <- fst_dxy_df |> filter(avg_hudson_fst == 1) |> mutate(.before=pop1 ,row_order = as.character((paste(chromosome,window_pos_1, sep = "_")))) |> group_by(row_order) |> count(chromosome)
+# 52 genes
+# all compared to pop9 (2016)
+
+ggplot(highest_fst_genes, aes(x=chromosome, y=n)) +
+  geom_point()
