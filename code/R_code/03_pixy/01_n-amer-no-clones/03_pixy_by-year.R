@@ -31,13 +31,3 @@ selected_fst_dxy$avg_hudson_fst[is.na(selected_fst_dxy$avg_hudson_fst) & selecte
 no_nas_fst_dxy <- selected_fst_dxy[complete.cases(selected_fst_dxy[ , 6]),]
 
 write.csv(no_nas_fst_dxy,file="26_03-06_fst_dxy_no_nas_10000.csv",row.names=FALSE,quote=FALSE)
-
-
-avg_the_avg <- no_nas_fst_dxy |> select(pop1,pop2,chromosome,window_pos_1,avg_hudson_fst,avg_dxy) |> mutate(.before=chromosome , group = as.numeric(gsub("\\D+", "",(paste(chromosome,pop1,pop2, sep = "_"))))) 
-
-avg_the_avg |> filter(pop1 == "pop1" & pop2 == "pop2") |> group_by(chromosome) |> summarize(avg = mean(avg_hudson_fst))
-
-
-nrow(avg_the_avg)
-nrow(avg_the_avg |> filter(pop1 == "pop1" & pop2 == "pop2"))
-length(unique(avg_the_avg$chromosome))
