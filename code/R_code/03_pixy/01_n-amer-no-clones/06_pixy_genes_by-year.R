@@ -69,15 +69,21 @@ gene_info <- gene_info |> arrange(gene_order)
 gene_df <- left_join(fst_dxy_df, gene_info, by = "gene_order")
 gene_df <- gene_df |> select(row_order,pop1,pop2,scaffold, window_pos_1,gene_id, avg_hudson_fst, avg_dxy)
 
-highest_fst_genes <- gene_df |> filter(avg_hudson_fst == 1) |> count(gene_id)
+highest_fst_genes <- gene_df |> filter(avg_hudson_fst == 1) |> count(gene_id) |> arrange(desc(n))
+write.csv(highest_fst_genes, file="26_03-19_highest_fst_genes.csv", quote=FALSE)
 # 52 genes
 # all compared to pop9 (2016)
 
 ggplot(highest_fst_genes, aes(x=n)) +
   geom_histogram() +
+  theme +
+  labs(y="Amount of Genes", x="Number of Years where Fst > 1")
 
 ggplot(highest_fst_genes, aes(x=gene_id, y=n)) +
-  geom_point()
+  geom_point() +
+  theme +
+  theme(axis.text.x = element_blank()) +
+  labs(y = "Number of Years with Fst > 1", x = "Genes with Fst > 1")
 
 
 ### list of genes that have the highest fst (fst=1)

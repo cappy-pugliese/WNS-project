@@ -1,0 +1,53 @@
+gene_id,n,length_AA,protein_name,GO annotations
+VC83_00309,7,213,Uncharacterized protein,NA
+VC83_01715,7,328,Uncharacterized protein,NA
+VC83_09646,7,273,HTH CENPB-type domain-containing protein,DNA binding
+VC83_09683,7,277,DDE-1 domain-containing protein,DNA binding
+VC83_00169,6,289,HAT C-terminal dimerisation domain-containing protein,"protein dimerization activity, transmembrane transporter activity"
+VC83_00818,6,369,CCHC-type domain-containing protein,"nucleic acid binding, zinc ion binding"
+VC83_00897,6,382,Uncharacterized protein,NA
+VC83_01547,6,144,Core Histone H2A/H2B/H3 domain-containing protein,"DNA binding, protein heterodimerization activity, structural constituent of chromatin"
+VC83_01749,6,60,Uncharacterized protein,NA
+VC83_02548,6,155,Uncharacterized protein,NA
+VC83_02769,6,219,Zn(2)-C6 fungal-type domain-containing protein,NA
+VC83_03771,6,615,Uncharacterized protein,NA
+VC83_04207,6,1658,DUF7892 domain-containing protein,NA
+VC83_04394,6,433,GPI inositol-deacylase winged helix domain-containing protein,NA
+VC83_04469,6,292,Uncharacterized protein,NA
+VC83_04512,6,97,Uncharacterized protein,NA
+VC83_04624,6,328,HAT C-terminal dimerisation domain-containing protein,"protein dimerization activity, zinc ion binding"
+VC83_05129,6,297,Uncharacterized protein,NA
+VC83_05802,6,210,Core Histone H2A/H2B/H3 domain-containing protein,"DNA binding, protein heterodimerization activity, structural constituent of chromatin"
+VC83_06159,6,,,
+VC83_07203,6,,,
+VC83_07221,6,,,
+VC83_07372,6,,,
+VC83_07573,6,,,
+VC83_08686,6,,,
+VC83_08914,6,,,
+VC83_09346,6,,,
+VC83_09582,6,,,
+VC83_09597,6,,,
+VC83_09611,6,,,
+VC83_09626,6,,,
+VC83_09686,6,,,
+VC83_06133,5,,,
+VC83_07319,5,,,
+VC83_09573,5,,,
+VC83_09581,5,,,
+VC83_09640,5,,,
+VC83_00551,4,,,
+VC83_02827,4,,,
+VC83_06191,4,,,
+VC83_07952,4,,,
+VC83_08872,3,,,
+VC83_09628,3,,,
+VC83_05471,2,,,
+VC83_06846,2,,,
+VC83_07503,2,,,
+VC83_07592,2,,,
+VC83_09618,2,,,
+VC83_04190,1,,,
+VC83_07737,1,,,
+VC83_09244,1,,,
+VC83_09451,1,,,
