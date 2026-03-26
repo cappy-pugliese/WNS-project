@@ -3,11 +3,11 @@ library("reticulate")
 # to help read .npy file
 np <- import("numpy")
 # good for combining python with R
-library(readr)
+#library(readr)
 library(tidyverse)
-library(ggplot2)
-library(see)
-library(vcfR)
+#library(ggplot2)
+#library(see)
+#library(vcfR)
 
 setwd("/Users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/data/04_pcangsd")
 
