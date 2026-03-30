@@ -23,7 +23,7 @@ plt.rcParams["font.family"] = "Arial"
 plt.rcParams["font.sans-serif"] = "Arial"
 
 ############ set variables
-data_path = '/Users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/data/07_feems'
+data_path = '/Users/caprinapugliese/Documents/03_school/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/data/07_feems'
 feems_package_path ='/Users/caprinapugliese/.my-bin/miniconda3/envs/feems/lib/python3.12/site-packages/feems/data'
 
 ############ read in files
