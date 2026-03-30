@@ -1,0 +1,17 @@
+grep -v # combined.vcf | wc -l
+bcftools view -H n-amer-no-clones_filtered.vcf.gz | wc -l
+
+all continents, only pd:
+26,783
+
+might not be accurate, also including non pd sample snps probably
+north america, only pd:
+north america no clones:
+north america no washington:
+(same amount of SNPs)
+506,864
+
+26,783
+
+all samples (with pd relatives):
+2,874,818
