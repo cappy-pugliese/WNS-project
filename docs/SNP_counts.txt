@@ -13,5 +13,9 @@ north america no washington:
 
 26,783
 
+north america, only pd:
+3,515
+(before filtering: 5,024)
+
 all samples (with pd relatives):
 2,874,818
