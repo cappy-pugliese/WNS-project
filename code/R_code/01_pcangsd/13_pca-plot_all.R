@@ -1,7 +1,7 @@
-R_code_path <- "/Users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/code/R_code/02_algatr/"
+R_code_path <- "/Users/caprinapugliese/Documents/03_school/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/code/R_code/02_algatr/"
 source(paste0(R_code_path, "12_algatr_src.R"))
 
-setwd("/Users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/data/04_pcangsd")
+setwd("/Users/caprinapugliese/Documents/03_school/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/data/04_pcangsd")
 
 library(paletteer)
 
@@ -12,7 +12,7 @@ library(paletteer)
 
 
 ## pcangsd tutorial
-info <- read.csv("/Users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/data/01_pd-samples/26_02-25_only-pd_info.csv")
+info <- read.csv("/Users/caprinapugliese/Documents/03_school/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/data/01_pd-samples/26_02-25_only-pd_info.csv")
 cov <- as.matrix(read.table("pcangsd_only-pd.cov"))
 e <- eigen(cov)
 df_e <- as.data.frame(e$vectors)
@@ -47,7 +47,7 @@ ggplot(data=df_e,aes(x=V1,y=V2,color=info$continent)) +
 
 ##### PC2 vs PC3
 ggplot(data=df_e,aes(x=V2,y=V3,color=info$continent)) +
-  geom_point(aes(alpha=0.5),size=2.5) +
+  geom_point(alpha=0.5,size=2.5) +
   scale_color_manual(values=c("#56B4E9","#064061","#D55E00")) +
   theme_cowplot() +
   labs(x = "PC2", y = "PC3", color="continent", title="Individual Allele Frequency")
