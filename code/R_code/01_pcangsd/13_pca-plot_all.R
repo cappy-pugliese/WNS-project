@@ -15,6 +15,7 @@ library(paletteer)
 info <- read.csv("/Users/caprinapugliese/Documents/03_school/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/data/01_pd-samples/26_02-25_only-pd_info.csv")
 cov <- as.matrix(read.table("pcangsd_only-pd.cov"))
 e <- eigen(cov)
+evals = e$values/sum(e$values)
 df_e <- as.data.frame(e$vectors)
 
 #### by year
@@ -22,20 +23,20 @@ ggplot(data=df_e,aes(x=V1,y=V2,color=info$year)) +
   geom_point(size=2.5) +
   scale_colour_paletteer_c("grDevices::Zissou 1") +
   theme_cowplot() +
-  labs(x = "PC1", y = "PC2", color="Year", title="Individual Allele Frequency")
+  labs(x = paste("PC1 (",round(evals[1]*100,2),"%)",sep=""), y = paste("PC2 (",round(evals[2]*100,2),"%)",sep=""), color="Year", title="Individual Allele Frequency")
 
 #### by long(or lat)
 ggplot(data=df_e,aes(x=V1,y=V2,color=info$long)) +
   geom_point(size=2.5) +
   scale_colour_paletteer_c("grDevices::Zissou 1") +
   theme_cowplot() +
-  labs(x = "PC1", y = "PC2", color="long", title="Individual Allele Frequency")
+  labs(x = paste("PC1 (",round(evals[1]*100,2),"%)",sep=""), y = paste("PC2 (",round(evals[2]*100,2),"%)",sep=""), color="long", title="Individual Allele Frequency")
 
 ggplot(data=df_e,aes(x=V1,y=V2,color=info$lat)) +
   geom_point(size=2.5) +
   scale_colour_paletteer_c("grDevices::Zissou 1") +
   theme_cowplot() +
-  labs(x = "PC1", y = "PC2", color="lat", title="Individual Allele Frequency")
+  labs(x = paste("PC1 (",round(evals[1]*100,2),"%)",sep=""), y = paste("PC2 (",round(evals[2]*100,2),"%)",sep=""), color="lat", title="Individual Allele Frequency")
 
 #### by continent
 ##### PC1 vs PC2
@@ -43,14 +44,15 @@ ggplot(data=df_e,aes(x=V1,y=V2,color=info$continent)) +
   geom_point(aes(alpha=0.5),size=2.5) +
   scale_color_manual(values=c("#56B4E9","#064061","#D55E00")) +
   theme_cowplot() +
-  labs(x = "PC1", y = "PC2", color="continent", title="Individual Allele Frequency")
+  labs(x = paste("PC1 (",round(evals[1]*100,2),"%)",sep=""), y = paste("PC2 (",round(evals[2]*100,2),"%)",sep=""), color="continent", title="Individual Allele Frequency")
 
 ##### PC2 vs PC3
-ggplot(data=df_e,aes(x=V2,y=V3,color=info$continent)) +
+ggplot(data=df_e,aes(x=V2,y=V3,color=info$continent, label=info$individuals)) +
   geom_point(alpha=0.5,size=2.5) +
   scale_color_manual(values=c("#56B4E9","#064061","#D55E00")) +
   theme_cowplot() +
-  labs(x = "PC2", y = "PC3", color="continent", title="Individual Allele Frequency")
+  labs(x = paste("PC2 (",round(evals[2]*100,2),"%)",sep=""), y = paste("PC3 (",round(evals[3]*100,2),"%)",sep=""), color="continent", title="Individual Allele Frequency") +
+  geom_text(hjust=0, vjust=0)
 
 #### by instrument
 ggplot(data=df_e,aes(x=V1,y=V2,fill=info$instrument)) +
