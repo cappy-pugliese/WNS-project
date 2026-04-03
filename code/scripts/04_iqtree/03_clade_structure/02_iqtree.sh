@@ -16,8 +16,8 @@ module load iqtree/3.0.1
 
 ## set variables
 VCF=/home/FCAM/cpugliese/lab_wns/05_vcfs/03_filtered-vcfs/clade-structure-pds_filtered.vcf.gz
-OUTNAME=clade-structure-pds_filtered
-PLINK=/home/FCAM/cpugliese/wns/06_iqtree/clade-structure/01_plink/plink_clade-structure-pds_filtered
+OUTNAME=clade-structure-pds_filtered3
+PLINK=/home/FCAM/cpugliese/wns/06_iqtree/clade-structure/01_plink/plink_clade-structure-pds_filtered2
 OUTDIR2=/home/FCAM/cpugliese/wns/06_iqtree/clade-structure/02_iqtree
 
 
@@ -31,6 +31,7 @@ iqtree3 \
 -bb 1000 \
 -mem 5G \
 -o Pd_31 \
+-m GTR+ASC \
 -s $PLINK.phy
 
 ########### script end
