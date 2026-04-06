@@ -95,14 +95,14 @@ cut_pop1_compar_df <- pop1_compar_df |> mutate(.before=chromosome, scaffold_num=
 
 plot2016_acrossgenome_fst <- ggplot(data=cut_pop1_compar_df, aes(x=chromosome,y=avg_hudson_fst, color=year_compar)) +
   geom_line(aes(color=year_compar, group=year_compar),size = 1.2) +
-  labs(title = "Fst of Each Scaffold Per Year Compared to 2016", x = "Genome Scaffolds", y = "Average Fst", color = "Year") +
+  labs(title = "Fst/Dxy of Each Scaffold Per Year \nCompared to 2008", x = "Genome Scaffolds", y = "Average Fst", color = "Year") +
   scale_color_manual(values = cols) +
   theme +
   theme(axis.title.x=element_blank(),axis.ticks.x = element_blank(),axis.text.x = element_blank())
 ### dxy
 plot2016_acrossgenome_dxy <- ggplot(data=cut_pop1_compar_df, aes(x=chromosome,y=avg_dxy, color=year_compar)) +
   geom_line(aes(color=year_compar, group=year_compar),size = 1.2) +
-  labs(title = "Dxy of Each Scaffold Per Year Compared to 2016", x = "Largest Genome Scaffolds", y = "Average Dxy", color = "Year") +
+  labs(x = "Largest Genome Scaffolds", y = "Average Dxy", color = "Year") +
   scale_color_manual(values = cols) +
   theme +
   theme(axis.ticks.x = element_blank(),axis.text.x = element_blank())
@@ -112,19 +112,18 @@ plot2016_acrossgenome_fst / plot2016_acrossgenome_dxy
 
 plot_by_year_fst <- ggplot(data=cut_pop1_compar_df, aes(x=year_compar, y=avg_hudson_fst)) +
   geom_boxplot(aes(fill=year_compar)) +
-  labs(title = "Average Fst Across the Genome Per Year", x = "Year", y = "Average Fst", fill = "Year") +
+  labs(title = "Average Fst/Dxy Across the Genome Per Year \n (Compared to 2008)", y = "Average Fst", fill = "Year") +
   scale_fill_manual(values = cols2) +
   theme +
+  theme(axis.title.x = element_blank()) +
   theme(legend.position="none")
-plot_by_year_fst
 
 plot_by_year_dxy <- ggplot(data=cut_pop1_compar_df, aes(x=year_compar, y=avg_dxy)) +
   geom_boxplot(aes(fill=year_compar)) +
-  labs(title = "Average Dxy Across the Genonme Per Year", x = "Year", y = "Average Dxy", fill = "Year") +
+  labs(x = "Year", y = "Average Dxy", fill = "Year") +
   scale_fill_manual(values = cols2) +
   theme +
   theme(legend.position="none")
-plot_by_year_dxy
 
 plot_by_year_fst / plot_by_year_dxy
 
