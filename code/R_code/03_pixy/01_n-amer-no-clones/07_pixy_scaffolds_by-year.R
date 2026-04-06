@@ -108,7 +108,25 @@ plot2016_acrossgenome_dxy <- ggplot(data=cut_pop1_compar_df, aes(x=chromosome,y=
   theme(axis.ticks.x = element_blank(),axis.text.x = element_blank())
 plot2016_acrossgenome_fst / plot2016_acrossgenome_dxy
 
+################### comparing years
 
+plot_by_year_fst <- ggplot(data=cut_pop1_compar_df, aes(x=year_compar, y=avg_hudson_fst)) +
+  geom_boxplot(aes(fill=year_compar)) +
+  labs(title = "Average Fst Across the Genome Per Year", x = "Year", y = "Average Fst", fill = "Year") +
+  scale_fill_manual(values = cols2) +
+  theme +
+  theme(legend.position="none")
+plot_by_year_fst
+
+plot_by_year_dxy <- ggplot(data=cut_pop1_compar_df, aes(x=year_compar, y=avg_dxy)) +
+  geom_boxplot(aes(fill=year_compar)) +
+  labs(title = "Average Dxy Across the Genonme Per Year", x = "Year", y = "Average Dxy", fill = "Year") +
+  scale_fill_manual(values = cols2) +
+  theme +
+  theme(legend.position="none")
+plot_by_year_dxy
+
+plot_by_year_fst / plot_by_year_dxy
 
 ############# across the genome plots: pi and tajima's d
 years <- c(2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016)
