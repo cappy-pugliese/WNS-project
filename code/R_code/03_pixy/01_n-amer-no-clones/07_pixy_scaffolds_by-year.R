@@ -90,18 +90,38 @@ plot2016_acrossgenome_dxy <- ggplot(data=pop9_compar_df, aes(x=chromosome,y=avg_
   theme(axis.ticks.x = element_blank(),axis.text.x = element_blank())
 plot2016_acrossgenome_fst / plot2016_acrossgenome_dxy
 
+###################### cut fst and dxy graphs
+cut_pop1_compar_df <- pop1_compar_df |> mutate(.before=chromosome, scaffold_num=as.numeric(gsub("NW_|\\.1", "",(paste(chromosome))))) |> filter(scaffold_num<20167560)
+
+plot2016_acrossgenome_fst <- ggplot(data=cut_pop1_compar_df, aes(x=chromosome,y=avg_hudson_fst, color=year_compar)) +
+  geom_line(aes(color=year_compar, group=year_compar),size = 1.2) +
+  labs(title = "Fst of Each Scaffold Per Year Compared to 2016", x = "Genome Scaffolds", y = "Average Fst", color = "Year") +
+  scale_color_manual(values = cols) +
+  theme +
+  theme(axis.title.x=element_blank(),axis.ticks.x = element_blank(),axis.text.x = element_blank())
+### dxy
+plot2016_acrossgenome_dxy <- ggplot(data=cut_pop1_compar_df, aes(x=chromosome,y=avg_dxy, color=year_compar)) +
+  geom_line(aes(color=year_compar, group=year_compar),size = 1.2) +
+  labs(title = "Dxy of Each Scaffold Per Year Compared to 2016", x = "Largest Genome Scaffolds", y = "Average Dxy", color = "Year") +
+  scale_color_manual(values = cols) +
+  theme +
+  theme(axis.ticks.x = element_blank(),axis.text.x = element_blank())
+plot2016_acrossgenome_fst / plot2016_acrossgenome_dxy
+
+
+
 ############# across the genome plots: pi and tajima's d
 years <- c(2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016)
 
 plot_acrossgenome_pi <- ggplot(data=merged_pi_tajima_d, aes(x=chromosome, y=avg_pi, color=pop)) +
-  geom_line(aes(color=pop, group=pop)) +
+  geom_line(aes(color=pop, group=pop),size = 1.2) +
   labs(title = "Average Pi for Each Genome Scaffold Per Year", x = "Genome Scaffolds", y = "Average Pi", color = "Year") +
   scale_color_manual(labels = years, values = cols) +
   theme +
   theme(axis.title.x=element_blank(),axis.ticks.x = element_blank(),axis.text.x = element_blank())
 
 plot_acrossgenome_tajimad <- ggplot(data=merged_pi_tajima_d, aes(x=chromosome, y=tajima_d, color=pop)) +
-  geom_line(aes(color=pop, group=pop)) +
+  geom_line(aes(color=pop, group=pop),size = 1.2) +
   labs(title = "Tajima's D for Each Genome Scaffold Per Year", x = "Genome Scaffolds", y = "Tajima's D", color = "Year") +
   scale_color_manual(labels = years, values = cols) +
   theme +
@@ -116,14 +136,14 @@ cut_pi_tajima_d <-merged_pi_tajima_d |> select(pop,chromosome,avg_pi,tajima_d) |
 cut_pi_tajima_d <- cut_pi_tajima_d |> group_by(scaffold_num) |> arrange(.by_group=TRUE) |> filter(scaffold_num<20167548)
 
 plot_acrossgenome_pi <- ggplot(data=cut_pi_tajima_d, aes(x=chromosome, y=avg_pi, color=pop)) +
-  geom_line(aes(color=pop, group=pop)) +
+  geom_line(aes(color=pop, group=pop),size = 1.2) +
   labs(title = "Average Pi for Each Genome Scaffold Per Year", x = "Largest Genome Scaffolds", y = "Average Pi", color = "Year") +
   scale_color_manual(labels = years, values = cols) +
   theme +
   theme(axis.title.x=element_blank(),axis.ticks.x = element_blank(),axis.text.x = element_blank())
 
 plot_acrossgenome_tajimad <- ggplot(data=cut_pi_tajima_d, aes(x=chromosome, y=tajima_d, color=pop)) +
-  geom_line(aes(color=pop, group=pop)) +
+  geom_line(aes(color=pop, group=pop),size = 1.2) +
   labs(title = "Tajima's D for Each Genome Scaffold Per Year", x = "Largest Genome Scaffolds", y = "Tajima's D", color = "Year") +
   scale_color_manual(labels = years, values = cols) +
   theme +
