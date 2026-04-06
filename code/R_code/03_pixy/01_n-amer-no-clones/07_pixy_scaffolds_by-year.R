@@ -4,7 +4,7 @@ library(ggplot2)
 library(cowplot)
 library(patchwork)
 
-setwd("/Users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/data/06_pixy/01_n-amer-no-clones/02_pixy-output/04_scaffolds/01_by-year/")
+setwd("/Users/caprinapugliese/Documents/03_school/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/data/06_pixy/01_n-amer-no-clones/02_pixy-output/04_scaffolds/01_by-year/")
 
 fst_df <- read_tsv("n-amer-no-clones_by-year_scaffolds_fst.txt")
 pi_df <- read_tsv("n-amer-no-clones_by-year_scaffolds_pi.txt")
@@ -94,19 +94,62 @@ plot2016_acrossgenome_fst / plot2016_acrossgenome_dxy
 years <- c(2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016)
 
 plot_acrossgenome_pi <- ggplot(data=merged_pi_tajima_d, aes(x=chromosome, y=avg_pi, color=pop)) +
-  geom_point() +
+  geom_line(aes(color=pop, group=pop)) +
   labs(title = "Average Pi for Each Genome Scaffold Per Year", x = "Genome Scaffolds", y = "Average Pi", color = "Year") +
   scale_color_manual(labels = years, values = cols) +
   theme +
   theme(axis.title.x=element_blank(),axis.ticks.x = element_blank(),axis.text.x = element_blank())
 
-
 plot_acrossgenome_tajimad <- ggplot(data=merged_pi_tajima_d, aes(x=chromosome, y=tajima_d, color=pop)) +
-  geom_point() +
+  geom_line(aes(color=pop, group=pop)) +
   labs(title = "Tajima's D for Each Genome Scaffold Per Year", x = "Genome Scaffolds", y = "Tajima's D", color = "Year") +
   scale_color_manual(labels = years, values = cols) +
   theme +
   theme(axis.ticks.x = element_blank(),axis.text.x = element_blank())
 
+plot_acrossgenome_pi / plot_acrossgenome_tajimad
+
+
+################# cut across the genome pi & tajima's d
+cut_pi_tajima_d <-merged_pi_tajima_d |> select(pop,chromosome,avg_pi,tajima_d) |>  mutate(.before=chromosome, scaffold_num=as.numeric(gsub("NW_|\\.1", "",(paste(chromosome)))))
+
+cut_pi_tajima_d <- cut_pi_tajima_d |> group_by(scaffold_num) |> arrange(.by_group=TRUE) |> filter(scaffold_num<20167548)
+
+plot_acrossgenome_pi <- ggplot(data=cut_pi_tajima_d, aes(x=chromosome, y=avg_pi, color=pop)) +
+  geom_line(aes(color=pop, group=pop)) +
+  labs(title = "Average Pi for Each Genome Scaffold Per Year", x = "Largest Genome Scaffolds", y = "Average Pi", color = "Year") +
+  scale_color_manual(labels = years, values = cols) +
+  theme +
+  theme(axis.title.x=element_blank(),axis.ticks.x = element_blank(),axis.text.x = element_blank())
+
+plot_acrossgenome_tajimad <- ggplot(data=cut_pi_tajima_d, aes(x=chromosome, y=tajima_d, color=pop)) +
+  geom_line(aes(color=pop, group=pop)) +
+  labs(title = "Tajima's D for Each Genome Scaffold Per Year", x = "Largest Genome Scaffolds", y = "Tajima's D", color = "Year") +
+  scale_color_manual(labels = years, values = cols) +
+  theme +
+  theme(axis.ticks.x = element_blank(),axis.text.x = element_blank())
 
 plot_acrossgenome_pi / plot_acrossgenome_tajimad
+
+######## comparing years pi & tajima's d
+cut_pi_tajima_d <- cut_pi_tajima_d |> mutate(.before=pop, year=as.character(2007+(as.numeric(gsub("\\D+", "",paste(pop))))))
+
+cols3 <- c("#064061","#0072B2","#56B4E9", "#B4E1FB", "#009E73","#DACE1E","#D55E00","#9C4907")
+
+plot_by_year_pi <- ggplot(data=cut_pi_tajima_d, aes(x=year, y=avg_pi)) +
+  geom_boxplot(aes(fill=year)) +
+  labs(title = "Average Pi Across the Genome Per Year", x = "Year", y = "Average Pi", fill = "Year") +
+  scale_fill_manual(values = cols3) +
+  theme +
+  theme(legend.position="none")
+plot_by_year_pi
+
+plot_by_year_tajima_d <- ggplot(data=cut_pi_tajima_d, aes(x=year, y=tajima_d)) +
+  geom_boxplot(aes(fill=year)) +
+  labs(title = "Average Tajima's D Across the Genonme Per Year", x = "Year", y = "Average Tajima's D", fill = "Year") +
+  scale_fill_manual(values = cols3) +
+  theme +
+  theme(legend.position="none")
+plot_by_year_tajima_d
+
+plot_by_year_pi / plot_by_year_tajima_d
