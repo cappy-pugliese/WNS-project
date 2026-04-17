@@ -85,3 +85,14 @@ ggplot(data=df_e,aes(x=V1,y=V2,color=info$year)) +
 
 #length(unique(info$strat))
 5
+
+pc_percents <- as.data.frame(evals)
+pc_percents$number <- c(1:67)
+ggplot(data=pc_percents,aes(y=evals, x=number)) + geom_point()
+
+ggplot(data=df_e,aes(x=V2,y=V3,color=info$continent, label=info$individuals)) +
+  geom_point(alpha=0.5,size=2.5) +
+  scale_color_manual(values=c("#56B4E9","#064061","#D55E00"), labels=c("Asia","Europe","North America")) +
+  theme_cowplot() +
+  labs(x = paste("PC2 (",round(evals[2]*100,2),"%)",sep=""), y = paste("PC3 (",round(evals[3]*100,2),"%)",sep=""), color="Continent") +
+  geom_text(hjust=0, vjust=0)

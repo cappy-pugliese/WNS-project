@@ -3,7 +3,7 @@ library(see)
 library(dplyr)
 #library(colorblindr)
 
-setwd("/Users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/data/04_pcangsd")
+setwd("/Users/caprinapugliese/Documents/03_school/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/data/04_pcangsd")
 df_long <- read.csv("25_12-09_only-pd_pcangsd_longdf.csv")
 df_continent <- df_long |> group_by(continent) |> arrange(.by_group = TRUE)
 
@@ -30,6 +30,17 @@ continents_label <- c(
 ## grouped by continent graph
 ggplot(df_long,aes(x=ind,y=admix,fill=Pop)) +
 scale_fill_manual(values = rev(cols)) +
+geom_col(col=NA,inherit.aes = TRUE) +
+theme(axis.text.x = element_text(angle = 90, hjust = 1, size=8), legend.key.size=unit(0.3, 'cm')) +
+geom_col(col=NA,inherit.aes = TRUE) +
+facet_grid( ~ continent, scales = "free_x", space="free_x", switch = "x", labeller = as_labeller(continents_label)) +
+labs(title = "Only Pd Samples: by Continent", x = "Individuals", y = "Admix")
+
+pop11 <- df_long |> filter(Pop == "pop11") 
+pop11_2 <- pop11 |> filter(ind != "Pd_02", ind != "Pd_58", ind != "Pd_59")
+
+ggplot(pop11_2,aes(x=ind,y=admix,fill=country)) +
+scale_fill_manual(values = cols) +
 geom_col(col=NA,inherit.aes = TRUE) +
 theme(axis.text.x = element_text(angle = 90, hjust = 1, size=8), legend.key.size=unit(0.3, 'cm')) +
 geom_col(col=NA,inherit.aes = TRUE) +
