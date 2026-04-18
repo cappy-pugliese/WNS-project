@@ -1,8 +1,9 @@
 library(ggplot2)
 library(see)
 #library(colorblindr)
+library(dplyr)
 
-setwd("/Users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/data/04_pcangsd")
+setwd("/Users/caprinapugliese/Documents/03_school/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/data/04_pcangsd")
 df_long <- read.csv("25_12-10_n-amer-no-clones_pcangsd_longdf.csv")
 
 cols <- c("#064061", "#56B4E9","#009E73","#FDF17B","#E69F00","#D55E00","#9C4907")
@@ -35,3 +36,10 @@ theme(axis.text.x = element_text(angle = 90, hjust = 1, size=8), legend.key.size
 geom_col(col=NA,inherit.aes = TRUE) +
 facet_grid( ~ year, scales = "free_x", space="free_x", switch = "x") +
 labs(title = "North American Pd Samples by Year", x = "Individuals Separated by Year", y = "Admix") 
+
+
+####################################
+# results calculations stuff
+####################################
+
+pop04 <- df_long |> filter(Pop == "pop04") |> filter(ind != "Pd_02", ind != "Pd_58", ind != "Pd_59")

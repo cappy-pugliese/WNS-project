@@ -36,8 +36,24 @@ geom_col(col=NA,inherit.aes = TRUE) +
 facet_grid( ~ continent, scales = "free_x", space="free_x", switch = "x", labeller = as_labeller(continents_label)) +
 labs(title = "Only Pd Samples: by Continent", x = "Individuals", y = "Admix")
 
+
+####################################
+# results calculations stuff
+####################################
+
 pop11 <- df_long |> filter(Pop == "pop11") 
 pop11_2 <- pop11 |> filter(ind != "Pd_02", ind != "Pd_58", ind != "Pd_59")
+
+pop11_2_namer <- pop11_2 |> filter(continent == "N_America")
+summary(pop11_2_namer$admix)
+
+pop11_namer <- pop11 |> filter(continent == "N_America") |> filter(ind == "Pd_02" | ind == "Pd_58"| ind == "Pd_59")
+
+clones <- df_long |> filter(ind == "Pd_36" | ind == "Pd_37" | ind == "Pd_39" | ind == "Pd_45")
+
+europes <- df_long |> filter(continent == "Europe")
+
+europe_majority <- df_long |> filter(continent == "Europe") |> filter(admix > 0.90)
 
 ggplot(pop11_2,aes(x=ind,y=admix,fill=country)) +
 scale_fill_manual(values = cols) +
