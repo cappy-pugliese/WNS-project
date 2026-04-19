@@ -1,8 +1,8 @@
-R_code_path <- "/Users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/code/R_code/02_algatr/"
-pcangsd_data_path <- "/Users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/data/01_pd-samples/"
+R_code_path <- "/Users/caprinapugliese/Documents/03_school/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/code/R_code/02_algatr/"
+pcangsd_data_path <- "/Users/caprinapugliese/Documents/03_school/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/data/01_pd-samples/"
 
-source(paste0(R_code_path, "12_algatr_src.R"))
-setwd("/Users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/graphs/02_algatr/")
+source(paste0(R_code_path, "12_tess_src.R"))
+setwd("/Users/caprinapugliese/Documents/03_school/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/graphs/02_algatr/")
 
 ##### tess tutorial
 ## https://thewanglab.github.io/algatr/articles/TESS_vignette.html
@@ -21,7 +21,7 @@ library(cowplot)
 library(patchwork)
 
 ## color scheme
-colors <- c("#D55E00", "#0072B2", "#DACE1E")
+colors <- c("#d62e00", "#0072B2", "#fff023")
 
 ## begin tess
 krig_raster <- raster::aggregate(og_envpcs, fact = 6)

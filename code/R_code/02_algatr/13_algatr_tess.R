@@ -21,9 +21,6 @@ library(cowplot)
 #my libraries
 library(patchwork)
 
-## color scheme
-colors <- c("#0072B2", "#D55E00", "#DACE1E")
-
 ## begin tess
 krig_raster <- raster::aggregate(og_envpcs, fact = 6)
 
@@ -46,7 +43,7 @@ krig_admix <- tess_krig(qmat, coords_longlat, krig_raster)
 tess_ggbarplot(qmat)
 
 df_qmat <- as.data.frame(qmat)
-colnames(df_qmat) <- c("K3","K1","K2")
+colnames(df_qmat) <- c("K1","K2","K3")
 df_qmat$Sample <- rownames(pruned_dosage)
 df_qmat$year <- pd_info$year
 df_qmat <- df_qmat |> dplyr::relocate(Sample, year, K1, K2, K3)
@@ -54,6 +51,8 @@ df_long_qmat <- df_qmat |> pivot_longer(cols=c('K1','K2','K3'),
                             names_to = 'K_value',
                             values_to = 'Q_value')
 
+## color scheme
+colors <- c("#ea7820", "#0072B2", "#e5d827")
 
 plot1 <- ggplot(df_long_qmat,aes(x=Sample,y=Q_value,fill=K_value)) +
 scale_fill_manual(values = colors) +
@@ -61,7 +60,7 @@ geom_col(col=NA,inherit.aes = TRUE) +
 theme(axis.text.x = element_text(angle = 90, hjust = 1, size=8), legend.key.size=unit(0.5, 'cm')) +
 geom_col(col=NA,inherit.aes = TRUE) +
 facet_grid( ~ year, scales = "free_x", space="free_x", switch = "x") +
-labs(title = "LD Pruned North American Pd Samples", x = "Individuals by Year", y = "Q Value") 
+labs(x = "Individuals by Year", y = "Ancestry Q value (Admixture)", fill = "K values") 
 plot1
 
 ## bar plot of Q values, k=7
