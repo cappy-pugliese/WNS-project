@@ -2,7 +2,7 @@ library(dplyr)
 library(readr)
 library(ggplot2)
 
-setwd("/Users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/data/06_pixy/01_n-amer-no-clones/02_pixy-output/02_larger_window/02_by-pops")
+setwd("/Users/caprinapugliese/Documents/03_school/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/data/06_pixy/01_n-amer-no-clones/02_pixy-output/02_larger_window/02_by-pops")
 
 fst_df <- read_tsv("n-amer-no-clones_by-pops2_fst.txt")
 pi_df <- read_tsv("n-amer-no-clones_by-pops2_pi.txt")
