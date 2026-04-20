@@ -1,0 +1,56 @@
+ind,continent,country,state,year,Pop,admix,pca_groups
+Pd_02,N_America,USA,Wisconsin,2016,pop04,0.999398172,B
+Pd_07,N_America,Canada,Ontario,2015,pop06,0.990320742,A
+Pd_08,N_America,Canada,Ontario,2015,pop06,0.908806026,A
+Pd_09,N_America,Canada,Nova Scotia,2013,pop06,0.969485521,A
+Pd_10,N_America,Canada,Nova Scotia,2013,pop06,0.946730971,A
+Pd_11,N_America,Canada,Prince Edward Island,2013,pop07,0.87335813,A
+Pd_12,N_America,Canada,Ontario,2015,pop06,0.999243379,A
+Pd_13,N_America,Canada,New Brunswick,2015,pop06,0.791775227,A
+Pd_14,N_America,Canada,New Brunswick,2012,pop07,0.996407032,A
+Pd_15,N_America,Canada,New Brunswick,2013,pop07,0.77202034,A
+Pd_16,N_America,Canada,New Brunswick,2012,pop07,0.814207554,A
+Pd_17,N_America,Canada,New Brunswick,2012,pop07,0.99848336,A
+Pd_19,N_America,Canada,New Brunswick,2013,pop07,0.765697956,A
+Pd_20,N_America,Canada,New Brunswick,2013,pop07,0.844947577,A
+Pd_21,N_America,Canada,New Brunswick,2013,pop06,0.971802652,A
+Pd_22,N_America,Canada,New Brunswick,2013,pop07,0.806734264,A
+Pd_23,N_America,USA,New York,2008,pop07,0.754875362,A
+Pd_24,N_America,Canada,New Brunswick,2012,pop07,0.881536722,A
+Pd_26,N_America,Canada,New Brunswick,2012,pop05,0.995057821,A
+Pd_27,N_America,Canada,Prince Edward Island,2012,pop05,0.942944169,A
+Pd_28,N_America,USA,New York,2008,pop05,0.54553628,A
+Pd_36,N_America,USA,New York,2009,popNA,0,C
+Pd_37,N_America,USA,New York,2009,popNA,0,C
+Pd_39,N_America,USA,New York,2009,popNA,0,C
+Pd_45,N_America,USA,New York,2009,popNA,0,C
+Pd_49,N_America,USA,Pennsylvania,2009,pop03,0.653413594,A
+Pd_50,N_America,USA,New Jersey,2009,pop03,0.618851781,A
+Pd_51,N_America,USA,West Virginia,2009,pop03,0.735782206,A
+Pd_52,N_America,Canada,Ontario,2010,pop01,0.487379223,A
+Pd_53,N_America,USA,Tennessee,2010,pop01,0.3447299,A
+Pd_54,N_America,USA,Vermont,2008,pop02,0.603335023,A
+Pd_55,N_America,USA,Connecticut,2009,pop01,0.585720956,A
+Pd_56,N_America,USA,Virginia,2009,pop01,0.584625244,A
+Pd_57,N_America,USA,Massachussetts,2008,pop02,0.727524459,A
+Pd_58,N_America,USA,Alabama,2015,pop04,0.999392211,B
+Pd_59,N_America,USA,Washington,2016,pop04,0.999400198,B
+Pd_62,N_America,USA,Connecticut,2008,pop02,0.843092859,A
+Pd_63,N_America,USA,Tennessee,2010,pop01,0.966300845,A
+Pd_64,N_America,USA,Maryland,2010,pop02,0.75482142,A
+Pd_65,N_America,USA,New York,2009,pop01,0.551457405,A
+Pd_66,N_America,USA,Vermont,2010,pop01,0.747775257,A
+Pd_67,N_America,Canada,Ontario,2010,pop02,0.904921412,A
+Pd_68,N_America,USA,Tennessee,2010,pop03,0.540554225,A
+Pd_72,N_America,Canada,New Brunswick,2012,pop05,0.552767813,A
+Pd_73,N_America,USA,Missouri,2012,pop07,0.393468231,A
+Pd_74,N_America,USA,Virginia,2011,pop02,0.712113261,A
+Pd_75,N_America,USA,Tennessee,2011,pop02,0.899385154,A
+Pd_76,N_America,USA,Indiana,2011,pop03,0.733065248,A
+Pd_77,N_America,USA,Indiana,2011,pop02,0.968530059,A
+Pd_78,N_America,USA,Deleware,2012,pop06,0.581766486,A
+Pd_79,N_America,USA,Maine,2011,pop03,0.565722704,A
+Pd_82,N_America,Canada,Ontario,2014,pop05,0.936529756,A
+Pd_83,N_America,Canada,Nova Scotia,2013,pop05,0.975788713,A
+Pd_84,N_America,Canada,New Brunswick,2012,pop05,0.954140425,A
+Pd_85,N_America,Canada,New Brunswick,2012,pop05,0.949781001,A

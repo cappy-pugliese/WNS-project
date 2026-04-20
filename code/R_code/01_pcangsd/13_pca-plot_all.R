@@ -88,7 +88,7 @@ ggplot(data=df_e,aes(x=V1,y=V2,color=info$year)) +
 
 pc_percents <- as.data.frame(evals)
 pc_percents$number <- c(1:67)
-ggplot(data=pc_percents,aes(y=evals, x=number)) + geom_point()
+ggplot(data=pc_percents,aes(y=evals, x=number)) + geom_point() + theme_cowplot()
 
 ggplot(data=df_e,aes(x=V2,y=V3,color=info$continent, label=info$individuals)) +
   geom_point(alpha=0.5,size=2.5) +
