@@ -151,10 +151,11 @@ v.draw_outliers(outliers_df)
 v.draw_obs_nodes(use_ids=True)
 
 # recommended to start with K=10 (nedges is K)
+# originally ran with 10, going to try running it with actual pcangsd k value of 7
 seq_results = sp_graph.sequential_fit(
     outliers_df=outliers_df, 
     lamb=2.15, lamb_q=1.0, optimize_q='n-dim', 
-    nedges=10, top=5
+    nedges=7, top=5
 )
 
 # visualizing the LREs as arrows
@@ -164,10 +165,19 @@ v = Viz(ax, sp_graph, projection=projection, edge_width=.5,
         edge_alpha=1, edge_zorder=100, sample_pt_size=20, 
         obs_node_size=7.5, sample_pt_color="black", 
         cbar_font_size=10)
-v.draw_map(); v.draw_edges(use_weights=True); v.draw_edge_colorbar(); v.draw_obs_nodes()
-v.draw_LREs(seq_results); v.draw_c_colorbar()
+v.draw_map(); v.draw_edges(use_weights=True); v.draw_obs_nodes()
+v.draw_LREs(seq_results)#; v.draw_edge_colorbar(); v.draw_c_colorbar()
 
 plot_FEEMSmix_summary(seq_results, sequential=True)
+
+######## just the bars
+#bars = Viz(ax, sp_graph, projection=projection, edge_width=.5, 
+ #       edge_alpha=1, edge_zorder=100, sample_pt_size=20, 
+  #      obs_node_size=0, sample_pt_color="black", 
+   #     cbar_font_size=10)
+#bars.draw_map();bars.draw_edge_colorbar(); bars.draw_c_colorbar()
+
+#plot_FEEMSmix_summary(seq_results, sequential=True)
 
 #############################################################################
 # moving to R for mapping
