@@ -16,9 +16,9 @@ date
 
 ## variables
 IN_VCF=/home/FCAM/cpugliese/lab_wns/05_vcfs/01_orig-vcfs/01_all-samples/ploidy-1/pd_ploidy-1.vcf.gz
-SAMPLES=/home/FCAM/cpugliese/wns/04_vcf/02_other-vcf-scritps/05_clade-structure_pds/clade-structure-pds.txt
+SAMPLES=/home/FCAM/cpugliese/wns/04_vcf/02_other-vcf-scritps/05_clade-structure_pds/clade-structure_ALL-samples.txt
 OUTDIR=/home/FCAM/cpugliese/lab_wns/05_vcfs/03_filtered-vcfs
-OUTNAME=clade-structure-pds_filtered.vcf.gz
+OUTNAME=clade-structure-ALL_filtered.vcf.gz
 
 ## load modules
 module load bcftools/1.9

@@ -19,7 +19,7 @@ module load bcftools/1.19
 
 ## set variables
 INDIR=/home/FCAM/cpugliese/lab_wns/05_vcfs/03_filtered-vcfs
-VCF=clade-structure-pds_filtered.vcf.gz
+VCF=clade-structure-ALL_filtered.vcf.gz
 
 cd $INDIR
 

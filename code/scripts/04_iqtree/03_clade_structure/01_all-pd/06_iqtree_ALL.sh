@@ -3,7 +3,7 @@
 #SBATCH -N 1
 #SBATCH -n 1
 #SBATCH -c 8
-#SBATCH --mem=20G
+#SBATCH --mem=5G
 #SBATCH --partition=general
 #SBATCH --qos=general
 #SBATCH -o logs/%x_%j.out
@@ -15,12 +15,12 @@
 module load iqtree/3.0.1
 
 ## set variables
-OUTNAME=only-pd_clade-structure-pds_filtered3
-PLINK=/home/FCAM/cpugliese/wns/06_iqtree/clade-structure/01_plink/only-pd_clade-structure-pds_filtered
-OUTDIR2=/home/FCAM/cpugliese/wns/06_iqtree/clade-structure/02_iqtree
+OUTNAME=clade-structure-ALL_filtered_b1000
+PLINK=/home/FCAM/cpugliese/wns/06_iqtree/clade-structure/01_plink/plink_clade-structure-ALL_filtered
+OUTDIR=/home/FCAM/cpugliese/wns/06_iqtree/clade-structure/02_iqtree
 
 
-cd $OUTDIR2
+cd $OUTDIR
 
 iqtree3 \
 -redo \
@@ -28,9 +28,9 @@ iqtree3 \
 -nt 8 \
 -cptime 1140 \
 -b 1000 \
--mem 20G \
+-mem 5G \
+-o Pd_31 \
 -m GTR+ASC \
--o Pd_70 \
 -s $PLINK.phy
 
 ########### script end
