@@ -165,8 +165,8 @@ v = Viz(ax, sp_graph, projection=projection, edge_width=.5,
         edge_alpha=1, edge_zorder=100, sample_pt_size=20, 
         obs_node_size=7.5, sample_pt_color="black", 
         cbar_font_size=10)
-v.draw_map(); v.draw_edges(use_weights=True); v.draw_obs_nodes()
-v.draw_LREs(seq_results)#; v.draw_edge_colorbar(); v.draw_c_colorbar()
+v.draw_map(); v.draw_edges(use_weights=True); v.draw_edge_colorbar(); v.draw_obs_nodes()
+v.draw_LREs(seq_results); v.draw_c_colorbar()
 
 plot_FEEMSmix_summary(seq_results, sequential=True)
 
@@ -183,11 +183,11 @@ plot_FEEMSmix_summary(seq_results, sequential=True)
 # moving to R for mapping
 
 # write the relevant edge weights out into a csv file
-np.savetxt('edgew.csv', np.vstack((np.array(sp_graph.edges).T, sp_graph.w)).T, delimiter=',')
+#np.savetxt('edgew.csv', np.vstack((np.array(sp_graph.edges).T, sp_graph.w)).T, delimiter=',')
 
 # write the deme coordinates + sample size (node attributes) out into a csv file
-np.savetxt('nodepos.csv', np.vstack((sp_graph.node_pos.T, [sp_graph.nodes[n]['n_samples'] for n in range(len(sp_graph.nodes))])).T, delimiter=',')
+#np.savetxt('nodepos.csv', np.vstack((sp_graph.node_pos.T, [sp_graph.nodes[n]['n_samples'] for n in range(len(sp_graph.nodes))])).T, delimiter=',')
 
 # (if using `FEEMSmix`,` print the MLE source & admix. prop.)
-contour_df = sp_graph.calc_joint_contour(...) 
-print(contour_df.iloc[np.argmax(contour_df['scaled log-lik'])])
+#contour_df = sp_graph.calc_joint_contour(...) 
+#print(contour_df.iloc[np.argmax(contour_df['scaled log-lik'])])
