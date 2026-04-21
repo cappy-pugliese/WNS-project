@@ -26,7 +26,7 @@ ggplot(data=pc_percents,aes(y=evals, x=number)) + geom_point() + theme_cowplot()
 
 ###########################
 ## by pca groups
-cols <- c("#E69F00","#56B4E9","#064061")
+cols <- c("#E69F00","#064061","#56B4E9")
 ###### PC1 vs PC2
 ggplot(data=df_e,aes(x=V1,y=V2, color=info$pca_groups)) +
   geom_point(alpha=0.6,size=2.5) +
