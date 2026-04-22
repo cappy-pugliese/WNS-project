@@ -38,7 +38,9 @@ crs(NoA) <- crs(bio)
 NoA_bio <- crop(bio, NoA)
 
 # performing a raster PCA
-pca <- prcomp(NoA_bio)
+pca <- prcomp(NoA_bio, scale=TRUE)
+# try to get the loadings
+# value of rotation = the loadings (larger loadings)
 
 ##################
 og_envpcs <- predict(NoA_bio, pca, index=1:3)

@@ -16,12 +16,12 @@ setwd("/Users/caprinapugliese/Documents/03_school/Uconn/2024-26_Grad_School/Dagi
 raster_path = "/Users/caprinapugliese/Documents/03_school/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/data/climate_data/wc2.1_data"
 coords <- read.csv("NoA_Pd_coords.csv")
 #coords <- read.csv("no-washington_coords.csv")
-vcf <- read.vcfR("n-amer-no-clones_filtered.vcf")
-#ld_pruned_vcf <- read.vcfR("n-amer-no-washington_ploidy1_filtered_plink-ld.vcf")
+#vcf <- read.vcfR("n-amer-no-clones_filtered.vcf")
+ld_pruned_vcf <- read.vcfR("n-amer-no-clones_ploidy1_filtered_plink-ld.vcf")
 
 ###########
 # Genetic Data Processing
-pruned_dosage <- vcf_to_dosage(vcf)
+pruned_dosage <- vcf_to_dosage(ld_pruned_vcf)
 rownames(pruned_dosage) <- sub("^(.*?_\\d+)_.*$", "\\1", rownames(pruned_dosage))
 
 ###########
@@ -38,7 +38,7 @@ crs(NoA) <- crs(bio)
 NoA_bio <- crop(bio, NoA)
 
 # performing a raster PCA
-pca <- prcomp(NoA_bio)
+pca <- prcomp(NoA_bio, scale=TRUE)
 
 ##################
 og_envpcs <- predict(NoA_bio, pca, index=1:3)
