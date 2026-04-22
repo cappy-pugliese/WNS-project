@@ -1,6 +1,6 @@
-R_code_path <- "/Users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/code/R_code/02_algatr/"
+R_code_path <- "/Users/caprinapugliese/Documents/03_school/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/code/R_code/02_algatr/"
 source(paste0(R_code_path, "12_algatr_src.R"))
-plot_path <- "/Users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/graphs/02_algatr/03_gdm/"
+plot_path <- "/Users/caprinapugliese/Documents/03_school/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/graphs/02_algatr/03_gdm/"
 
 #libraries
 gdm_packages()
@@ -23,15 +23,13 @@ gdm_plot_diss(gdm_full$model)
 # Plot the I-splines with free x and y-axes
 gdm_plot_isplines(gdm_full$model, scales = "free")
 gdm_plot_isplines(gdm_full$model, scales = "free_x")
-# does not work
-  # Warning message:
-    # Removed 2000 rows containing missing values or values outside the scale range (`geom_line()`). 
+
 
 
 # To run gdm.varImp() you need a gdmData object, which you can create using gdm_format()
 gdmData <- gdm_format(euc_dists, coords, env, scale_gendist = TRUE)
 # Then you can run gdm.varImp(), specifying whether you want to use geographic distance as a variable as well as the number of permutations you wish to run
-varimp <- gdm.varImp(gdmData, geo = TRUE, nPerm = 50)
+varimp <- gdm.varImp(gdmData, geo = TRUE, nPerm = 1000)
 # You can visualize the results using gdm_varimp_table()
 gdm_varimp_table(varimp)
 
