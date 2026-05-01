@@ -12,7 +12,7 @@
 ########### script start
 
 ## set variables
-VCF=/home/FCAM/cpugliese/lab_wns/05_vcfs/03_filtered-vcfs/snp-count_n-amer_no-clones_filtered.vcf.gz
+VCF=/home/FCAM/cpugliese/wns/03_bam2gvcf/04_n-amer_pd_vcf2/ONLY_n-amer_no-clones_filtered.vcf.gz
 OUTNAME=plink_n-amer_no-clones_filtered
 OUTDIR=/home/FCAM/cpugliese/wns/06_iqtree/clade-structure/01_plink
 
