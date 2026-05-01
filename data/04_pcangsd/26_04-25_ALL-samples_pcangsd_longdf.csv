@@ -1,0 +1,519 @@
+ind,group,continent,country,state,year,Pop,admix
+Pd_02,group2,N_America,USA,Wisconsin,2016,pop01,0.958681404590607
+Pd_02,group2,N_America,USA,Wisconsin,2016,pop02,0.00010043377551483
+Pd_02,group2,N_America,USA,Wisconsin,2016,pop03,0.0393419712781906
+Pd_02,group2,N_America,USA,Wisconsin,2016,pop04,0.00010043377551483
+Pd_02,group2,N_America,USA,Wisconsin,2016,pop05,0.00116236484609544
+Pd_02,group2,N_America,USA,Wisconsin,2016,pop06,0.000512897502630949
+Pd_02,group2,N_America,USA,Wisconsin,2016,pop07,0.00010043377551483
+Pd_03,Europe,Europe,Czech Republic,Central Bohemian Region,2010,pop01,0.306370079517365
+Pd_03,Europe,Europe,Czech Republic,Central Bohemian Region,2010,pop02,0.000100168290373404
+Pd_03,Europe,Europe,Czech Republic,Central Bohemian Region,2010,pop03,0.693129003047943
+Pd_03,Europe,Europe,Czech Republic,Central Bohemian Region,2010,pop04,0.000100168290373404
+Pd_03,Europe,Europe,Czech Republic,Central Bohemian Region,2010,pop05,0.000100168290373404
+Pd_03,Europe,Europe,Czech Republic,Central Bohemian Region,2010,pop06,0.000100168290373404
+Pd_03,Europe,Europe,Czech Republic,Central Bohemian Region,2010,pop07,0.000100168290373404
+Pd_04,Europe,Europe,Czech Republic,Central Bohemian Region,2010,pop01,0.14780193567276
+Pd_04,Europe,Europe,Czech Republic,Central Bohemian Region,2010,pop02,0.000100206765637267
+Pd_04,Europe,Europe,Czech Republic,Central Bohemian Region,2010,pop03,0.851696968078613
+Pd_04,Europe,Europe,Czech Republic,Central Bohemian Region,2010,pop04,0.000100206765637267
+Pd_04,Europe,Europe,Czech Republic,Central Bohemian Region,2010,pop05,0.000100206765637267
+Pd_04,Europe,Europe,Czech Republic,Central Bohemian Region,2010,pop06,0.000100206765637267
+Pd_04,Europe,Europe,Czech Republic,Central Bohemian Region,2010,pop07,0.000100206765637267
+Pd_05,Europe,Europe,Czech Republic,Hradec Kralove,2011,pop01,0.0921984687447548
+Pd_05,Europe,Europe,Czech Republic,Hradec Kralove,2011,pop02,0.000100083678262308
+Pd_05,Europe,Europe,Czech Republic,Hradec Kralove,2011,pop03,0.907301068305969
+Pd_05,Europe,Europe,Czech Republic,Hradec Kralove,2011,pop04,0.000100083678262308
+Pd_05,Europe,Europe,Czech Republic,Hradec Kralove,2011,pop05,0.000100083678262308
+Pd_05,Europe,Europe,Czech Republic,Hradec Kralove,2011,pop06,0.000100083678262308
+Pd_05,Europe,Europe,Czech Republic,Hradec Kralove,2011,pop07,0.000100083678262308
+Pd_06,Europe,Europe,Czech Republic,Hradec Kralove,2011,pop01,0.194354668259621
+Pd_06,Europe,Europe,Czech Republic,Hradec Kralove,2011,pop02,9.96652743197046e-05
+Pd_06,Europe,Europe,Czech Republic,Hradec Kralove,2011,pop03,0.805146932601929
+Pd_06,Europe,Europe,Czech Republic,Hradec Kralove,2011,pop04,9.96652743197046e-05
+Pd_06,Europe,Europe,Czech Republic,Hradec Kralove,2011,pop05,9.96652743197046e-05
+Pd_06,Europe,Europe,Czech Republic,Hradec Kralove,2011,pop06,9.96652743197046e-05
+Pd_06,Europe,Europe,Czech Republic,Hradec Kralove,2011,pop07,9.96652743197046e-05
+Pd_07,group1,N_America,Canada,Ontario,2015,pop01,0.999400198459625
+Pd_07,group1,N_America,Canada,Ontario,2015,pop02,9.99500116449781e-05
+Pd_07,group1,N_America,Canada,Ontario,2015,pop03,9.99500116449781e-05
+Pd_07,group1,N_America,Canada,Ontario,2015,pop04,9.99500116449781e-05
+Pd_07,group1,N_America,Canada,Ontario,2015,pop05,9.99500116449781e-05
+Pd_07,group1,N_America,Canada,Ontario,2015,pop06,9.99500116449781e-05
+Pd_07,group1,N_America,Canada,Ontario,2015,pop07,9.99500116449781e-05
+Pd_08,group1,N_America,Canada,Ontario,2015,pop01,0.999400198459625
+Pd_08,group1,N_America,Canada,Ontario,2015,pop02,9.99500116449781e-05
+Pd_08,group1,N_America,Canada,Ontario,2015,pop03,9.99500116449781e-05
+Pd_08,group1,N_America,Canada,Ontario,2015,pop04,9.99500116449781e-05
+Pd_08,group1,N_America,Canada,Ontario,2015,pop05,9.99500116449781e-05
+Pd_08,group1,N_America,Canada,Ontario,2015,pop06,9.99500116449781e-05
+Pd_08,group1,N_America,Canada,Ontario,2015,pop07,9.99500116449781e-05
+Pd_09,group1,N_America,Canada,Nova Scotia,2013,pop01,0.999400198459625
+Pd_09,group1,N_America,Canada,Nova Scotia,2013,pop02,9.99500116449781e-05
+Pd_09,group1,N_America,Canada,Nova Scotia,2013,pop03,9.99500116449781e-05
+Pd_09,group1,N_America,Canada,Nova Scotia,2013,pop04,9.99500116449781e-05
+Pd_09,group1,N_America,Canada,Nova Scotia,2013,pop05,9.99500116449781e-05
+Pd_09,group1,N_America,Canada,Nova Scotia,2013,pop06,9.99500116449781e-05
+Pd_09,group1,N_America,Canada,Nova Scotia,2013,pop07,9.99500116449781e-05
+Pd_10,group1,N_America,Canada,Nova Scotia,2013,pop01,0.999400198459625
+Pd_10,group1,N_America,Canada,Nova Scotia,2013,pop02,9.99500116449781e-05
+Pd_10,group1,N_America,Canada,Nova Scotia,2013,pop03,9.99500116449781e-05
+Pd_10,group1,N_America,Canada,Nova Scotia,2013,pop04,9.99500116449781e-05
+Pd_10,group1,N_America,Canada,Nova Scotia,2013,pop05,9.99500116449781e-05
+Pd_10,group1,N_America,Canada,Nova Scotia,2013,pop06,9.99500116449781e-05
+Pd_10,group1,N_America,Canada,Nova Scotia,2013,pop07,9.99500116449781e-05
+Pd_11,group1,N_America,Canada,Prince Edward Island,2013,pop01,0.999400198459625
+Pd_11,group1,N_America,Canada,Prince Edward Island,2013,pop02,9.99500116449781e-05
+Pd_11,group1,N_America,Canada,Prince Edward Island,2013,pop03,9.99500116449781e-05
+Pd_11,group1,N_America,Canada,Prince Edward Island,2013,pop04,9.99500116449781e-05
+Pd_11,group1,N_America,Canada,Prince Edward Island,2013,pop05,9.99500116449781e-05
+Pd_11,group1,N_America,Canada,Prince Edward Island,2013,pop06,9.99500116449781e-05
+Pd_11,group1,N_America,Canada,Prince Edward Island,2013,pop07,9.99500116449781e-05
+Pd_12,group1,N_America,Canada,Ontario,2015,pop01,0.999400198459625
+Pd_12,group1,N_America,Canada,Ontario,2015,pop02,9.99500116449781e-05
+Pd_12,group1,N_America,Canada,Ontario,2015,pop03,9.99500116449781e-05
+Pd_12,group1,N_America,Canada,Ontario,2015,pop04,9.99500116449781e-05
+Pd_12,group1,N_America,Canada,Ontario,2015,pop05,9.99500116449781e-05
+Pd_12,group1,N_America,Canada,Ontario,2015,pop06,9.99500116449781e-05
+Pd_12,group1,N_America,Canada,Ontario,2015,pop07,9.99500116449781e-05
+Pd_13,group1,N_America,Canada,New Brunswick,2015,pop01,0.999400198459625
+Pd_13,group1,N_America,Canada,New Brunswick,2015,pop02,9.99500116449781e-05
+Pd_13,group1,N_America,Canada,New Brunswick,2015,pop03,9.99500116449781e-05
+Pd_13,group1,N_America,Canada,New Brunswick,2015,pop04,9.99500116449781e-05
+Pd_13,group1,N_America,Canada,New Brunswick,2015,pop05,9.99500116449781e-05
+Pd_13,group1,N_America,Canada,New Brunswick,2015,pop06,9.99500116449781e-05
+Pd_13,group1,N_America,Canada,New Brunswick,2015,pop07,9.99500116449781e-05
+Pd_14,group1,N_America,Canada,New Brunswick,2012,pop01,0.999400198459625
+Pd_14,group1,N_America,Canada,New Brunswick,2012,pop02,9.99500116449781e-05
+Pd_14,group1,N_America,Canada,New Brunswick,2012,pop03,9.99500116449781e-05
+Pd_14,group1,N_America,Canada,New Brunswick,2012,pop04,9.99500116449781e-05
+Pd_14,group1,N_America,Canada,New Brunswick,2012,pop05,9.99500116449781e-05
+Pd_14,group1,N_America,Canada,New Brunswick,2012,pop06,9.99500116449781e-05
+Pd_14,group1,N_America,Canada,New Brunswick,2012,pop07,9.99500116449781e-05
+Pd_15,group1,N_America,Canada,New Brunswick,2013,pop01,0.999400198459625
+Pd_15,group1,N_America,Canada,New Brunswick,2013,pop02,9.99500116449781e-05
+Pd_15,group1,N_America,Canada,New Brunswick,2013,pop03,9.99500116449781e-05
+Pd_15,group1,N_America,Canada,New Brunswick,2013,pop04,9.99500116449781e-05
+Pd_15,group1,N_America,Canada,New Brunswick,2013,pop05,9.99500116449781e-05
+Pd_15,group1,N_America,Canada,New Brunswick,2013,pop06,9.99500116449781e-05
+Pd_15,group1,N_America,Canada,New Brunswick,2013,pop07,9.99500116449781e-05
+Pd_16,group1,N_America,Canada,New Brunswick,2012,pop01,0.999400198459625
+Pd_16,group1,N_America,Canada,New Brunswick,2012,pop02,9.99500116449781e-05
+Pd_16,group1,N_America,Canada,New Brunswick,2012,pop03,9.99500116449781e-05
+Pd_16,group1,N_America,Canada,New Brunswick,2012,pop04,9.99500116449781e-05
+Pd_16,group1,N_America,Canada,New Brunswick,2012,pop05,9.99500116449781e-05
+Pd_16,group1,N_America,Canada,New Brunswick,2012,pop06,9.99500116449781e-05
+Pd_16,group1,N_America,Canada,New Brunswick,2012,pop07,9.99500116449781e-05
+Pd_17,group1,N_America,Canada,New Brunswick,2012,pop01,0.999400198459625
+Pd_17,group1,N_America,Canada,New Brunswick,2012,pop02,9.99500116449781e-05
+Pd_17,group1,N_America,Canada,New Brunswick,2012,pop03,9.99500116449781e-05
+Pd_17,group1,N_America,Canada,New Brunswick,2012,pop04,9.99500116449781e-05
+Pd_17,group1,N_America,Canada,New Brunswick,2012,pop05,9.99500116449781e-05
+Pd_17,group1,N_America,Canada,New Brunswick,2012,pop06,9.99500116449781e-05
+Pd_17,group1,N_America,Canada,New Brunswick,2012,pop07,9.99500116449781e-05
+Pd_18,Europe,Europe,Germany,Thuringa,2009,pop01,0.0871798694133759
+Pd_18,Europe,Europe,Germany,Thuringa,2009,pop02,9.92026252788492e-05
+Pd_18,Europe,Europe,Germany,Thuringa,2009,pop03,0.912324070930481
+Pd_18,Europe,Europe,Germany,Thuringa,2009,pop04,9.92026252788492e-05
+Pd_18,Europe,Europe,Germany,Thuringa,2009,pop05,9.92026252788492e-05
+Pd_18,Europe,Europe,Germany,Thuringa,2009,pop06,9.92026252788492e-05
+Pd_18,Europe,Europe,Germany,Thuringa,2009,pop07,9.92026252788492e-05
+Pd_19,group1,N_America,Canada,New Brunswick,2013,pop01,0.999400198459625
+Pd_19,group1,N_America,Canada,New Brunswick,2013,pop02,9.99500116449781e-05
+Pd_19,group1,N_America,Canada,New Brunswick,2013,pop03,9.99500116449781e-05
+Pd_19,group1,N_America,Canada,New Brunswick,2013,pop04,9.99500116449781e-05
+Pd_19,group1,N_America,Canada,New Brunswick,2013,pop05,9.99500116449781e-05
+Pd_19,group1,N_America,Canada,New Brunswick,2013,pop06,9.99500116449781e-05
+Pd_19,group1,N_America,Canada,New Brunswick,2013,pop07,9.99500116449781e-05
+Pd_20,group1,N_America,Canada,New Brunswick,2013,pop01,0.999400198459625
+Pd_20,group1,N_America,Canada,New Brunswick,2013,pop02,9.99500116449781e-05
+Pd_20,group1,N_America,Canada,New Brunswick,2013,pop03,9.99500116449781e-05
+Pd_20,group1,N_America,Canada,New Brunswick,2013,pop04,9.99500116449781e-05
+Pd_20,group1,N_America,Canada,New Brunswick,2013,pop05,9.99500116449781e-05
+Pd_20,group1,N_America,Canada,New Brunswick,2013,pop06,9.99500116449781e-05
+Pd_20,group1,N_America,Canada,New Brunswick,2013,pop07,9.99500116449781e-05
+Pd_21,group1,N_America,Canada,New Brunswick,2013,pop01,0.999400198459625
+Pd_21,group1,N_America,Canada,New Brunswick,2013,pop02,9.99500116449781e-05
+Pd_21,group1,N_America,Canada,New Brunswick,2013,pop03,9.99500116449781e-05
+Pd_21,group1,N_America,Canada,New Brunswick,2013,pop04,9.99500116449781e-05
+Pd_21,group1,N_America,Canada,New Brunswick,2013,pop05,9.99500116449781e-05
+Pd_21,group1,N_America,Canada,New Brunswick,2013,pop06,9.99500116449781e-05
+Pd_21,group1,N_America,Canada,New Brunswick,2013,pop07,9.99500116449781e-05
+Pd_22,group1,N_America,Canada,New Brunswick,2013,pop01,0.999400198459625
+Pd_22,group1,N_America,Canada,New Brunswick,2013,pop02,9.99500116449781e-05
+Pd_22,group1,N_America,Canada,New Brunswick,2013,pop03,9.99500116449781e-05
+Pd_22,group1,N_America,Canada,New Brunswick,2013,pop04,9.99500116449781e-05
+Pd_22,group1,N_America,Canada,New Brunswick,2013,pop05,9.99500116449781e-05
+Pd_22,group1,N_America,Canada,New Brunswick,2013,pop06,9.99500116449781e-05
+Pd_22,group1,N_America,Canada,New Brunswick,2013,pop07,9.99500116449781e-05
+Pd_23,group1,N_America,USA,New York,2008,pop01,0.999400198459625
+Pd_23,group1,N_America,USA,New York,2008,pop02,9.99500116449781e-05
+Pd_23,group1,N_America,USA,New York,2008,pop03,9.99500116449781e-05
+Pd_23,group1,N_America,USA,New York,2008,pop04,9.99500116449781e-05
+Pd_23,group1,N_America,USA,New York,2008,pop05,9.99500116449781e-05
+Pd_23,group1,N_America,USA,New York,2008,pop06,9.99500116449781e-05
+Pd_23,group1,N_America,USA,New York,2008,pop07,9.99500116449781e-05
+Pd_24,group1,N_America,Canada,New Brunswick,2012,pop01,0.999400198459625
+Pd_24,group1,N_America,Canada,New Brunswick,2012,pop02,9.99500116449781e-05
+Pd_24,group1,N_America,Canada,New Brunswick,2012,pop03,9.99500116449781e-05
+Pd_24,group1,N_America,Canada,New Brunswick,2012,pop04,9.99500116449781e-05
+Pd_24,group1,N_America,Canada,New Brunswick,2012,pop05,9.99500116449781e-05
+Pd_24,group1,N_America,Canada,New Brunswick,2012,pop06,9.99500116449781e-05
+Pd_24,group1,N_America,Canada,New Brunswick,2012,pop07,9.99500116449781e-05
+Pd_26,group1,N_America,Canada,New Brunswick,2012,pop01,0.999400198459625
+Pd_26,group1,N_America,Canada,New Brunswick,2012,pop02,9.99500116449781e-05
+Pd_26,group1,N_America,Canada,New Brunswick,2012,pop03,9.99500116449781e-05
+Pd_26,group1,N_America,Canada,New Brunswick,2012,pop04,9.99500116449781e-05
+Pd_26,group1,N_America,Canada,New Brunswick,2012,pop05,9.99500116449781e-05
+Pd_26,group1,N_America,Canada,New Brunswick,2012,pop06,9.99500116449781e-05
+Pd_26,group1,N_America,Canada,New Brunswick,2012,pop07,9.99500116449781e-05
+Pd_27,group1,N_America,Canada,Prince Edward Island,2012,pop01,0.999400198459625
+Pd_27,group1,N_America,Canada,Prince Edward Island,2012,pop02,9.99500116449781e-05
+Pd_27,group1,N_America,Canada,Prince Edward Island,2012,pop03,9.99500116449781e-05
+Pd_27,group1,N_America,Canada,Prince Edward Island,2012,pop04,9.99500116449781e-05
+Pd_27,group1,N_America,Canada,Prince Edward Island,2012,pop05,9.99500116449781e-05
+Pd_27,group1,N_America,Canada,Prince Edward Island,2012,pop06,9.99500116449781e-05
+Pd_27,group1,N_America,Canada,Prince Edward Island,2012,pop07,9.99500116449781e-05
+Pd_28,group1,N_America,USA,New York,2008,pop01,0.999400198459625
+Pd_28,group1,N_America,USA,New York,2008,pop02,9.99500116449781e-05
+Pd_28,group1,N_America,USA,New York,2008,pop03,9.99500116449781e-05
+Pd_28,group1,N_America,USA,New York,2008,pop04,9.99500116449781e-05
+Pd_28,group1,N_America,USA,New York,2008,pop05,9.99500116449781e-05
+Pd_28,group1,N_America,USA,New York,2008,pop06,9.99500116449781e-05
+Pd_28,group1,N_America,USA,New York,2008,pop07,9.99500116449781e-05
+Pd_29,P. species,N_America,USA,Minnesota,2008,pop01,9.74137146840803e-05
+Pd_29,P. species,N_America,USA,Minnesota,2008,pop02,0.0178531892597675
+Pd_29,P. species,N_America,USA,Minnesota,2008,pop03,0.0108605595305562
+Pd_29,P. species,N_America,USA,Minnesota,2008,pop04,0.00301932520233095
+Pd_29,P. species,N_America,USA,Minnesota,2008,pop05,9.74137146840803e-05
+Pd_29,P. species,N_America,USA,Minnesota,2008,pop06,0.269461959600449
+Pd_29,P. species,N_America,USA,Minnesota,2008,pop07,0.698610126972198
+Pd_30,P. species,N_America,USA,Wisconsin,1960,pop01,9.9994802440051e-05
+Pd_30,P. species,N_America,USA,Wisconsin,1960,pop02,0.000470944534754381
+Pd_30,P. species,N_America,USA,Wisconsin,1960,pop03,9.9994802440051e-05
+Pd_30,P. species,N_America,USA,Wisconsin,1960,pop04,0.998580515384674
+Pd_30,P. species,N_America,USA,Wisconsin,1960,pop05,0.000548575015272945
+Pd_30,P. species,N_America,USA,Wisconsin,1960,pop06,9.9994802440051e-05
+Pd_30,P. species,N_America,USA,Wisconsin,1960,pop07,9.9994802440051e-05
+Pd_31,P. species,N_America,Canada,Alberta,2002,pop01,0.0502197965979576
+Pd_31,P. species,N_America,Canada,Alberta,2002,pop02,9.69104876276106e-05
+Pd_31,P. species,N_America,Canada,Alberta,2002,pop03,9.69104876276106e-05
+Pd_31,P. species,N_America,Canada,Alberta,2002,pop04,9.69104876276106e-05
+Pd_31,P. species,N_America,Canada,Alberta,2002,pop05,0.00243246252648532
+Pd_31,P. species,N_America,Canada,Alberta,2002,pop06,9.69104876276106e-05
+Pd_31,P. species,N_America,Canada,Alberta,2002,pop07,0.946960151195526
+Pd_32,P. species,N_America,USA,Vermont,2008,pop01,9.94254296529107e-05
+Pd_32,P. species,N_America,USA,Vermont,2008,pop02,0.978095054626465
+Pd_32,P. species,N_America,USA,Vermont,2008,pop03,0.0105091063305736
+Pd_32,P. species,N_America,USA,Vermont,2008,pop04,9.94254296529107e-05
+Pd_32,P. species,N_America,USA,Vermont,2008,pop05,0.000632880080956966
+Pd_32,P. species,N_America,USA,Vermont,2008,pop06,0.0104647316038609
+Pd_32,P. species,N_America,USA,Vermont,2008,pop07,9.94254296529107e-05
+Pd_33,P. species,N_America,USA,New York,2008,pop01,0.0071179112419486
+Pd_33,P. species,N_America,USA,New York,2008,pop02,0.947064697742462
+Pd_33,P. species,N_America,USA,New York,2008,pop03,9.91599445114844e-05
+Pd_33,P. species,N_America,USA,New York,2008,pop04,0.0100234439596534
+Pd_33,P. species,N_America,USA,New York,2008,pop05,0.000191346785868518
+Pd_33,P. species,N_America,USA,New York,2008,pop06,9.91599445114844e-05
+Pd_33,P. species,N_America,USA,New York,2008,pop07,0.0354042984545231
+Pd_34,P. species,N_America,USA,Wisconsin,2008,pop01,9.99829862848856e-05
+Pd_34,P. species,N_America,USA,Wisconsin,2008,pop02,9.99829862848856e-05
+Pd_34,P. species,N_America,USA,Wisconsin,2008,pop03,9.99829862848856e-05
+Pd_34,P. species,N_America,USA,Wisconsin,2008,pop04,9.99829862848856e-05
+Pd_34,P. species,N_America,USA,Wisconsin,2008,pop05,0.999400079250336
+Pd_34,P. species,N_America,USA,Wisconsin,2008,pop06,9.99829862848856e-05
+Pd_34,P. species,N_America,USA,Wisconsin,2008,pop07,9.99829862848856e-05
+Pd_35,P. species,N_America,USA,Minnesota,2008,pop01,0.000100376892078202
+Pd_35,P. species,N_America,USA,Minnesota,2008,pop02,0.000100376892078202
+Pd_35,P. species,N_America,USA,Minnesota,2008,pop03,0.000100376892078202
+Pd_35,P. species,N_America,USA,Minnesota,2008,pop04,0.000100376892078202
+Pd_35,P. species,N_America,USA,Minnesota,2008,pop05,0.000100376892078202
+Pd_35,P. species,N_America,USA,Minnesota,2008,pop06,0.999397695064545
+Pd_35,P. species,N_America,USA,Minnesota,2008,pop07,0.000100376892078202
+Pd_36,lab_clone,N_America,USA,New York,2009,pop01,0.921794712543488
+Pd_36,lab_clone,N_America,USA,New York,2009,pop02,0.000100503937574103
+Pd_36,lab_clone,N_America,USA,New York,2009,pop03,0.0702776312828064
+Pd_36,lab_clone,N_America,USA,New York,2009,pop04,0.000360877049388364
+Pd_36,lab_clone,N_America,USA,New York,2009,pop05,0.00495798559859395
+Pd_36,lab_clone,N_America,USA,New York,2009,pop06,0.00240777037106454
+Pd_36,lab_clone,N_America,USA,New York,2009,pop07,0.000100503937574103
+Pd_37,lab_clone,N_America,USA,New York,2009,pop01,0.921798646450043
+Pd_37,lab_clone,N_America,USA,New York,2009,pop02,0.000100503915746231
+Pd_37,lab_clone,N_America,USA,New York,2009,pop03,0.07027468085289
+Pd_37,lab_clone,N_America,USA,New York,2009,pop04,0.000359950034180656
+Pd_37,lab_clone,N_America,USA,New York,2009,pop05,0.00495836464688182
+Pd_37,lab_clone,N_America,USA,New York,2009,pop06,0.00240733660757542
+Pd_37,lab_clone,N_America,USA,New York,2009,pop07,0.000100503915746231
+Pd_39,lab_clone,N_America,USA,New York,2009,pop01,0.921797156333923
+Pd_39,lab_clone,N_America,USA,New York,2009,pop02,0.000100503937574103
+Pd_39,lab_clone,N_America,USA,New York,2009,pop03,0.0702757686376572
+Pd_39,lab_clone,N_America,USA,New York,2009,pop04,0.000360285310307518
+Pd_39,lab_clone,N_America,USA,New York,2009,pop05,0.0049582184292376
+Pd_39,lab_clone,N_America,USA,New York,2009,pop06,0.00240752776153386
+Pd_39,lab_clone,N_America,USA,New York,2009,pop07,0.000100503937574103
+Pd_45,lab_clone,N_America,USA,New York,2009,pop01,0.92179811000824
+Pd_45,lab_clone,N_America,USA,New York,2009,pop02,0.000100503937574103
+Pd_45,lab_clone,N_America,USA,New York,2009,pop03,0.0702749937772751
+Pd_45,lab_clone,N_America,USA,New York,2009,pop04,0.000360044039553031
+Pd_45,lab_clone,N_America,USA,New York,2009,pop05,0.00495833810418844
+Pd_45,lab_clone,N_America,USA,New York,2009,pop06,0.00240743719041348
+Pd_45,lab_clone,N_America,USA,New York,2009,pop07,0.000100503937574103
+Pd_47,Europe,Europe,Germany,Thuringa,2009,pop01,0.0862196013331413
+Pd_47,Europe,Europe,Germany,Thuringa,2009,pop02,9.92094064713456e-05
+Pd_47,Europe,Europe,Germany,Thuringa,2009,pop03,0.913284301757812
+Pd_47,Europe,Europe,Germany,Thuringa,2009,pop04,9.92094064713456e-05
+Pd_47,Europe,Europe,Germany,Thuringa,2009,pop05,9.92094064713456e-05
+Pd_47,Europe,Europe,Germany,Thuringa,2009,pop06,9.92094064713456e-05
+Pd_47,Europe,Europe,Germany,Thuringa,2009,pop07,9.92094064713456e-05
+Pd_48,Europe,Europe,Switzerland,Aargau,2009,pop01,0.112465716898441
+Pd_48,Europe,Europe,Switzerland,Aargau,2009,pop02,9.93633293546736e-05
+Pd_48,Europe,Europe,Switzerland,Aargau,2009,pop03,0.887037396430969
+Pd_48,Europe,Europe,Switzerland,Aargau,2009,pop04,9.93633293546736e-05
+Pd_48,Europe,Europe,Switzerland,Aargau,2009,pop05,9.93633293546736e-05
+Pd_48,Europe,Europe,Switzerland,Aargau,2009,pop06,9.93633293546736e-05
+Pd_48,Europe,Europe,Switzerland,Aargau,2009,pop07,9.93633293546736e-05
+Pd_49,group1,N_America,USA,Pennsylvania,2009,pop01,0.999399960041046
+Pd_49,group1,N_America,USA,Pennsylvania,2009,pop02,9.99867334030569e-05
+Pd_49,group1,N_America,USA,Pennsylvania,2009,pop03,9.99867334030569e-05
+Pd_49,group1,N_America,USA,Pennsylvania,2009,pop04,9.99867334030569e-05
+Pd_49,group1,N_America,USA,Pennsylvania,2009,pop05,9.99867334030569e-05
+Pd_49,group1,N_America,USA,Pennsylvania,2009,pop06,9.99867334030569e-05
+Pd_49,group1,N_America,USA,Pennsylvania,2009,pop07,9.99867334030569e-05
+Pd_50,group1,N_America,USA,New Jersey,2009,pop01,0.999399960041046
+Pd_50,group1,N_America,USA,New Jersey,2009,pop02,9.99951371341012e-05
+Pd_50,group1,N_America,USA,New Jersey,2009,pop03,9.99951371341012e-05
+Pd_50,group1,N_America,USA,New Jersey,2009,pop04,9.99951371341012e-05
+Pd_50,group1,N_America,USA,New Jersey,2009,pop05,9.99951371341012e-05
+Pd_50,group1,N_America,USA,New Jersey,2009,pop06,9.99951371341012e-05
+Pd_50,group1,N_America,USA,New Jersey,2009,pop07,9.99951371341012e-05
+Pd_51,group1,N_America,USA,West Virginia,2009,pop01,0.999400019645691
+Pd_51,group1,N_America,USA,West Virginia,2009,pop02,9.99794719973579e-05
+Pd_51,group1,N_America,USA,West Virginia,2009,pop03,9.99794719973579e-05
+Pd_51,group1,N_America,USA,West Virginia,2009,pop04,9.99794719973579e-05
+Pd_51,group1,N_America,USA,West Virginia,2009,pop05,9.99794719973579e-05
+Pd_51,group1,N_America,USA,West Virginia,2009,pop06,9.99794719973579e-05
+Pd_51,group1,N_America,USA,West Virginia,2009,pop07,9.99794719973579e-05
+Pd_52,group1,N_America,Canada,Ontario,2010,pop01,0.999399721622467
+Pd_52,group1,N_America,Canada,Ontario,2010,pop02,0.000100026329164393
+Pd_52,group1,N_America,Canada,Ontario,2010,pop03,0.000100026329164393
+Pd_52,group1,N_America,Canada,Ontario,2010,pop04,0.000100026329164393
+Pd_52,group1,N_America,Canada,Ontario,2010,pop05,0.000100026329164393
+Pd_52,group1,N_America,Canada,Ontario,2010,pop06,0.000100026329164393
+Pd_52,group1,N_America,Canada,Ontario,2010,pop07,0.000100026329164393
+Pd_53,group1,N_America,USA,Tennessee,2010,pop01,0.999399662017822
+Pd_53,group1,N_America,USA,Tennessee,2010,pop02,0.000100035140349064
+Pd_53,group1,N_America,USA,Tennessee,2010,pop03,0.000100035140349064
+Pd_53,group1,N_America,USA,Tennessee,2010,pop04,0.000100035140349064
+Pd_53,group1,N_America,USA,Tennessee,2010,pop05,0.000100035140349064
+Pd_53,group1,N_America,USA,Tennessee,2010,pop06,0.000100035140349064
+Pd_53,group1,N_America,USA,Tennessee,2010,pop07,0.000100035140349064
+Pd_54,group1,N_America,USA,Vermont,2008,pop01,0.998721420764923
+Pd_54,group1,N_America,USA,Vermont,2008,pop02,0.000100123528682161
+Pd_54,group1,N_America,USA,Vermont,2008,pop03,0.000777878914959729
+Pd_54,group1,N_America,USA,Vermont,2008,pop04,0.000100123528682161
+Pd_54,group1,N_America,USA,Vermont,2008,pop05,0.000100123528682161
+Pd_54,group1,N_America,USA,Vermont,2008,pop06,0.000100123528682161
+Pd_54,group1,N_America,USA,Vermont,2008,pop07,0.000100123528682161
+Pd_55,group1,N_America,USA,Connecticut,2009,pop01,0.999399483203888
+Pd_55,group1,N_America,USA,Connecticut,2009,pop02,0.000100071069027763
+Pd_55,group1,N_America,USA,Connecticut,2009,pop03,0.000100071069027763
+Pd_55,group1,N_America,USA,Connecticut,2009,pop04,0.000100071069027763
+Pd_55,group1,N_America,USA,Connecticut,2009,pop05,0.000100071069027763
+Pd_55,group1,N_America,USA,Connecticut,2009,pop06,0.000100071069027763
+Pd_55,group1,N_America,USA,Connecticut,2009,pop07,0.000100071069027763
+Pd_56,group1,N_America,USA,Virginia,2009,pop01,0.998440861701965
+Pd_56,group1,N_America,USA,Virginia,2009,pop02,0.000100132514489815
+Pd_56,group1,N_America,USA,Virginia,2009,pop03,0.00105836184229702
+Pd_56,group1,N_America,USA,Virginia,2009,pop04,0.000100132514489815
+Pd_56,group1,N_America,USA,Virginia,2009,pop05,0.000100132514489815
+Pd_56,group1,N_America,USA,Virginia,2009,pop06,0.000100132514489815
+Pd_56,group1,N_America,USA,Virginia,2009,pop07,0.000100132514489815
+Pd_57,group1,N_America,USA,Massachussetts,2008,pop01,0.999399542808533
+Pd_57,group1,N_America,USA,Massachussetts,2008,pop02,0.000100059849501122
+Pd_57,group1,N_America,USA,Massachussetts,2008,pop03,0.000100059849501122
+Pd_57,group1,N_America,USA,Massachussetts,2008,pop04,0.000100059849501122
+Pd_57,group1,N_America,USA,Massachussetts,2008,pop05,0.000100059849501122
+Pd_57,group1,N_America,USA,Massachussetts,2008,pop06,0.000100059849501122
+Pd_57,group1,N_America,USA,Massachussetts,2008,pop07,0.000100059849501122
+Pd_58,group2,N_America,USA,Alabama,2015,pop01,0.963714241981506
+Pd_58,group2,N_America,USA,Alabama,2015,pop02,0.000100427612778731
+Pd_58,group2,N_America,USA,Alabama,2015,pop03,0.0347289629280567
+Pd_58,group2,N_America,USA,Alabama,2015,pop04,0.000100427612778731
+Pd_58,group2,N_America,USA,Alabama,2015,pop05,0.000887206173501909
+Pd_58,group2,N_America,USA,Alabama,2015,pop06,0.000368321983842179
+Pd_58,group2,N_America,USA,Alabama,2015,pop07,0.000100427612778731
+Pd_59,group2,N_America,USA,Washington,2016,pop01,0.96359646320343
+Pd_59,group2,N_America,USA,Washington,2016,pop02,0.000100427823781502
+Pd_59,group2,N_America,USA,Washington,2016,pop03,0.0348419845104218
+Pd_59,group2,N_America,USA,Washington,2016,pop04,0.000100427823781502
+Pd_59,group2,N_America,USA,Washington,2016,pop05,0.000888876616954803
+Pd_59,group2,N_America,USA,Washington,2016,pop06,0.000371376372640952
+Pd_59,group2,N_America,USA,Washington,2016,pop07,0.000100427823781502
+Pd_60,Europe,Europe,Hungary,Kislod,2009,pop01,0.246582522988319
+Pd_60,Europe,Europe,Hungary,Kislod,2009,pop02,9.94793954305351e-05
+Pd_60,Europe,Europe,Hungary,Kislod,2009,pop03,0.752919971942902
+Pd_60,Europe,Europe,Hungary,Kislod,2009,pop04,9.94793954305351e-05
+Pd_60,Europe,Europe,Hungary,Kislod,2009,pop05,9.94793954305351e-05
+Pd_60,Europe,Europe,Hungary,Kislod,2009,pop06,9.94793954305351e-05
+Pd_60,Europe,Europe,Hungary,Kislod,2009,pop07,9.94793954305351e-05
+Pd_62,group1,N_America,USA,Connecticut,2008,pop01,0.999398708343506
+Pd_62,group1,N_America,USA,Connecticut,2008,pop02,0.000100092467619106
+Pd_62,group1,N_America,USA,Connecticut,2008,pop03,0.000100748351542279
+Pd_62,group1,N_America,USA,Connecticut,2008,pop04,0.000100092467619106
+Pd_62,group1,N_America,USA,Connecticut,2008,pop05,0.000100092467619106
+Pd_62,group1,N_America,USA,Connecticut,2008,pop06,0.000100092467619106
+Pd_62,group1,N_America,USA,Connecticut,2008,pop07,0.000100092467619106
+Pd_63,group1,N_America,USA,Tennessee,2010,pop01,0.998401463031769
+Pd_63,group1,N_America,USA,Tennessee,2010,pop02,0.000100130673672538
+Pd_63,group1,N_America,USA,Tennessee,2010,pop03,0.0010977815836668
+Pd_63,group1,N_America,USA,Tennessee,2010,pop04,0.000100130673672538
+Pd_63,group1,N_America,USA,Tennessee,2010,pop05,0.000100130673672538
+Pd_63,group1,N_America,USA,Tennessee,2010,pop06,0.000100130673672538
+Pd_63,group1,N_America,USA,Tennessee,2010,pop07,0.000100130673672538
+Pd_64,group1,N_America,USA,Maryland,2010,pop01,0.999399602413177
+Pd_64,group1,N_America,USA,Maryland,2010,pop02,0.00010004887735704
+Pd_64,group1,N_America,USA,Maryland,2010,pop03,0.00010004887735704
+Pd_64,group1,N_America,USA,Maryland,2010,pop04,0.00010004887735704
+Pd_64,group1,N_America,USA,Maryland,2010,pop05,0.00010004887735704
+Pd_64,group1,N_America,USA,Maryland,2010,pop06,0.00010004887735704
+Pd_64,group1,N_America,USA,Maryland,2010,pop07,0.00010004887735704
+Pd_65,group1,N_America,USA,New York,2009,pop01,0.998596251010895
+Pd_65,group1,N_America,USA,New York,2009,pop02,0.000100128796475474
+Pd_65,group1,N_America,USA,New York,2009,pop03,0.000903059204574674
+Pd_65,group1,N_America,USA,New York,2009,pop04,0.000100128796475474
+Pd_65,group1,N_America,USA,New York,2009,pop05,0.000100128796475474
+Pd_65,group1,N_America,USA,New York,2009,pop06,0.000100128796475474
+Pd_65,group1,N_America,USA,New York,2009,pop07,0.000100128796475474
+Pd_66,group1,N_America,USA,Vermont,2010,pop01,0.998468935489655
+Pd_66,group1,N_America,USA,Vermont,2010,pop02,0.000100130462669767
+Pd_66,group1,N_America,USA,Vermont,2010,pop03,0.00103038165252656
+Pd_66,group1,N_America,USA,Vermont,2010,pop04,0.000100130462669767
+Pd_66,group1,N_America,USA,Vermont,2010,pop05,0.000100130462669767
+Pd_66,group1,N_America,USA,Vermont,2010,pop06,0.000100130462669767
+Pd_66,group1,N_America,USA,Vermont,2010,pop07,0.000100130462669767
+Pd_67,group1,N_America,Canada,Ontario,2010,pop01,0.999369859695435
+Pd_67,group1,N_America,Canada,Ontario,2010,pop02,0.000100098492112011
+Pd_67,group1,N_America,Canada,Ontario,2010,pop03,0.000129569496493787
+Pd_67,group1,N_America,Canada,Ontario,2010,pop04,0.000100098492112011
+Pd_67,group1,N_America,Canada,Ontario,2010,pop05,0.000100098492112011
+Pd_67,group1,N_America,Canada,Ontario,2010,pop06,0.000100098492112011
+Pd_67,group1,N_America,Canada,Ontario,2010,pop07,0.000100098492112011
+Pd_68,group1,N_America,USA,Tennessee,2010,pop01,0.999400198459625
+Pd_68,group1,N_America,USA,Tennessee,2010,pop02,9.99500116449781e-05
+Pd_68,group1,N_America,USA,Tennessee,2010,pop03,9.99500116449781e-05
+Pd_68,group1,N_America,USA,Tennessee,2010,pop04,9.99500116449781e-05
+Pd_68,group1,N_America,USA,Tennessee,2010,pop05,9.99500116449781e-05
+Pd_68,group1,N_America,USA,Tennessee,2010,pop06,9.99500116449781e-05
+Pd_68,group1,N_America,USA,Tennessee,2010,pop07,9.99500116449781e-05
+Pd_70,Asia,Asia,Mongolia,NA,2016,pop01,9.75948132690974e-05
+Pd_70,Asia,Asia,Mongolia,NA,2016,pop02,0.000616565346717834
+Pd_70,Asia,Asia,Mongolia,NA,2016,pop03,0.975850522518158
+Pd_70,Asia,Asia,Mongolia,NA,2016,pop04,0.0179773978888988
+Pd_70,Asia,Asia,Mongolia,NA,2016,pop05,0.00526274926960468
+Pd_70,Asia,Asia,Mongolia,NA,2016,pop06,9.75948132690974e-05
+Pd_70,Asia,Asia,Mongolia,NA,2016,pop07,9.75948132690974e-05
+Pd_71,Asia,Asia,Mongolia,NA,2016,pop01,9.76156370597892e-05
+Pd_71,Asia,Asia,Mongolia,NA,2016,pop02,9.76156370597892e-05
+Pd_71,Asia,Asia,Mongolia,NA,2016,pop03,0.976058781147003
+Pd_71,Asia,Asia,Mongolia,NA,2016,pop04,0.0171118918806314
+Pd_71,Asia,Asia,Mongolia,NA,2016,pop05,0.00557928299531341
+Pd_71,Asia,Asia,Mongolia,NA,2016,pop06,0.000957164098508656
+Pd_71,Asia,Asia,Mongolia,NA,2016,pop07,9.76156370597892e-05
+Pd_72,group1,N_America,Canada,New Brunswick,2012,pop01,0.999400198459625
+Pd_72,group1,N_America,Canada,New Brunswick,2012,pop02,9.99500116449781e-05
+Pd_72,group1,N_America,Canada,New Brunswick,2012,pop03,9.99500116449781e-05
+Pd_72,group1,N_America,Canada,New Brunswick,2012,pop04,9.99500116449781e-05
+Pd_72,group1,N_America,Canada,New Brunswick,2012,pop05,9.99500116449781e-05
+Pd_72,group1,N_America,Canada,New Brunswick,2012,pop06,9.99500116449781e-05
+Pd_72,group1,N_America,Canada,New Brunswick,2012,pop07,9.99500116449781e-05
+Pd_73,group1,N_America,USA,Missouri,2012,pop01,0.999400198459625
+Pd_73,group1,N_America,USA,Missouri,2012,pop02,9.99500116449781e-05
+Pd_73,group1,N_America,USA,Missouri,2012,pop03,9.99500116449781e-05
+Pd_73,group1,N_America,USA,Missouri,2012,pop04,9.99500116449781e-05
+Pd_73,group1,N_America,USA,Missouri,2012,pop05,9.99500116449781e-05
+Pd_73,group1,N_America,USA,Missouri,2012,pop06,9.99500116449781e-05
+Pd_73,group1,N_America,USA,Missouri,2012,pop07,9.99500116449781e-05
+Pd_74,group1,N_America,USA,Virginia,2011,pop01,0.999399662017822
+Pd_74,group1,N_America,USA,Virginia,2011,pop02,0.000100044409919064
+Pd_74,group1,N_America,USA,Virginia,2011,pop03,0.000100044409919064
+Pd_74,group1,N_America,USA,Virginia,2011,pop04,0.000100044409919064
+Pd_74,group1,N_America,USA,Virginia,2011,pop05,0.000100044409919064
+Pd_74,group1,N_America,USA,Virginia,2011,pop06,0.000100044409919064
+Pd_74,group1,N_America,USA,Virginia,2011,pop07,0.000100044409919064
+Pd_75,group1,N_America,USA,Tennessee,2011,pop01,0.999204039573669
+Pd_75,group1,N_America,USA,Tennessee,2011,pop02,0.000100109733466525
+Pd_75,group1,N_America,USA,Tennessee,2011,pop03,0.000295312725938857
+Pd_75,group1,N_America,USA,Tennessee,2011,pop04,0.000100109733466525
+Pd_75,group1,N_America,USA,Tennessee,2011,pop05,0.000100109733466525
+Pd_75,group1,N_America,USA,Tennessee,2011,pop06,0.000100109733466525
+Pd_75,group1,N_America,USA,Tennessee,2011,pop07,0.000100109733466525
+Pd_76,group1,N_America,USA,Indiana,2011,pop01,0.999400198459625
+Pd_76,group1,N_America,USA,Indiana,2011,pop02,9.99500116449781e-05
+Pd_76,group1,N_America,USA,Indiana,2011,pop03,9.99500116449781e-05
+Pd_76,group1,N_America,USA,Indiana,2011,pop04,9.99500116449781e-05
+Pd_76,group1,N_America,USA,Indiana,2011,pop05,9.99500116449781e-05
+Pd_76,group1,N_America,USA,Indiana,2011,pop06,9.99500116449781e-05
+Pd_76,group1,N_America,USA,Indiana,2011,pop07,9.99500116449781e-05
+Pd_77,group1,N_America,USA,Indiana,2011,pop01,0.999399363994598
+Pd_77,group1,N_America,USA,Indiana,2011,pop02,0.000100091870990582
+Pd_77,group1,N_America,USA,Indiana,2011,pop03,0.000100116965768393
+Pd_77,group1,N_America,USA,Indiana,2011,pop04,0.000100091870990582
+Pd_77,group1,N_America,USA,Indiana,2011,pop05,0.000100091870990582
+Pd_77,group1,N_America,USA,Indiana,2011,pop06,0.000100091870990582
+Pd_77,group1,N_America,USA,Indiana,2011,pop07,0.000100091870990582
+Pd_78,group1,N_America,USA,Deleware,2012,pop01,0.999400198459625
+Pd_78,group1,N_America,USA,Deleware,2012,pop02,9.99500116449781e-05
+Pd_78,group1,N_America,USA,Deleware,2012,pop03,9.99500116449781e-05
+Pd_78,group1,N_America,USA,Deleware,2012,pop04,9.99500116449781e-05
+Pd_78,group1,N_America,USA,Deleware,2012,pop05,9.99500116449781e-05
+Pd_78,group1,N_America,USA,Deleware,2012,pop06,9.99500116449781e-05
+Pd_78,group1,N_America,USA,Deleware,2012,pop07,9.99500116449781e-05
+Pd_79,group1,N_America,USA,Maine,2011,pop01,0.999400198459625
+Pd_79,group1,N_America,USA,Maine,2011,pop02,9.99500116449781e-05
+Pd_79,group1,N_America,USA,Maine,2011,pop03,9.99500116449781e-05
+Pd_79,group1,N_America,USA,Maine,2011,pop04,9.99500116449781e-05
+Pd_79,group1,N_America,USA,Maine,2011,pop05,9.99500116449781e-05
+Pd_79,group1,N_America,USA,Maine,2011,pop06,9.99500116449781e-05
+Pd_79,group1,N_America,USA,Maine,2011,pop07,9.99500116449781e-05
+Pd_80,Europe,Europe,Ukraine,NA,2011,pop01,0.313903331756592
+Pd_80,Europe,Europe,Ukraine,NA,2011,pop02,9.98650575638749e-05
+Pd_80,Europe,Europe,Ukraine,NA,2011,pop03,0.68559730052948
+Pd_80,Europe,Europe,Ukraine,NA,2011,pop04,9.98650575638749e-05
+Pd_80,Europe,Europe,Ukraine,NA,2011,pop05,9.98650575638749e-05
+Pd_80,Europe,Europe,Ukraine,NA,2011,pop06,9.98650575638749e-05
+Pd_80,Europe,Europe,Ukraine,NA,2011,pop07,9.98650575638749e-05
+Pd_81,Europe,Europe,France,Aquitaine,2009,pop01,0.232779547572136
+Pd_81,Europe,Europe,France,Aquitaine,2009,pop02,9.95200607576407e-05
+Pd_81,Europe,Europe,France,Aquitaine,2009,pop03,0.766722738742828
+Pd_81,Europe,Europe,France,Aquitaine,2009,pop04,9.95200607576407e-05
+Pd_81,Europe,Europe,France,Aquitaine,2009,pop05,9.95200607576407e-05
+Pd_81,Europe,Europe,France,Aquitaine,2009,pop06,9.95200607576407e-05
+Pd_81,Europe,Europe,France,Aquitaine,2009,pop07,9.95200607576407e-05
+Pd_82,group1,N_America,Canada,Ontario,2014,pop01,0.999400198459625
+Pd_82,group1,N_America,Canada,Ontario,2014,pop02,9.99500116449781e-05
+Pd_82,group1,N_America,Canada,Ontario,2014,pop03,9.99500116449781e-05
+Pd_82,group1,N_America,Canada,Ontario,2014,pop04,9.99500116449781e-05
+Pd_82,group1,N_America,Canada,Ontario,2014,pop05,9.99500116449781e-05
+Pd_82,group1,N_America,Canada,Ontario,2014,pop06,9.99500116449781e-05
+Pd_82,group1,N_America,Canada,Ontario,2014,pop07,9.99500116449781e-05
+Pd_83,group1,N_America,Canada,Nova Scotia,2013,pop01,0.999400198459625
+Pd_83,group1,N_America,Canada,Nova Scotia,2013,pop02,9.99500116449781e-05
+Pd_83,group1,N_America,Canada,Nova Scotia,2013,pop03,9.99500116449781e-05
+Pd_83,group1,N_America,Canada,Nova Scotia,2013,pop04,9.99500116449781e-05
+Pd_83,group1,N_America,Canada,Nova Scotia,2013,pop05,9.99500116449781e-05
+Pd_83,group1,N_America,Canada,Nova Scotia,2013,pop06,9.99500116449781e-05
+Pd_83,group1,N_America,Canada,Nova Scotia,2013,pop07,9.99500116449781e-05
+Pd_84,group1,N_America,Canada,New Brunswick,2012,pop01,0.999400198459625
+Pd_84,group1,N_America,Canada,New Brunswick,2012,pop02,9.99500116449781e-05
+Pd_84,group1,N_America,Canada,New Brunswick,2012,pop03,9.99500116449781e-05
+Pd_84,group1,N_America,Canada,New Brunswick,2012,pop04,9.99500116449781e-05
+Pd_84,group1,N_America,Canada,New Brunswick,2012,pop05,9.99500116449781e-05
+Pd_84,group1,N_America,Canada,New Brunswick,2012,pop06,9.99500116449781e-05
+Pd_84,group1,N_America,Canada,New Brunswick,2012,pop07,9.99500116449781e-05
+Pd_85,group1,N_America,Canada,New Brunswick,2012,pop01,0.999400198459625
+Pd_85,group1,N_America,Canada,New Brunswick,2012,pop02,9.99500116449781e-05
+Pd_85,group1,N_America,Canada,New Brunswick,2012,pop03,9.99500116449781e-05
+Pd_85,group1,N_America,Canada,New Brunswick,2012,pop04,9.99500116449781e-05
+Pd_85,group1,N_America,Canada,New Brunswick,2012,pop05,9.99500116449781e-05
+Pd_85,group1,N_America,Canada,New Brunswick,2012,pop06,9.99500116449781e-05
+Pd_85,group1,N_America,Canada,New Brunswick,2012,pop07,9.99500116449781e-05

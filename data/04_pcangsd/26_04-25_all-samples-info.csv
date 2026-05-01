@@ -1,0 +1,75 @@
+﻿individuals,names,year,continent,country,state,location,group_names
+Pd_02,26994-002,2016,N_America,USA,Wisconsin, Iowa County,group2
+Pd_03,Pseudogymnoascus_destructans_CCF3941,2010,Europe,Czech Republic,Central Bohemian Region,Mala Amerika,Europe
+Pd_04,Pseudogymnoascus_destructans_CCF3942,2010,Europe,Czech Republic,Central Bohemian Region,Mala Amerika,Europe
+Pd_05,Pseudogymnoascus_destructans_CCF4124,2011,Europe,Czech Republic,Hradec Kralove,Horni Alberice,Europe
+Pd_06,Pseudogymnoascus_destructans_CCF4125,2011,Europe,Czech Republic,Hradec Kralove,Horni Alberice,Europe
+Pd_07,Pd_UWMM.03,2015,N_America,Canada,Ontario,Thunder Bay,group1
+Pd_08,Pd_UWMM.13,2015,N_America,Canada,Ontario,Thunder Bay,group1
+Pd_09,Pd_X4702.13.1,2013,N_America,Canada,Nova Scotia,NA,group1
+Pd_10,Pd_X4702.13.2,2013,N_America,Canada,Nova Scotia,NA,group1
+Pd_11,Pd_X4148.13,2013,N_America,Canada,Prince Edward Island,NA,group1
+Pd_12,Pd_UWMM.14,2015,N_America,Canada,Ontario,Thunder Bay,group1
+Pd_13,Pd_WO2109,2015,N_America,Canada,New Brunswick,White Cave,group1
+Pd_14,Pd_671202,2012,N_America,Canada,New Brunswick,Glebe Mine,group1
+Pd_15,Pd_681103,2013,N_America,Canada,New Brunswick,Glebe Mine,group1
+Pd_16,Pd_102203,2012,N_America,Canada,New Brunswick,White Cave,group1
+Pd_17,Pd_192204,2012,N_America,Canada,New Brunswick,Markhamville Mine,group1
+Pd_18,Pd_European,2009,Europe,Germany,Thuringa,NA,Europe
+Pd_19,Pd_H07218,2013,N_America,Canada,New Brunswick,Dorchester Mine,group1
+Pd_20,Pd_692102,2013,N_America,Canada,New Brunswick,Markhamville Mine,group1
+Pd_21,Pd_712206,2013,N_America,Canada,New Brunswick,Markhamville Mine,group1
+Pd_22,Pd_M53205,2013,N_America,Canada,New Brunswick,Glebe Mine,group1
+Pd_23,Pd_N_American,2008,N_America,USA,New York,Williams Hotel,group1
+Pd_24,Pd_52201,2012,N_America,Canada,New Brunswick,White Cave,group1
+Pd_26,NB26,2012,N_America,Canada,New Brunswick,Dorchester Mine,group1
+Pd_27,PE8,2012,N_America,Canada,Prince Edward Island,Murray River,group1
+Pd_28,Pseudogymnoascus_destructans_20631-21,2008,N_America,USA,New York,Williams Hotel Mine,group1
+Pd_29,Pseudogymnoascus_24MN13,2008,N_America,USA,Minnesota,NA,P. species
+Pd_30,Pseudogymnoascus_WSF_3629,1960,N_America,USA,Wisconsin,NA,P. species
+Pd_31,Pseudogymnoascus_verrucosus_UAMH_10579,2002,N_America,Canada,Alberta,NA,P. species
+Pd_32,Pseudogymnoascus_3VT5,2008,N_America,USA,Vermont,NA,P. species
+Pd_33,Pseudogymnoascus_5NY8,2008,N_America,USA,New York,NA,P. species
+Pd_34,Pseudogymnoascus_23342,2008,N_America,USA,Wisconsin,NA,P. species
+Pd_35,Pseudogymnoascus_24MN13,2008,N_America,USA,Minnesota,NA,P. species
+Pd_36,BROAD:SEQUENCING_SAMPLE:37145.0,2009,N_America,USA,New York,Williams Hotel Mine,lab_clone
+Pd_37,BROAD:SEQUENCING_SAMPLE:37145.0,2009,N_America,USA,New York,Williams Hotel Mine,lab_clone
+Pd_39,BROAD:SEQUENCING_SAMPLE:37145.0,2009,N_America,USA,New York,Williams Hotel Mine,lab_clone
+Pd_45,BROAD:SEQUENCING_SAMPLE:37145.0,2009,N_America,USA,New York,Williams Hotel Mine,lab_clone
+Pd_47,GU999986,2009,Europe,Germany,Thuringa,NA,Europe
+Pd_48,GU350433,2009,Europe,Switzerland,Aargau,NA,Europe
+Pd_49,22504-1,2009,N_America,USA,Pennsylvania,Centre County,group1
+Pd_50,22442-2,2009,N_America,USA,New Jersey,Warren County,group1
+Pd_51,22429-8,2009,N_America,USA,West Virginia,Pendleton County,group1
+Pd_52,22971-3,2010,N_America,Canada,Ontario,Kirkland Lake,group1
+Pd_53,22948-1,2010,N_America,USA,Tennessee,Montgomery County,group1
+Pd_54,20674-9,2008,N_America,USA,Vermont,Bennington County,group1
+Pd_55,22426-2,2009,N_America,USA,Connecticut,Litchfield County,group1
+Pd_56,22469-1,2009,N_America,USA,Virginia,Giles County,group1
+Pd_57,20682-10,2008,N_America,USA,Massachussetts,Berkshire County,group1
+Pd_58,44797-145,2015,N_America,USA,Alabama,Jackson County,group2
+Pd_59,27099-001,2016,N_America,USA,Washington, King County,group2
+Pd_60,GU350434,2009,Europe,Hungary,Kislod,NA,Europe
+Pd_62,22004-1,2008,N_America,USA,Connecticut,Litchfield County,group1
+Pd_63,22930-2,2010,N_America,USA,Tennessee,Sullivan County,group1
+Pd_64,22949-4,2010,N_America,USA,Maryland,Allegany County,group1
+Pd_65,22480-1,2009,N_America,USA,New York,Ulster County,group1
+Pd_66,22884-4W,2010,N_America,USA,Vermont,Rutland County,group1
+Pd_67,22972-2W,2010,N_America,Canada,Ontario,NA,group1
+Pd_68,22997-1,2010,N_America,USA,Tennessee,Fentress County,group1
+Pd_70,JH16MG088,2016,Asia,Mongolia,NA,Mongolia,Asia
+Pd_71,JH16MG093,2016,Asia,Mongolia,NA,Mongolia,Asia
+Pd_72,W41203,2012,N_America,Canada,New Brunswick,Dorchester Mine,group1
+Pd_73,23897-2,2012,N_America,USA,Missouri,Lincoln County,group1
+Pd_74,23455-1,2011,N_America,USA,Virginia,Wise County,group1
+Pd_75,23444-1,2011,N_America,USA,Tennessee,Montgomery County,group1
+Pd_76,23434-1W,2011,N_America,USA,Indiana,Crawford County,group1
+Pd_77,23414-1W,2011,N_America,USA,Indiana,Washington County,group1
+Pd_78,23877-1,2012,N_America,USA,Deleware,New Castle County,group1
+Pd_79,23874-1,2011,N_America,USA,Maine,Hancock County,group1
+Pd_80,Gd44,2011,Europe,Ukraine,NA,NA,Europe
+Pd_81,Gd41,2009,Europe,France,Aquitaine,Dordogne,Europe
+Pd_82,ON14,2014,N_America,Canada,Ontario,Rattlesnake Point,group1
+Pd_83,NS1,2013,N_America,Canada,Nova Scotia,Falmouth,group1
+Pd_84,NB28,2012,N_America,Canada,New Brunswick,Harbell's Cave,group1
+Pd_85,NB27,2012,N_America,Canada,New Brunswick,Dorchester Mine,group1
