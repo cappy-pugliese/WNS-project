@@ -145,3 +145,8 @@ data/07_feems/nodepos.csv
 data/06_pixy/01_n-amer-no-clones/02_pixy-output/by-year_wind1000000_tmp.txt
 data/04_pcangsd/pcangsd_n-amer-pd.cov
 data/04_pcangsd/pcangsd_ALL-samples.admix.7.Q.npy
+data/04_pcangsd/pcangsd_n-amer-no-clones.cov
+graphs/06_iqtree/unfinished_run10_ALL-no-clones_b149.tre
+.DS_Store
+.gitignore
+data/04_pcangsd/26_04-20_n-amer-no-clones_df.csv
