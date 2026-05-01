@@ -46,7 +46,7 @@ krig_admix <- tess_krig(qmat2, coords_longlat, krig_raster)
 ## bar plot of Q values, k=3
 #tess_ggbarplot(qmat)
 df_qmat <- as.data.frame(qmat)
-colnames(df_qmat) <- c("K1","K2","K3")
+colnames(df_qmat) <- c("K2","K3","K1")
 df_qmat$Sample <- rownames(pruned_dosage)
 df_qmat$year <- pd_info$year
 df_qmat <- df_qmat |> dplyr::relocate(Sample, year, K1, K2, K3)
@@ -54,7 +54,7 @@ df_long_qmat <- df_qmat |> pivot_longer(cols=c('K1','K2','K3'),
                             names_to = 'K_value',
                             values_to = 'Q_value')
 ## color scheme
-colors <- c("#ea7820","#0072B2", "#e5d827")
+colors <- c("#e5d827","#ea7820","#0072B2")
 ## plot
 plot1 <- ggplot(df_long_qmat,aes(x=Sample,y=Q_value,fill=K_value)) +
 scale_fill_manual(values = colors) +
@@ -62,11 +62,12 @@ geom_col(col=NA,inherit.aes = TRUE) +
 theme(axis.text.x = element_text(angle = 90, hjust = 1, size=8), legend.key.size=unit(0.7, 'cm'),axis.title = element_text(size = 14), legend.text = element_text(size = 12), legend.title = element_text(size = 14)) +
 geom_col(col=NA,inherit.aes = TRUE) +
 facet_grid( ~ year, scales = "free_x", space="free_x", switch = "x") +
-labs(x = "Individuals by Year", y = "Ancestry Q value\n(Admixture Proportion)", fill = "K values") 
+labs(x = "Individuals by Year", y = "Ancestry Q value\n(Admixture Proportion)", fill = "Admixture\nGroups") 
 plot1
 
 ## color scheme
 colors <- c("#d62e00","#0072B2", "#fff023")
+colors <- c("#e5d827","#ea7820","#0072B2")
 ### plotting using tess
 tessplot <- tess_ggplot(krig_admix,
   plot_method = "maxQ", minQ = 0.2,
