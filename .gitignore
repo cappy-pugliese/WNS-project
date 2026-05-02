@@ -150,3 +150,4 @@ graphs/06_iqtree/unfinished_run10_ALL-no-clones_b149.tre
 .DS_Store
 .gitignore
 data/04_pcangsd/26_04-20_n-amer-no-clones_df.csv
+data/04_pcangsd/26_05-01_states-info.csv

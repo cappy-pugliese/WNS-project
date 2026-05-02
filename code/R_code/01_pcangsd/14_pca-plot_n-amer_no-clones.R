@@ -73,49 +73,25 @@ ggplot(data=df_e,aes(x=V3,y=V4, color=info$year)) +
   labs(x = paste("PC3 (",round(evals[3]*100,2),"%)",sep=""), y = paste("PC4 (",round(evals[4]*100,2),"%)",sep=""), color = "Year")
 
 ###########################
-## by pop
-cols3 <- c("#064061", "#56B4E9", "#009E73","#DACE1E","#E69F00","#D55E00","#9C4907")
-###### PC1 vs PC2
-ggplot(data=df_e,aes(x=V1,y=V2, color=info$Pop)) +
-  geom_point(size=2.5) +
-  scale_color_manual(values = cols3) +
-  theme_cowplot() +
-  labs(x = paste("PC1 (",round(evals[1]*100,2),"%)",sep=""), y = paste("PC2 (",round(evals[2]*100,2),"%)",sep=""), color = "PCAngsd Pop")
-
-##### PC2 vs PC3
-ggplot(data=df_e,aes(x=V2,y=V3, color=info$Pop)) +
-  geom_point(size=2.5) +
-  scale_color_manual(values = cols3) +
-  theme_cowplot() +
-  labs(x = paste("PC2 (",round(evals[2]*100,2),"%)",sep=""), y = paste("PC3 (",round(evals[3]*100,2),"%)",sep=""), color = "PCAngsd Pop")
-
-##### PC3 vs PC4
-ggplot(data=df_e,aes(x=V3,y=V4, color=info$Pop)) +
-  geom_point(size=2.5) +
-  scale_color_manual(values = cols3) +
-  theme_cowplot() +
-  labs(x = paste("PC3 (",round(evals[3]*100,2),"%)",sep=""), y = paste("PC4 (",round(evals[4]*100,2),"%)",sep=""), color = "PCAngsd Pop")
-
-###########################
-## latitude
+## latitude - for 2012 and 2013 only
 ###### PC1 vs PC2
 df_e_and_info <- bind_cols(info, df_e) |> select(ind, country, state, year, Pop, pca_groups, long, lat, V1, V2, V3, V4)
-same_year_2012 <- df_e_and_info |> filter(year=="2012")
-ggplot(data=df_e,aes(x=V1,y=V2, color=info$lat)) +
+same_year_2012 <- df_e_and_info |> filter(year=="2012" | year=="2013")
+ggplot(data=same_year_2012,aes(x=V1,y=V2, color=lat)) +
   geom_point(size=2.5) +
   scale_colour_continuous(palette = c("#064061", "#0072B2", "#56B4E9", "#DACE1E","#E69F00","#D55E00","#9C4907")) +
   theme_cowplot() +
   labs(x = paste("PC1 (",round(evals[1]*100,2),"%)",sep=""), y = paste("PC2 (",round(evals[2]*100,2),"%)",sep=""), color = "Latitude")
 
 ##### PC2 vs PC3
-ggplot(data=df_e,aes(x=V2,y=V3, color=info$lat)) +
+ggplot(data=same_year_2012,aes(x=V2,y=V3, color=lat)) +
   geom_point(size=2.5) +
   scale_colour_continuous(palette = c("#064061", "#0072B2", "#56B4E9", "#DACE1E","#E69F00","#D55E00","#9C4907")) +
   theme_cowplot() +
   labs(x = paste("PC2 (",round(evals[2]*100,2),"%)",sep=""), y = paste("PC3 (",round(evals[3]*100,2),"%)",sep=""), color = "Latitude")
 
 ##### PC3 vs PC4
-ggplot(data=df_e,aes(x=V3,y=V4, color=info$lat)) +
+ggplot(data=same_year_2012,aes(x=V3,y=V4, color=lat)) +
   geom_point(size=2.5) +
   scale_colour_continuous(palette = c("#064061", "#0072B2", "#56B4E9", "#DACE1E","#E69F00","#D55E00","#9C4907")) +
   theme_cowplot() +
@@ -143,3 +119,29 @@ ggplot(data=df_e,aes(x=V3,y=V4, color=info$long)) +
   scale_colour_continuous(palette = c("#064061", "#0072B2", "#56B4E9", "#DACE1E","#E69F00","#D55E00","#9C4907")) +
   theme_cowplot() +
   labs(x = paste("PC3 (",round(evals[3]*100,2),"%)",sep=""), y = paste("PC4 (",round(evals[4]*100,2),"%)",sep=""), color = "Longitude")
+
+###########################
+## state
+#df_e_and_info_states <- df_e_and_info |> arrange(lat,long) |> group_by(state)
+#write.csv(df_e_and_info_states,file="26_05-01_states-info.csv",row.names=FALSE,quote=FALSE)
+df_e_and_info_states <- read.csv("26_05-01_states-info.csv")
+###### PC1 vs PC2
+ggplot(data=df_e_and_info_states,aes(x=V1,y=V2, color=state_groups)) +
+  geom_point(size=2.5) +
+  scale_colour_continuous(palette = c("#064061", "#0072B2", "#56B4E9", "#DACE1E","#E69F00","#D55E00","#9C4907")) +
+  theme_cowplot() +
+  labs(x = paste("PC1 (",round(evals[1]*100,2),"%)",sep=""), y = paste("PC2 (",round(evals[2]*100,2),"%)",sep=""), color = "States\n(ranked by\nlong & lat)")
+
+##### PC2 vs PC3
+ggplot(data=df_e_and_info_states,aes(x=V2,y=V3, color=state_groups)) +
+  geom_point(size=2.5) +
+  scale_colour_continuous(palette = c("#064061", "#0072B2", "#56B4E9", "#DACE1E","#E69F00","#D55E00","#9C4907")) +
+  theme_cowplot() +
+  labs(x = paste("PC2 (",round(evals[2]*100,2),"%)",sep=""), y = paste("PC3 (",round(evals[3]*100,2),"%)",sep=""), color = "States\n(ranked by\nlong & lat)")
+
+##### PC3 vs PC4
+ggplot(data=df_e_and_info_states,aes(x=V3,y=V4, color=state_groups)) +
+  geom_point(size=2.5) +
+  scale_colour_continuous(palette = c("#064061", "#0072B2", "#56B4E9", "#DACE1E","#E69F00","#D55E00","#9C4907")) +
+  theme_cowplot() +
+  labs(x = paste("PC3 (",round(evals[3]*100,2),"%)",sep=""), y = paste("PC4 (",round(evals[4]*100,2),"%)",sep=""), color = "States\n(ranked by\nlong & lat)")
