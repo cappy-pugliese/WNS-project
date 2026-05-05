@@ -1,5 +1,6 @@
 grep -v # combined.vcf | wc -l
 bcftools view -H n-amer-no-clones_filtered.vcf.gz | wc -l
+bcftools view -H -v snps
 
 all continents, only pd:
 26,783
@@ -19,3 +20,29 @@ north america, only pd:
 
 all samples (with pd relatives):
 2,874,818
+
+#########################################################
+######## redoing counts
+
+## ALL samples (including outgroup)
+before filtering:   3,442,910      pd_ploidy-1.vcf.gz
+after filtering:    506,864         pd_filtered.vcf.gz
+
+## Only pd (all continents, including lab clones)
+before filtering:   206,978      only-pd-ploidy1.vcf.gz
+after filtering:    26,783
+
+## Only North American pd (including lab clones)
+before filtering:   5,024      n-amer-pd_snp-count2.vcf.gz
+after filtering:    3,515      n-amer-pd_snp-count2_filtered.vcf.gz
+
+## Only North American pd, no lab clones
+before filtering:   5,017
+after filtering:    3,515
+
+## Only North American pd, no lab clones, no Washington
+before filtering:   -----
+after filtering:    3,515  -> estimated based off the no clones
+- don't have an accurate count of no washington, would have to make a new vcf and I don't feel like doing that. very likely the same as the no clones since its only missing one sample.
+
+

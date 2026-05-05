@@ -1,3 +1,6 @@
+## original code made by: Luke Anderson-Trocmé
+## see original code here: https://github.com/NovembreLab/feems/blob/main/feems/data/ggplot_feems.R
+
 # Import libraries
 library(data.table) # data wrangling
 library(dplyr) # data wrangling
@@ -52,6 +55,7 @@ prepare_data <- function(edge_file, node_file, custom_crs){
 data <- prepare_data(edge_file, node_file, projection)
 
 # Function to plot baseline FEEMS result
+#### code for larger powerpoint image
 plot_feems <- function(edges_sf, nodes_sf, arrows_list = NULL){
     
     eems_colors <- c("#994000", "#CC5800", "#FF8F33", "#FFAD66", "#FFCA99", "#FFE6CC", "#FBFBFB", "#CCFDFF", "#99F8FF", "#66F0FF","#33E4FF", "#00AACC", "#007A99")
@@ -76,14 +80,15 @@ plot_feems <- function(edges_sf, nodes_sf, arrows_list = NULL){
             st_intersection(land_borders, st_transform(bbox, st_crs(land_borders))), 
                             st_crs(edges_sf)), 
                 color="black", fill = 'grey95', size = 0.1) + 
-        geom_sf(data = edges_sf, color = "black", linewidth = 1.5) + 
-        geom_sf(data = edges_sf, aes(color = weight), linewidth = 1.3) + # Edges
-        geom_sf(data = nodes_sf, color = "white", size = 0.40) + # Nodes
-        geom_sf(data = nodes_sf %>% filter(N>0), aes(size = N),color = "grey50") + # Nodes
+        geom_sf(data = edges_sf, color = "black", linewidth = 2.5) + 
+        geom_sf(data = edges_sf, aes(color = weight), linewidth = 2.2) + # Edges
+        geom_sf(data = nodes_sf, color = "white", size = 1.2) + # Nodes
+        geom_sf(data = nodes_sf %>% filter(N>0), size=3, color="grey50") + #aes(size = N),color = "grey50") + # Nodes
         scale_size_area(max_size = 3) + # Define custom size scale
         scale_color_gradientn(colors = eems_colors, #values = scales::rescale(color_positions),
                               limits = c(-2, 2)) +
         theme_minimal() +
+        theme(text=element_text(size=20)) +
         labs(x = "Longitude", y = "Latitude", color=expression(log[10](w/bar(w))))
     p
 }    
