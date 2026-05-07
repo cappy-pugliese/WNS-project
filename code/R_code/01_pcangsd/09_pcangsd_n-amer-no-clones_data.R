@@ -9,7 +9,7 @@ library(ggplot2)
 library(see)
 library(vcfR)
 
-setwd("/Users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/data/04_pcangsd")
+setwd("/Users/caprinapugliese/Documents/03_school/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/data/04_pcangsd")
 
 admix <- np$load(file = "pcangsd_n-amer-no-clones.admix.7.Q.npy",allow_pickle=FALSE)
 k <- 7
@@ -24,14 +24,14 @@ for (n in 1:k) {
 colnames(admix) <- pops
 
 indivs <- read.csv("n-amer-no-clones_pd_ids.txt")
-pd_locations <- read.csv("/Users/caprinapugliese/Documents/School/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/data/01_pd-samples/25_12-10_n-amer-no-clones_locations.csv")
+pd_locations <- read.csv("/Users/caprinapugliese/Documents/03_school/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/data/01_pd-samples/25_12-10_n-amer-no-clones_locations.csv")
 
 
 rownames(admix) = indivs$individuals
-admix$ind = indivs$individuals
-admix$continent = pd_locations$continent
-admix$country = pd_locations$country
-admix$state = pd_locations$state
+#admix$ind = indivs$individuals
+#admix$continent = pd_locations$continent
+#admix$country = pd_locations$country
+#admix$state = pd_locations$state
 admix$year = pd_locations$year
 
 
