@@ -1,3 +1,5 @@
+## ALGATR GDM Code
+```r
 R_code_path <- "/Users/caprinapugliese/Documents/03_school/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/code/R_code/02_algatr/"
 source(paste0(R_code_path, "12_algatr_time_src.R"))
 plot_path <- "/Users/caprinapugliese/Documents/03_school/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/graphs/02_algatr/03_gdm/"
@@ -32,28 +34,50 @@ gdmData <- gdm_format(euc_dists, coords, pca_time$x, scale_gendist = TRUE)
 varimp <- gdm.varImp(gdmData, geo = TRUE, nPerm = 1000)
 # You can visualize the results using gdm_varimp_table()
 gdm_varimp_table(varimp)
+```
 
+## GLM by genetic distance, space, and time
+```r
+##### code from Dagilis
 
-map <- gdm_map(gdm_full$model, NoA_map, coords)
+#Assuming you have the genetic distances and spatial distances matrices, you can make one for temporal distances like so:
+spatial_distance <- as.matrix(geo_dist)
+gen_distance <- as.matrix(euc_dists)
 
-# Extract the GDM map from the GDM model object
-#maprgb <- map$pcaRastRGB
+time_dists <- as.matrix(gen_dist(time_df, dist_type = "euclidean"))
 
-# Now, use `extrap_mask()` to do buffer-based masking 
-# (i.e., mask out areas outside a buffer around our sampling coordinates)
-#map_mask <- extrap_mask(coords, maprgb, method = "buffer", buffer_width = 3)
-#terra::plotRGB(maprgb)
-#terra::plot(map_mask, col = "white", add = TRUE, legend = FALSE, alpha = 0.6)
-#terra::points(coords_longlat,)
+##And then we just run a GLM with interaction effects:
 
+time_space_model = glm(c(gen_distance) ~ c(spatial_distance)*c(time_dists))
 
+summary(time_space_model)
+```
 
-###################################################
-#### saving graphs: 
-###################################################
-date <- "26_02-11"
-plot_title <- "05_map"
-paste0(date, "_gdm_", plot_title)
-#png(file=paste0(plot_path, date, "_gdm_", plot_title),width=620, height=450)
-#plot
-#dev.off()
+summary output:
+```txt
+Call:
+glm(formula = c(gen_distance) ~ c(spatial_distance) * c(time_dists))
+
+Coefficients:
+                                  Estimate Std. Error
+(Intercept)                       18.32065    0.28850
+c(spatial_distance)                0.33635    0.02433
+c(time_dists)                      1.99428    0.13934
+c(spatial_distance):c(time_dists) -0.07008    0.01090
+                                  t value Pr(>|t|)    
+(Intercept)                        63.503  < 2e-16 ***
+c(spatial_distance)                13.822  < 2e-16 ***
+c(time_dists)                      14.312  < 2e-16 ***
+c(spatial_distance):c(time_dists)  -6.427 1.55e-10 ***
+---
+Signif. codes:  
+0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for gaussian family taken to be 33.61917)
+
+    Null deviance: 109443  on 2499  degrees of freedom
+Residual deviance:  83913  on 2496  degrees of freedom
+AIC: 15888
+
+Number of Fisher Scoring iterations: 2
+```
