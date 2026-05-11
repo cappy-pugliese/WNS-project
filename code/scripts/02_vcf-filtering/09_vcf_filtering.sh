@@ -39,3 +39,7 @@ $INDIR/pd.vcf.gz
 ########### script end
 
 #bcftools_viewCommand=view -i QUAL>20 -v snps -m2 -M2 -Oz -o pd_biallelic_snps.vcf.gz pd.vcf.gz
+
+## for iqtree:
+    # rate variation/ invariant rates (+I)
+    # + nni with ultrafast

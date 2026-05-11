@@ -12,18 +12,30 @@
 ########### script start
 
 ## set variables
-VCF=/home/FCAM/cpugliese/lab_wns/05_vcfs/03_filtered-vcfs/clade-structure-ALL_filtered.vcf.gz
-OUTNAME=plink_clade-structure-ALL_filtered
-OUTDIR=/home/FCAM/cpugliese/wns/06_iqtree/clade-structure/01_plink
+VCF=/home/FCAM/cpugliese/wns/06_iqtree/03_fixing-branchlenghts/01_filtered-vcfs/ALL_filtered_branchlengths.vcf.gz
+OUTNAME=ALL_filtered_branchlengths_plink
+OUTDIR=/home/FCAM/cpugliese/wns/06_iqtree/03_fixing-branchlenghts/02_plink
 
 cd $OUTDIR
 
 plink2 \
 --vcf $VCF \
 --snps-only \
+--geno 0.1 \
+--mind 0.5 \
 --allow-extra-chr \
 --chr-set -83 \
 --export phylip \
 --out $OUTNAME
 
 ########### script end
+
+## in theory this script should work, but for some reason it's running into an error
+
+# Error: --export phylip: 0-based variant #62 has allele code(s) outside {A,C,G,T,missing}. (Did you forget --snps-only?)
+    ## this error is weird because I specified snps only _and_ it says that I specified snps only sooooo... idk what's going on here but this code worked previously so.
+
+# Pretty sure the script is not working because of the vcf
+# I think changing the -m and -M might have messed it up somehow
+# I think it needs to be biallelic to work with plink
+
