@@ -12,15 +12,19 @@
 ########### script start
 
 ## set variables
-VCF=/home/FCAM/cpugliese/lab_wns/05_vcfs/03_filtered-vcfs/only-pd-ploidy1-filtered.vcf.gz
-OUTNAME=only-pd_clade-structure-pds_filtered
-OUTDIR1=/home/FCAM/cpugliese/wns/06_iqtree/clade-structure/01_plink
+VCF=only-pd_filtered_branchlengths2.vcf.gz
+OUTNAME=only-pd_filtered_branchlengths_plink
 
-cd $OUTDIR1
+INDIR=/home/FCAM/cpugliese/wns/06_iqtree/03_fixing-branchlenghts/01_filtered-vcfs
+OUTDIR=/home/FCAM/cpugliese/wns/06_iqtree/03_fixing-branchlenghts/02_plink
+
+cd $OUTDIR
 
 plink2 \
---vcf $VCF \
+--vcf $INDIR/$VCF \
 --snps-only \
+--geno 0.1 \
+--mind 0.5 \
 --allow-extra-chr \
 --chr-set -83 \
 --export phylip \

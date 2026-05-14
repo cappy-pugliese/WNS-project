@@ -3,7 +3,7 @@
 #SBATCH -N 1
 #SBATCH -n 1
 #SBATCH -c 8
-#SBATCH --mem=20G
+#SBATCH --mem=5G
 #SBATCH --partition=general
 #SBATCH --qos=general
 #SBATCH -o logs/%x_%j.out
@@ -12,25 +12,27 @@
 ########### script start
 
 ## modules needed:
-module load iqtree/3.0.1
+module load iqtree/2.2.2
+    # seeing if changing the version helps
+    # code for xanadu
 
 ## set variables
-OUTNAME=only-pd_clade-structure-pds_filtered3
-PLINK=/home/FCAM/cpugliese/wns/06_iqtree/clade-structure/01_plink/only-pd_clade-structure-pds_filtered
-OUTDIR2=/home/FCAM/cpugliese/wns/06_iqtree/clade-structure/02_iqtree
+OUTNAME=02_only-pd_filtered_mf
+PLINK=only-pd_filtered_branchlengths_plink
+
+INDIR=/home/FCAM/cpugliese/wns/06_iqtree/03_fixing-branchlenghts/02_plink
+OUTDIR=/home/FCAM/cpugliese/wns/06_iqtree/03_fixing-branchlenghts/03_iqtree
 
 
-cd $OUTDIR2
+cd $OUTDIR
 
-iqtree3 \
+iqtree2 \
 -redo \
 -pre $OUTNAME \
 -nt 8 \
 -cptime 1140 \
--b 1000 \
--mem 20G \
--m GTR+ASC \
--o Pd_70 \
--s $PLINK.phy
+-mem 5G \
+-m MF \
+-s $INDIR/$PLINK.phy
 
 ########### script end

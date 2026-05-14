@@ -12,20 +12,22 @@
 ########### script start
 
 ## set variables
-VCF=/home/FCAM/cpugliese/wns/06_iqtree/03_fixing-branchlenghts/01_filtered-vcfs/n-amer_filtered_branchlengths.vcf.gz
+VCF=n-amer_filtered_branchlengths2.vcf.gz
 OUTNAME=n-amer_filtered_branchlengths_plink
+
+INDIR=/home/FCAM/cpugliese/wns/06_iqtree/03_fixing-branchlenghts/01_filtered-vcfs
 OUTDIR=/home/FCAM/cpugliese/wns/06_iqtree/03_fixing-branchlenghts/02_plink
 
 cd $OUTDIR
 
 plink2 \
---vcf $VCF \
+--vcf $INDIR/$VCF \
 --snps-only \
+--geno 0.1 \
+--mind 0.5 \
 --allow-extra-chr \
 --chr-set -83 \
 --export phylip \
 --out $OUTNAME
 
 ########### script end
-
-#/home/FCAM/cpugliese/wns/06_iqtree/clade-structure/scripts

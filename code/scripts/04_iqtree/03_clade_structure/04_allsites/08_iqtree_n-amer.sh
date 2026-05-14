@@ -1,9 +1,9 @@
 #!/bin/bash
-#SBATCH --job-name=iqtree_4
+#SBATCH --job-name=iqtree
 #SBATCH -N 1
 #SBATCH -n 1
 #SBATCH -c 8
-#SBATCH --mem=20G
+#SBATCH --mem=5G
 #SBATCH --partition=general
 #SBATCH --qos=general
 #SBATCH -o logs/%x_%j.out
@@ -12,25 +12,25 @@
 ########### script start
 
 ## modules needed:
-module load iqtree/3.0.1
+module load iqtree/2.2.2
 
 ## set variables
-OUTNAME=n-amer-pd_clade-structure_b1000
-PLINK=/home/FCAM/cpugliese/wns/06_iqtree/clade-structure/01_plink/n-amer-pd_clade-structure
-OUTDIR=/home/FCAM/cpugliese/wns/06_iqtree/clade-structure/02_iqtree
+OUTNAME=03_n-amer_filtered_mf
+PLINK=n-amer_filtered_branchlengths_plink
+
+INDIR=/home/FCAM/cpugliese/wns/06_iqtree/03_fixing-branchlenghts/02_plink
+OUTDIR=/home/FCAM/cpugliese/wns/06_iqtree/03_fixing-branchlenghts/03_iqtree
 
 
 cd $OUTDIR
 
-iqtree3 \
+iqtree2 \
 -redo \
 -pre $OUTNAME \
 -nt 8 \
 -cptime 1140 \
--b 1000 \
 -mem 5G \
--m GTR+ASC \
--o Pd_28 \
--s $PLINK.phy
+-m MF \
+-s $INDIR/$PLINK.phy
 
 ########### script end

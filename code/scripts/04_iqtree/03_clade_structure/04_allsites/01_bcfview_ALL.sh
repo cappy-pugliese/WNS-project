@@ -18,7 +18,7 @@ date
 IN_VCF=/home/FCAM/cpugliese/lab_wns/05_vcfs/01_orig-vcfs/01_all-samples/ploidy-1/pd_ploidy-1.vcf.gz
 SAMPLES=/home/FCAM/cpugliese/wns/04_vcf/02_other-vcf-scritps/05_clade-structure_pds/clade-structure_ALL-samples.txt
 OUTDIR=/home/FCAM/cpugliese/wns/06_iqtree/03_fixing-branchlenghts/01_filtered-vcfs
-OUTNAME=ALL_filtered_branchlengths.vcf.gz
+OUTNAME=ALL_filtered_branchlengths2.vcf.gz
 
 ## load modules
 module load bcftools/1.9
@@ -28,8 +28,8 @@ bcftools view -S $SAMPLES \
 -i 'QUAL>20' \
 -i 'MAF>0.05' \
 -v snps \
--m 1 \
--M 4 \
+-m2 \
+-M2 \
 -Oz \
 -o $OUTDIR/$OUTNAME \
 $IN_VCF

@@ -18,8 +18,10 @@ module load iqtree/2.2.2
 
 ## set variables
 OUTNAME=01_ALL_filtered_mf
-PLINK=/home/FCAM/cpugliese/wns/06_iqtree/clade-structure/01_plink/plink_clade-structure-ALL_filtered
-OUTDIR=/home/FCAM/cpugliese/wns/06_iqtree/clade-structure/02_iqtree/01_fixing-branchlengths
+PLINK=ALL_filtered_branchlengths2_plink
+
+INDIR=/home/FCAM/cpugliese/wns/06_iqtree/03_fixing-branchlenghts/02_plink
+OUTDIR=/home/FCAM/cpugliese/wns/06_iqtree/03_fixing-branchlenghts/03_iqtree
 
 
 cd $OUTDIR
@@ -32,7 +34,7 @@ iqtree2 \
 -mem 5G \
 -m MF \
 -o Pd_31 \
--s $PLINK.phy
+-s $INDIR/$PLINK.phy
 
 ########### script end
 

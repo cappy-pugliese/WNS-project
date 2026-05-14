@@ -12,8 +12,8 @@
 ########### script start
 
 ## set variables
-VCF=/home/FCAM/cpugliese/wns/06_iqtree/03_fixing-branchlenghts/01_filtered-vcfs/ALL_filtered_branchlengths.vcf.gz
-OUTNAME=ALL_filtered_branchlengths_plink
+VCF=/home/FCAM/cpugliese/wns/06_iqtree/03_fixing-branchlenghts/01_filtered-vcfs/ALL_filtered_branchlengths2.vcf.gz
+OUTNAME=ALL_filtered_branchlengths2_plink
 OUTDIR=/home/FCAM/cpugliese/wns/06_iqtree/03_fixing-branchlenghts/02_plink
 
 cd $OUTDIR
