@@ -36,9 +36,3 @@ iqtree3 \
 -s $INDIR/$PLINK.phy
 
 ########### script end
-
-2081981
-2081744
-
-only-pd: TVM+F+I+R2 or GTR+F+I+R2
-n-amer:  TVM+F+I+R3

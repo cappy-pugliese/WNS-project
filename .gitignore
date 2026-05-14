@@ -152,3 +152,5 @@ graphs/06_iqtree/unfinished_run10_ALL-no-clones_b149.tre
 data/04_pcangsd/26_04-20_n-amer-no-clones_df.csv
 data/04_pcangsd/26_05-01_states-info.csv
 data/z_evolution_project_data/test.dxf
+graphs/06_iqtree/01_fixing_branchlengths/02_only-pd_bb1000_bestfit.pdf
+graphs/06_iqtree/01_fixing_branchlengths/03_n-amer_bb1000_bestfitmodel.pdf
