@@ -12,10 +12,10 @@
 ########### script start
 
 ## modules needed:
-module load iqtree/2.2.2
+module load iqtree/3.0.1
 
 ## set variables
-OUTNAME=03_n-amer_filtered_mf
+OUTNAME=03_n-amer_bb1000_best-fit-model
 PLINK=n-amer_filtered_branchlengths_plink
 
 INDIR=/home/FCAM/cpugliese/wns/06_iqtree/03_fixing-branchlenghts/02_plink
@@ -24,13 +24,21 @@ OUTDIR=/home/FCAM/cpugliese/wns/06_iqtree/03_fixing-branchlenghts/03_iqtree
 
 cd $OUTDIR
 
-iqtree2 \
+iqtree3 \
 -redo \
 -pre $OUTNAME \
 -nt 8 \
 -cptime 1140 \
 -mem 5G \
--m MF \
+-bb 1000 \
+-m TVM+F+I+R3 \
+-bnni \
 -s $INDIR/$PLINK.phy
 
 ########### script end
+
+2081981
+2081744
+
+only-pd: TVM+F+I+R2 or GTR+F+I+R2
+n-amer:  TVM+F+I+R3
