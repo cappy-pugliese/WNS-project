@@ -1,0 +1,55 @@
+---
+output: 
+  pdf_document:
+    latex_engine: xelatex
+fontsize: 12pt
+---
+
+## GLM by genetic distance, space, and time
+
+``` r
+## Setting up the matricies:
+spatial_distance <- as.matrix(geo_dist)
+gen_distance <- as.matrix(euc_dists)
+
+time_dists <- as.matrix(gen_dist(time_df, dist_type = "euclidean"))
+# Used algatr gen_dist() function to make
+# time matrix with the time dataframe as input.
+# The regular dist() function did not format the
+# data the same way.
+
+##### code from Dagilis
+## Run a GLM with interaction effects:
+time_space_model = glm(c(gen_distance) ~ c(spatial_distance)*c(time_dists))
+summary(time_space_model)
+```
+
+### summary output
+
+``` txt
+Call:
+glm(formula = c(gen_distance) ~ c(spatial_distance) * c(time_dists))
+
+Coefficients:
+                                  Estimate Std. Error
+(Intercept)                       18.32065    0.28850
+c(spatial_distance)                0.33635    0.02433
+c(time_dists)                      1.99428    0.13934
+c(spatial_distance):c(time_dists) -0.07008    0.01090
+                                  t value Pr(>|t|)    
+(Intercept)                        63.503  < 2e-16 ***
+c(spatial_distance)                13.822  < 2e-16 ***
+c(time_dists)                      14.312  < 2e-16 ***
+c(spatial_distance):c(time_dists)  -6.427 1.55e-10 ***
+---
+Signif. codes:  
+0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for gaussian family taken to be 33.61917)
+
+    Null deviance: 109443  on 2499  degrees of freedom
+Residual deviance:  83913  on 2496  degrees of freedom
+AIC: 15888
+
+Number of Fisher Scoring iterations: 2
+```

@@ -1,5 +1,6 @@
 ## ALGATR GDM Code
-```r
+
+``` r
 R_code_path <- "/Users/caprinapugliese/Documents/03_school/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/code/R_code/02_algatr/"
 source(paste0(R_code_path, "12_algatr_time_src.R"))
 plot_path <- "/Users/caprinapugliese/Documents/03_school/Uconn/2024-26_Grad_School/Dagilis-lab/WNS-project/graphs/02_algatr/03_gdm/"
@@ -37,7 +38,8 @@ gdm_varimp_table(varimp)
 ```
 
 ## GLM by genetic distance, space, and time
-```r
+
+``` r
 ##### code from Dagilis
 
 #Assuming you have the genetic distances and spatial distances matrices, you can make one for temporal distances like so:
@@ -54,7 +56,8 @@ summary(time_space_model)
 ```
 
 summary output:
-```txt
+
+``` txt
 Call:
 glm(formula = c(gen_distance) ~ c(spatial_distance) * c(time_dists))
 
