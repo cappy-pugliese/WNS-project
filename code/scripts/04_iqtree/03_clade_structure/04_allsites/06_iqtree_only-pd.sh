@@ -36,3 +36,5 @@ iqtree3 \
 -s $INDIR/$PLINK.phy
 
 ########### script end
+
+## bnni --> runs NNI for each bootstrap when running ultrafast bootstrapping
